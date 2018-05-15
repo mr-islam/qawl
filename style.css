@@ -24,7 +24,7 @@ time, mark, audio, video {
 		}
 		body { 
 			min-height: 100%; 
-			background-color: #fdf6e3;
+			background-color: "#fdf6e3";
 		}
 		.wrapper {
 			display: grid;
@@ -34,6 +34,8 @@ time, mark, audio, video {
 		img.resize {
 			max-width: 100%;
 			height: auto;
+			background-color: transparent;
+			border: none;
 		}
 		div.footerControls {
 			display: flex;
