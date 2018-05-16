@@ -11,17 +11,19 @@
 	</div>
 	<div class="footerControls">
 		<div class="footerSurahSelect">
-			<select></select>
+			<select>
+				<option value=""></option>
+			</select>
 		</div>
 		<div class="footerPageOptions">
-			<button></button>
+			<button onclick="changePage(-1);"></button>
 			<select></select>
-			<button></button>
+			<button onclick="changePage(1);"></button>
 		</div>
 		<div class="footerSettings">
+			<button id="zoomOut"></button>
 			<button id="darkTheme"></button>
-			<button id=""></button>
-			<button id=""></button>
+			<button id="zoomIn"></button>
 		</div>
 	</div>
 
