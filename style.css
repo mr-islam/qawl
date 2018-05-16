@@ -19,29 +19,33 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-		html { 
-			height: 100%;
-		}
-		body { 
-			min-height: 100%; 
-			background-color: "#fdf6e3";
-		}
-		.wrapper {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr 1fr;
-		}
-		img.resize {
-			max-width: 100%;
-			height: auto;
-			background-color: transparent;
-			border: none;
-		}
-		div.footerControls {
-			display: flex;
-			width: 100%;
-			position: fixed;
-			bottom: 0;
-			background-color: black;
-		}
-	</style>
+html { 
+	height: 100%;
+}
+body { 
+	min-height: 100%; 
+	background-color: "#fdf6e3";
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+img.resize {
+	max-width: 100%;
+	height: auto;
+	background-color: transparent;
+	border: none;
+}
+div.footerControls {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: black;
+}
+div.footerPageOptions, div.footerSettings {
+	display: flex;
+	flex-direction: row;
+}
