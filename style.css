@@ -40,6 +40,9 @@ img.resize {
 div.footerControls {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
 	width: 100%;
 	position: fixed;
 	bottom: 0;
