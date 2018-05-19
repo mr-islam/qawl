@@ -13,3 +13,7 @@ page change logic flow:
 	IN PROG: animation to fade away/flip/slideRight, then block:none
 			change src of image left/right
 			block:display again to show image <--- how would an animation fit here?
+
+zoom options
+	simply changes max-width of the images in grid,
+	this allows for keeping the aspect ratio nicely
