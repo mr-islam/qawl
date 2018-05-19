@@ -4,9 +4,6 @@ var leftPageNumber = rightPageNumber + 1; //or, localStorage, later.
 var leftPage = document.getElementById("leftPage");
 var rightPage = document.getElementById("rightPage");
 
-/*var element = document.getElementById("div1");
-element.classList.add("otherclass");*/
-
 function renderPage() {
 	leftPage.src = "../quran/hi/png-d150/"+leftPageNumber+".png"; 
 	rightPage.src = "../quran/hi/png-d150/"+rightPageNumber+".png";
@@ -46,16 +43,9 @@ function changePage(increment) {
 		rightPage.classList.add("pageEnter");
 		console.log('change 4');
 	}  
-	
+
 	renderPage();
 }
 
 renderPage();
 console.log('renderPage');
-/*
-page change logic flow:
-	event buttonLeft press, right press, add +2
-	animation to fade away/flip/slideRight, then block:none
-	change src of image left/right
-	block:display again to show image <--- how would an animation fit here?
-*/
