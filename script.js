@@ -13,11 +13,21 @@ function renderPage() {
 }
 
 function changePage(increment) {
-	
+	if (increment > 0) {
+		if (rightPageNumber === 603) {
+			return
+		} else {
+			changePageActual(increment);
+		}
+	} else if (increment < 0) {
+		if (rightPageNumber === -1) {
+			return
+		} else {
+			changePageActual(increment);
+		}
+	}
 
-
-	if ((rightPageNumber > 1) && (rightPageNumber < 604)) {
-		//so it wont go beyond the page limits
+	function changePageActual(increment) {
 		console.log('start change');
 		leftPage.classList.remove("pageEnter");
 		rightPage.classList.remove("pageEnter");
@@ -35,9 +45,9 @@ function changePage(increment) {
 		leftPage.classList.add("pageEnter");
 		rightPage.classList.add("pageEnter");
 		console.log('change 4');
-
-		renderPage();
-	}
+	}  
+	
+	renderPage();
 }
 
 renderPage();
