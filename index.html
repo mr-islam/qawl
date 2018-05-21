@@ -17,12 +17,12 @@
 			</select>
 		</div>
 		<div class="footerPageOptions">
-			<button onclick="changePage(2);">⬅️</button>
+			<button onclick="changePage('increment', +2);">⬅️</button>
 			<form onsubmit="return false">
 				<input type="number" name="pageNumberInput" id="pageNumberInput">
-				<input type="submit" name="go" value="submit" onclick="return setPage()"; style="display: none"/>
+				<input type="submit" name="go" value="submit" onclick="return changePage('manual')"; style="display: none"/>
 			</form>
-			<button onclick="changePage(-2);">➡️</button>
+			<button onclick="changePage('increment', -2);">➡️</button>
 		</div>
 		<div class="footerSettings">
 			<button id="zoomOut"></button>
