@@ -18,7 +18,10 @@
 		</div>
 		<div class="footerPageOptions">
 			<button onclick="changePage(2);">⬅️</button>
-			<select></select>
+			<form onsubmit="return false">
+				<input type="number" name="pageNumberInput" id="pageNumberInput">
+				<input type="submit" name="go" value="submit" onclick="return setPage()"; style="display: none"/>
+			</form>
 			<button onclick="changePage(-2);">➡️</button>
 		</div>
 		<div class="footerSettings">
