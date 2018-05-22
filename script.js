@@ -29,6 +29,7 @@ function incrementPage(increment) {
 	leftPageNumber = rightPageNumber + 1;
 	pageEnter();
 	renderPage();
+	document.getElementById("pageNumberInput").value = rightPageNumber;
 }
 
 function changePage(method, increment) {
