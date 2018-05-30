@@ -24,7 +24,7 @@ html {
 }
 body { 
 	min-height: 100%; 
-	background-color: "#fdf6e3";
+	background-color: #fdf6e3;
 }
 .wrapper {
 	display: grid;
