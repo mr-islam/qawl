@@ -18,7 +18,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 html { 
 	height: 100%;
 }
@@ -27,9 +26,10 @@ body {
 	background-color: #fdf6e3;
 }
 .wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
 }
 img.resize {
 	max-width: 100%;
