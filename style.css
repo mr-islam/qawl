@@ -18,18 +18,18 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 html { 
 	height: 100%;
 }
 body { 
 	min-height: 100%; 
-	background-color: "#fdf6e3";
+	background-color: #fdf6e3;
 }
 .wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
 }
 img.resize {
 	max-width: 100%;
@@ -46,7 +46,8 @@ div.footerControls {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
-	background-color: black;
+	background:rgba(0,0,0,0.5);
+
 }
 div.footerPageOptions, div.footerSettings {
 	display: flex;
