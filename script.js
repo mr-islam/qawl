@@ -5,8 +5,8 @@ var leftPage = document.getElementById("leftPage");
 var rightPage = document.getElementById("rightPage");
 
 function renderPage() {
-	leftPage.src = "../quran/hi/png-d150/"+leftPageNumber+".png"; //gotta fix dir structure later
-	rightPage.src = "../quran/hi/png-d150/"+rightPageNumber+".png";
+	leftPage.src = "mushaf-green/"+leftPageNumber+".png"; //gotta fix dir structure later
+	rightPage.src = "mushaf-green/"+rightPageNumber+".png";
 }
 function pageExit() {
 	console.log('start change');
