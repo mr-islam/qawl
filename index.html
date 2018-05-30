@@ -1,6 +1,5 @@
 <doctype !HTML>
 <meta charset="utf-8">
-
 <head>
 	<title>al-Kitab</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -12,15 +11,14 @@
 	</div>
 	<div class="footerControls">
 		<div class="footerSurahSelect">
-			<select>
-				<option value=""></option>
-			</select>
+			<select><option value=""></option></select>
 		</div>
 		<div class="footerPageOptions">
 			<button onclick="changePage('increment', +2);">⬅️</button>
 			<form onsubmit="return false">
 				<input type="number" name="pageNumberInput" id="pageNumberInput">
-				<input type="submit" name="go" value="submit" onclick="return changePage('manual')"; style="display: none"/>
+				<input type="submit" name="go" value="submit" 
+				onclick="return changePage('manual')"; style="display: none"/>
 			</form>
 			<button onclick="changePage('increment', -2);">➡️</button>
 		</div>
@@ -30,6 +28,5 @@
 			<button id="zoomIn"></button>
 		</div>
 	</div>
-
 <script src="script.js"></script>
 </body>
