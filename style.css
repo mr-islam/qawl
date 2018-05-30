@@ -46,7 +46,8 @@ div.footerControls {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
-	background-color: black;
+	background:rgba(0,0,0,0.5);
+
 }
 div.footerPageOptions, div.footerSettings {
 	display: flex;
