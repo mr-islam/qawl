@@ -1,0 +1,454 @@
+[
+	{
+		"name": "al-Fātihah",
+		"page": 1
+	},
+	{
+		"name": "al-Baqarah",
+		"page": 2
+	},
+	{
+		"name": "Ãl-´Imrān",
+		"page": 50
+	},
+	{
+		"name": "an-Nisā'",
+		"page": 77
+	},
+	{
+		"name": "al-Mā'idah",
+		"page": 106
+	},
+	{
+		"name": "al-An'ām",
+		"page": 128
+	},
+	{
+		"name": "al-A´rāf",
+		"page": 151
+	},
+	{
+		"name": "al-Anfāl",
+		"page": 177
+	},
+	{
+		"name": "at-Taubah",
+		"page": 187
+	},
+	{
+		"name": "Yūnus",
+		"page": 208
+	},
+	{
+		"name": "Hūd",
+		"page": 221
+	},
+	{
+		"name": "Yūsuf",
+		"page": 235
+	},
+	{
+		"name": "ar-Ra´d",
+		"page": 249
+	},
+	{
+		"name": "Ibrāhim",
+		"page": 255
+	},
+	{
+		"name": "al-Hijr",
+		"page": 262
+	},
+	{
+		"name": "an-Nahl",
+		"page": 267
+	},
+	{
+		"name": "al-Isra'",
+		"page": 282
+	},
+	{
+		"name": "al-Kahf",
+		"page": 293
+	},
+	{
+		"name": "Maryam",
+		"page": 305
+	},
+	{
+		"name": "Tā-Hā",
+		"page": 312
+	},
+	{
+		"name": "al-Anbiyā'",
+		"page": 322
+	},
+	{
+		"name": "al-Hajj",
+		"page": 332
+	},
+	{
+		"name": "al-Mu'minūn",
+		"page": 342
+	},
+	{
+		"name": "an-Nūr",
+		"page": 350
+	},
+	{
+		"name": "al-Furqān",
+		"page": 359
+	},
+	{
+		"name": "ash-Shu´arā",
+		"page": 367
+	},
+	{
+		"name": "an-Naml",
+		"page": 377
+	},
+	{
+		"name": "al-Qasas",
+		"page": 385
+	},
+	{
+		"name": "al-Ankabūt",
+		"page": 396
+	},
+	{
+		"name": "ar-Rūm",
+		"page": 404
+	},
+	{
+		"name": "Luqmān",
+		"page": 411
+	},
+	{
+		"name": "as-Sajdah",
+		"page": 415
+	}
+	{
+		"name": "Saba'",
+		"page": 428
+	}
+	{
+		"name": "Fātir",
+		"page": 434
+	}
+	{
+		"name": "Yā-Sīn",
+		"page": 440
+	}
+	{
+		"name": "as-Sāffāt",
+		"page": 446
+	}
+	{
+		"name": "Sād",
+		"page": 453
+	}
+	{
+		"name": "az-Zumar",
+		"page": 458
+	}
+	{
+		"name": "Ghāfir",
+		"page": 467
+	}
+	{
+		"name": "Fussilat",
+		"page": 477
+	}
+	{
+		"name": "ash-Shūra",
+		"page": 483
+	}
+	{
+		"name": "az-Zukhrūf",
+		"page": 489
+	}
+	{
+		"name": "ad-Dukhan",
+		"page": 496
+	}
+	{
+		"name": "al-Jāthiya",
+		"page": 499
+	}
+	{
+		"name": "al-Ahqāf",
+		"page": 502
+	}
+	{
+		"name": "Muhammad",
+		"page": 507
+	}
+	{
+		"name": "al-Fath",
+		"page": 511
+	}
+	{
+		"name": "al-Hujurāt",
+		"page": 515
+	}
+	{
+		"name": "Qāf",
+		"page": 518
+	}
+	{
+		"name": "adh-Dhāriyāt",
+		"page": 520
+	}
+	{
+		"name": "at-Tūr",
+		"page": 523
+	}
+	{
+		"name": "an-Najm",
+		"page": 526
+	}
+	{
+		"name": "al-Qamar",
+		"page": 428
+	}
+	{
+		"name": "ar-Rahmān",
+		"page": 531
+	}
+	{
+		"name": "al-Wāqi´ah",
+		"page": 534
+	}
+	{
+		"name": "al-Hadīd",
+		"page": 
+	}
+	{
+		"name": "al-Mujādalah",
+		"page": 542
+	}
+	{
+		"name": "al-Hashr",
+		"page": 545
+	}
+	{
+		"name": "al-Mumtahanah",
+		"page": 549
+	}
+	{
+		"name": "as-Saf",
+		"page": 551
+	}
+	{
+		"name": "al-Jumu´ah",
+		"page": 553
+	}
+	{
+		"name": "al-Munāfiqūn",
+		"page": 554
+	}
+	{
+		"name": "at-Taghabūn",
+		"page": 556
+	}
+	{
+		"name": "at-Talāq",
+		"page": 558
+	}
+	{
+		"name": "at-Tahrīm",
+		"page": 560
+	}
+	{
+		"name": "al-Mulk",
+		"page": 562
+	}
+	{
+		"name": "al-Qalam",
+		"page": 564
+	}
+	{
+		"name": "al-Hāqqah",
+		"page": 566
+	}
+	{
+		"name": "al-Ma´ārij",
+		"page": 568
+	}
+	{
+		"name": "Nūh",
+		"page": 570
+	}
+	{
+		"name": "al-Jinn",
+		"page": 572
+	}
+	{
+		"name": "al-Muzzammil",
+		"page": 574
+	}
+	{
+		"name": "Muddaththir",
+		"page": 575
+	}
+	{
+		"name": "al-Qiyāmah",
+		"page": 577
+	}
+	{
+		"name": "al-Insān",
+		"page": 578
+	}
+	{
+		"name": "al-Mursalāt",
+		"page": 580
+	}
+	{
+		"name": "an-Naba'",
+		"page": 582
+	}
+	{
+		"name": "an-Nāzi´āt",
+		"page": 583
+	}
+	{
+		"name": "´Abasa",
+		"page": 585
+	}
+	{
+		"name": "at-Takwīr",
+		"page": 586
+	}
+	{
+		"name": "al-Infitār",
+		"page": 587
+	}
+	{
+		"name": "al-Mutaffifīn",
+		"page": 587
+	}
+	{
+		"name": "al-Inshiqāq",
+		"page": 589
+	}
+	{
+		"name": "al-Burūj",
+		"page": 590
+	}
+	{
+		"name": "at-Tāriq",
+		"page": 591
+	}
+	{
+		"name": "al-A´lā",
+		"page": 591
+	}
+	{
+		"name": "al-Ghāshiyah",
+		"page": 592
+	}
+	{
+		"name": "al-Fajr",
+		"page": 593
+	}
+	{
+		"name": "al-Balad",
+		"page": 594
+	}
+	{
+		"name": "ash-Shams",
+		"page": 595
+	}
+	{
+		"name": "al-Layl",
+		"page": 595
+	}
+	{
+		"name": "ad-Duhā",
+		"page": 596
+	}
+	{
+		"name": "ash-Sharh",
+		"page": 596
+	}
+	{
+		"name": "at-Tīn",
+		"page": 597
+	}
+	{
+		"name": "al-Alaq",
+		"page": 597
+	}
+	{
+		"name": "al-Qadr",
+		"page": 598
+	}
+	{
+		"name": "al-Bayyinah",
+		"page": 598
+	}
+	{
+		"name": "az-Zalzalah",
+		"page": 599
+	}
+	{
+		"name": "al-´Ãdiyāt",
+		"page": 599
+	}
+	{
+		"name": "al-Qāriyah",
+		"page": 600
+	}
+	{
+		"name": "at-Takāthur",
+		"page": 600
+	}
+	{
+		"name": "al-´Asr",
+		"page": 601
+	}
+	{
+		"name": "al-Humazah",
+		"page": 601
+	}
+	{
+		"name": "al-Fīl",
+		"page": 601
+	}
+	{
+		"name": "Quraysh",
+		"page": 602
+	}
+	{
+		"name": "al-Mā´ūn",
+		"page": 602
+	}
+	{
+		"name": "al-Kawthar",
+		"page": 602
+	}
+	{
+		"name": "al-Kāfirūn",
+		"page": 603
+	}
+	{
+		"name": "an-Nasr",
+		"page": 603
+	}
+	{
+		"name": "al-Masad",
+		"page": 603
+	}
+	{
+		"name": "al-Ikhlās",
+		"page": 604
+	}
+	{
+		"name": "al-Falaq",
+		"page": 604
+	}
+	{
+		"name": "an-Nās",
+		"page": 604
+	}
+]
