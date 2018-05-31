@@ -75,6 +75,19 @@ function fillSelect() {
                 '<option value="' + surahs[i]['pageGreen'] + '">' + surahs[i]['name'] + '</option>';
         }
 }
+function surahSelectPageChange() {
+	var selectedSurah = document.getElementById('surahSelect').value;
+	if (selectedSurah % 2 != 0) {
+			rightPageNumber = selectedSurah;
+			leftPageNumber = parseInt(rightPageNumber) + 1; //otherwise, + adds 1 to the string
+			console.log('r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
+		} else {
+			rightPageNumber = selectedSurah - 1;
+			leftPageNumber = selectedSurah;
+			console.log('r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
+	}
+	renderPage();
+}
 
 fillSelect();
 renderPage();
