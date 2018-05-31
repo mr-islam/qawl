@@ -53,7 +53,10 @@ function changePage(method, increment) {
 		console.log('page choice: '+userPageInput);
 		pageExit();
 
-		if (userPageInput % 2 != 0) {
+		if (userPageInput > 604 || userPageInput < 0) {
+			return
+		} 
+		else if (userPageInput % 2 != 0) {
 			rightPageNumber = userPageInput;
 			leftPageNumber = parseInt(rightPageNumber) + 1; //otherwise, + adds 1 to the string
 			console.log('r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
