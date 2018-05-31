@@ -65,7 +65,17 @@ function changePage(method, increment) {
 		pageEnter();
 		renderPage();
 	}	
-}	
+}
 
+function fillSelect() {
+	var ele = document.getElementById('surahSelect');
+        for (var i = 0; i < surahs.length; i++) {
+            // POPULATE SELECT ELEMENT WITH JSON.
+            ele.innerHTML = ele.innerHTML +
+                '<option value="' + surahs[i]['pageGreen'] + '">' + surahs[i]['name'] + '</option>';
+        }
+}
+
+fillSelect();
 renderPage();
 console.log('renderPage');
