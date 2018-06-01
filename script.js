@@ -5,7 +5,8 @@ var leftPage = document.getElementById("leftPage");
 var rightPage = document.getElementById("rightPage");
 
 function renderPage() {
-	leftPage.src = "mushaf-green/"+leftPageNumber+".png"; //gotta fix dir structure later
+	console.log('rednertime:: r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
+	leftPage.src = "mushaf-green/"+leftPageNumber+".png";
 	rightPage.src = "mushaf-green/"+rightPageNumber+".png";
 }
 function pageExit() {
@@ -16,18 +17,17 @@ function pageExit() {
 	rightPage.classList.add("pageExit");
 }
 function pageEnter() {
-	console.log('change 3');
 	leftPage.classList.remove("pageExit");
 	rightPage.classList.remove("pageExit");
 	leftPage.classList.add("pageEnter");
 	rightPage.classList.add("pageEnter");
-	console.log('change 4');
 }
 function incrementPage(increment) {
 	pageExit();
 	rightPageNumber += increment;
 	leftPageNumber = rightPageNumber + 1;
 	pageEnter();
+	console.log('incrememnt time:: r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
 	renderPage();
 	document.getElementById("pageNumberInput").value = rightPageNumber;
 }
@@ -59,11 +59,9 @@ function changePage(method, increment) {
 		else if (userPageInput % 2 != 0) {
 			rightPageNumber = userPageInput;
 			leftPageNumber = parseInt(rightPageNumber) + 1; //otherwise, + adds 1 to the string
-			console.log('r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
 		} else {
 			rightPageNumber = userPageInput - 1;
 			leftPageNumber = userPageInput;
-			console.log('r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
 		}
 		pageEnter();
 		renderPage();
