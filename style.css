@@ -53,30 +53,6 @@ div.footerPageOptions, div.footerSettings {
 	display: flex;
 	flex-direction: row;
 }
-@keyframes exit {
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
-}
-@keyframes enter {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-img.pageEnter {
-	animation-name: enter;
-	animation-duration: 3s;
-}
-img.pageExit {
-	animation-name: exit;
-	animation-duration: 3s;
-}
 input {
 	text-align: center;
 }

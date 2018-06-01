@@ -9,24 +9,9 @@ function renderPage() {
 	leftPage.src = "mushaf-green/"+leftPageNumber+".png";
 	rightPage.src = "mushaf-green/"+rightPageNumber+".png";
 }
-function pageExit() {
-	console.log('start change');
-	leftPage.classList.remove("pageEnter");
-	rightPage.classList.remove("pageEnter");
-	leftPage.classList.add("pageExit");
-	rightPage.classList.add("pageExit");
-}
-function pageEnter() {
-	leftPage.classList.remove("pageExit");
-	rightPage.classList.remove("pageExit");
-	leftPage.classList.add("pageEnter");
-	rightPage.classList.add("pageEnter");
-}
 function incrementPage(increment) {
-	pageExit();
 	rightPageNumber += increment;
 	leftPageNumber = rightPageNumber + 1;
-	pageEnter();
 	console.log('incrememnt time:: r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
 	renderPage();
 	document.getElementById("pageNumberInput").value = rightPageNumber;
@@ -51,7 +36,6 @@ function changePage(method, increment) {
 	} else if (method == "manual") {
 		var userPageInput = document.getElementById("pageNumberInput").value;
 		console.log('page choice: '+userPageInput);
-		pageExit();
 
 		if (userPageInput > 604 || userPageInput < 0) {
 			return
@@ -63,7 +47,6 @@ function changePage(method, increment) {
 			rightPageNumber = userPageInput - 1;
 			leftPageNumber = userPageInput;
 		}
-		pageEnter();
 		renderPage();
 	}	
 }
@@ -71,7 +54,6 @@ function changePage(method, increment) {
 function fillSelect() {
 	var ele = document.getElementById('surahSelect');
         for (var i = 0; i < surahs.length; i++) {
-            // POPULATE SELECT ELEMENT WITH JSON.
             ele.innerHTML = ele.innerHTML +
                 '<option value="' + surahs[i]['pageGreen'] + '">' + surahs[i]['name'] + '</option>';
         }
