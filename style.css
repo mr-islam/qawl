@@ -58,9 +58,19 @@ div.footerPageOptions, div.footerSettings {
 	display: flex;
 	flex-direction: row;
 }
-input {
+input, select {
 	text-align: center;
+	height: 100%;
+	background: none;
+	color: #fdf6e3;
 }
-#zoomOut, #zoomIn {
-	font-family: fontello
+button {
+	background:none;
+	color: #fdf6e3;
+	border-radius: 4px;
+	box-shadow: none;
+}
+button:hover {
+	background-color: #fdf6e3;
+	color: rgba(0,0,0,0.5);
 }
