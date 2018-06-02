@@ -16,19 +16,20 @@
 			</select>
 		</div>
 		<div class="footerPageOptions">
-			<button onclick="turnPage(+2);">⬅️</button>
+			<button onclick="turnPage(+2);"><i class="icon-left-open-outline"></i></button>
 			<form onsubmit="return false">
 				<input type="number" name="pageNumberInput" id="pageNumberInput">
 				<input type="submit" name="go" value="submit" 
 				onclick="return choicePage();"; style="display: none"/>
 			</form>
-			<button onclick="turnPage(-2);">➡️</button>
+			<button onclick="turnPage(-2);"><i class="icon-right-open-outline"></i></button>
 		</div>
 		<div class="footerSettings">
-			<button id="zoomOut" onclick="changeZoom(-5);"></button>
-			<button id="zoomIn" onclick="changeZoom(+5);"></button>
+			<button id="zoomOut" onclick="changeZoom(-5);"><i class="icon-zoom-out-1"></i></button>
+			<button id="zoomIn" onclick="changeZoom(+5);"><i class="icon-zoom-in-1"></i></button>
 		</div>
 	</div>
 <script type="text/javascript" src="surahs.js"></script>
 <script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" href="assets/fonts/css/fontello.css">
 </body>

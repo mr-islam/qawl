@@ -58,8 +58,8 @@ function changeZoom(increment) {
 }
 function updatePageView() {
 	console.log('page set: r='+ rightPageNumber + ' l='+ leftPageNumber);
-	leftPage.src = "mushaf-green/"+leftPageNumber+".png";
-	rightPage.src = "mushaf-green/"+rightPageNumber+".png";
+	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
+	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
 }
 
 updatePageView(); //resume reading from last place

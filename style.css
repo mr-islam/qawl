@@ -61,3 +61,6 @@ div.footerPageOptions, div.footerSettings {
 input {
 	text-align: center;
 }
+#zoomOut, #zoomIn {
+	font-family: fontello
+}
