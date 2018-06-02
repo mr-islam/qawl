@@ -45,13 +45,26 @@ function selectSurah() { // working for even pages, not odd
 	console.log(userPageInputInt)
 	changePage();
 }
+function changeZoom(increment) {
+	var currentZoom = parseInt(localStorage.getItem("currentZoomStored")) || 100;
+	currentZoom += increment;
+	console.log(currentZoom);
+	if (currentZoom < 100) {
+		document.getElementById("wrapper").style['max-width'] = currentZoom + "%";
+	} else if (currentZoom > 100) {
+		document.body.style.width = currentZoom + "%";
+	}
+	localStorage.setItem('currentZoomStored', currentZoom)
+}
 function updatePageView() {
 	console.log('page set: r='+ rightPageNumber + ' l='+ leftPageNumber);
 	leftPage.src = "mushaf-green/"+leftPageNumber+".png";
 	rightPage.src = "mushaf-green/"+rightPageNumber+".png";
 }
 
-updatePageView();
+updatePageView(); //resume reading from last place
+changeZoom(0); //to get last zoom set
+
 (function() { // fills in <select> from other .js file
     var ele = document.getElementById('surahSelect');
     for (var i = 0; i < surahs.length; i++) {
