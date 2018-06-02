@@ -1,77 +1,61 @@
-var rightPageNumber = 3;
-var leftPageNumber = rightPageNumber + 1; //or, localStorage, later.
+var rightPageNumber = localStorage.getItem('rightPageNumberStored') || 3;
+var leftPageNumber = parseInt(rightPageNumber) + 1;
 
-var leftPage = document.getElementById("leftPage");
-var rightPage = document.getElementById("rightPage");
+var leftPageElement = document.getElementById("leftPage");
+var rightPageElement = document.getElementById("rightPage");
 
-function renderPage() {
-	console.log('rednertime:: r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
+var userPageInput = document.getElementById("pageNumberInput").value;
+var userPageInputInt = parseInt(userPageInput)
+
+function changePage() { // changes page to whatevers in input
+	if (userPageInputInt < 604 && userPageInputInt > -1) {
+		if (userPageInputInt % 2 === 0) {
+			leftPageNumber = userPageInputInt;
+			rightPageNumber = leftPageNumber - 1;
+		} else {
+			rightPageNumber = userPageInputInt;
+			leftPageNumber = parseInt(rightPageNumber) + 1;
+		}
+		localStorage.setItem('rightPageNumberStored', rightPageNumber);
+		updatePageView();
+		document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
+	}
+}
+function choicePage() {
+	var userPageInput = document.getElementById("pageNumberInput").value;
+	var userPageInputInt = parseInt(userPageInput);
+	if (userPageInputInt % 2 === 0) { // this and below is repeated changePage(); I messed up vars
+		leftPageNumber = userPageInputInt;
+		rightPageNumber = leftPageNumber - 1;
+	} else {
+		rightPageNumber = userPageInputInt;
+		leftPageNumber = parseInt(rightPageNumber) + 1;
+	}
+	localStorage.setItem('rightPageNumberStored', rightPageNumber);
+	updatePageView();
+}
+function turnPage(increment) {
+	userPageInputInt += increment;
+	changePage();
+}
+function selectSurah() { // working for even pages, not odd
+	var selectedSurah = parseInt(document.getElementById('surahSelect').value);
+	userPageInputInt = selectedSurah;
+	console.log(selectedSurah);
+	console.log(userPageInputInt)
+	changePage();
+}
+function updatePageView() {
+	console.log('page set: r='+ rightPageNumber + ' l='+ leftPageNumber);
 	leftPage.src = "mushaf-green/"+leftPageNumber+".png";
 	rightPage.src = "mushaf-green/"+rightPageNumber+".png";
 }
-function incrementPage(increment) {
-	rightPageNumber += increment;
-	leftPageNumber = rightPageNumber + 1;
-	console.log('incrememnt time:: r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
-	renderPage();
-	document.getElementById("pageNumberInput").value = rightPageNumber;
-}
 
-function changePage(method, increment) {
-
-	if (method == "increment") {
-		if (increment > 0) {
-			if (rightPageNumber === 603) {
-				return
-			} else {
-				incrementPage(increment);
-			}
-		} else if (increment < 0) {
-			if (rightPageNumber === -1) {
-				return
-			} else {
-				incrementPage(increment);
-			}
-		}
-	} else if (method == "manual") {
-		var userPageInput = document.getElementById("pageNumberInput").value;
-		console.log('page choice: '+userPageInput);
-
-		if (userPageInput > 604 || userPageInput < 0) {
-			return
-		} 
-		else if (userPageInput % 2 != 0) {
-			rightPageNumber = userPageInput;
-			leftPageNumber = parseInt(rightPageNumber) + 1; //otherwise, + adds 1 to the string
-		} else {
-			rightPageNumber = userPageInput - 1;
-			leftPageNumber = userPageInput;
-		}
-		renderPage();
-	}	
-}
-
-function fillSelect() {
-	var ele = document.getElementById('surahSelect');
-        for (var i = 0; i < surahs.length; i++) {
-            ele.innerHTML = ele.innerHTML +
-                '<option value="' + surahs[i]['pageGreen'] + '">' + surahs[i]['name'] + '</option>';
-        }
-}
-function surahSelectPageChange() {
-	var selectedSurah = document.getElementById('surahSelect').value;
-	if (selectedSurah % 2 != 0) {
-			rightPageNumber = selectedSurah;
-			leftPageNumber = parseInt(rightPageNumber) + 1; //otherwise, + adds 1 to the string
-			console.log('r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
-		} else {
-			rightPageNumber = selectedSurah - 1;
-			leftPageNumber = selectedSurah;
-			console.log('r: '+ rightPageNumber + ' |l: '+ leftPageNumber);
-	}
-	renderPage();
-}
-
-fillSelect();
-renderPage();
-console.log('renderPage');
+updatePageView();
+(function() { // fills in <select> from other .js file
+    var ele = document.getElementById('surahSelect');
+    for (var i = 0; i < surahs.length; i++) {
+        ele.innerHTML = ele.innerHTML +
+            '<option value="' + surahs[i]['pageGreen'] + '">' + surahs[i]['name'] + '</option>';
+    }
+})();

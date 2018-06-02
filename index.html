@@ -11,18 +11,18 @@
 	</div>
 	<div class="footerControls">
 		<div class="footerSurahSelect">
-			<select id="surahSelect" onchange="surahSelectPageChange();">
+			<select id="surahSelect" onchange="selectSurah();">
 				<option value="">Surah</option>
 			</select>
 		</div>
 		<div class="footerPageOptions">
-			<button onclick="changePage('increment', +2);">⬅️</button>
+			<button onclick="turnPage(+2);">⬅️</button>
 			<form onsubmit="return false">
 				<input type="number" name="pageNumberInput" id="pageNumberInput">
 				<input type="submit" name="go" value="submit" 
-				onclick="return changePage('manual', this)"; style="display: none"/>
+				onclick="return choicePage();"; style="display: none"/>
 			</form>
-			<button onclick="changePage('increment', -2);">➡️</button>
+			<button onclick="turnPage(-2);">➡️</button>
 		</div>
 		<div class="footerSettings">
 			<button id="zoomOut"></button>
