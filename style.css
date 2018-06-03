@@ -58,7 +58,7 @@ div.footerPageOptions, div.footerSettings {
 	display: flex;
 	flex-direction: row;
 }
-input, select {
+input {
 	text-align: center;
 	height: 100%;
 	background: none;

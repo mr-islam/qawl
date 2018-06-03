@@ -5,9 +5,11 @@ var leftPageElement = document.getElementById("leftPage");
 var rightPageElement = document.getElementById("rightPage");
 
 var userPageInput = document.getElementById("pageNumberInput").value;
+userPageInput = localStorage.getItem("rightPageNumberStored") || 2;
 var userPageInputInt = parseInt(userPageInput);
 
 function changePage() { // changes page to whatevers in input
+	console.log("change page called");
 	if (userPageInputInt < 604 && userPageInputInt > -1) {
 		if (userPageInputInt % 2 === 0) {
 			leftPageNumber = userPageInputInt;
@@ -35,8 +37,7 @@ function choicePage() {
 	updatePageView();
 }
 function turnPage(increment) {
-	console.log("turn page called")
-	userPageInputInt += increment;
+	userPageInputInt += parseInt(increment);
 	changePage();
 }
 function selectSurah() { // working for even pages, not odd
