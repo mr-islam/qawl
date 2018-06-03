@@ -32,12 +32,12 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	align-items: flex-start;
-	max-width: 100%;
+	max-width: 50%;
 	margin-right: auto;
 	margin-left: auto;
 }
 img.resize {
-	max-width: 100%;
+	max-width: 50%;
 	height: auto;
 	background-color: transparent;
 	border: none;
