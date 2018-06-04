@@ -5,28 +5,31 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="wrapper">
-		<img class="resize" src=`` id="leftPage">
-		<img class="resize" src=`` id="rightPage">
+	<div id="wrapper">
+		<img class="resize" id="leftPage">
+		<img class="resize" id="rightPage">
 	</div>
 	<div class="footerControls">
 		<div class="footerSurahSelect">
-			<select><option value=""></option></select>
+			<select id="surahSelect" onchange="selectSurah();">
+				<option value="">Surah</option>
+			</select>
 		</div>
 		<div class="footerPageOptions">
-			<button onclick="changePage('increment', +2);">⬅️</button>
+			<button onclick="turnPage(+2);"><i class="icon-left-open-outline"></i></button>
 			<form onsubmit="return false">
 				<input type="number" name="pageNumberInput" id="pageNumberInput">
 				<input type="submit" name="go" value="submit" 
-				onclick="return changePage('manual')"; style="display: none"/>
+				onclick="return choicePage();"; style="display: none"/>
 			</form>
-			<button onclick="changePage('increment', -2);">➡️</button>
+			<button onclick="turnPage(-2);"><i class="icon-right-open-outline"></i></button>
 		</div>
 		<div class="footerSettings">
-			<button id="zoomOut"></button>
-			<button id="darkTheme"></button>
-			<button id="zoomIn"></button>
+			<button id="zoomOut" onclick="changeZoom(-5);"><i class="icon-zoom-out-1"></i></button>
+			<button id="zoomIn" onclick="changeZoom(+5);"><i class="icon-zoom-in-1"></i></button>
 		</div>
 	</div>
-<script src="script.js"></script>
+<script type="text/javascript" src="surahs.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" href="assets/fonts/css/fontello.css">
 </body>

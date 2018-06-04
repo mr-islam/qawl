@@ -22,17 +22,22 @@ html {
 	height: 100%;
 }
 body { 
-	min-height: 100%; 
+	min-height: 100%;
+	margin-right: auto;
+	margin-left: auto;
 	background-color: #fdf6e3;
 }
-.wrapper {
+#wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: flex-start;
+	max-width: 50%;
+	margin-right: auto;
+	margin-left: auto;
 }
 img.resize {
-	max-width: 100%;
+	max-width: 50%;
 	height: auto;
 	background-color: transparent;
 	border: none;
@@ -47,36 +52,32 @@ div.footerControls {
 	position: fixed;
 	bottom: 0;
 	background:rgba(0,0,0,0.5);
+	height: 4%;
 
 }
 div.footerPageOptions, div.footerSettings {
 	display: flex;
 	flex-direction: row;
 }
-@keyframes exit {
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
-}
-@keyframes enter {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-img.pageEnter {
-	animation-name: enter;
-	animation-duration: 3s;
-}
-img.pageExit {
-	animation-name: exit;
-	animation-duration: 3s;
-}
 input {
 	text-align: center;
+	height: 100%;
+	background: none;
+	color: #fdf6e3;
+}
+select {
+	text-align: center;
+	height: 100%;
+	background-color: #7E7A71;
+	color: #fdf6e3;
+}
+button {
+	background:none;
+	color: #fdf6e3;
+	border-radius: 4px;
+	box-shadow: none;
+}
+button:hover {
+	background-color: #fdf6e3;
+	color: rgba(0,0,0,0.5);
 }
