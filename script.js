@@ -10,7 +10,7 @@ var userPageInputInt = parseInt(userPageInput);
 
 function changePage() { // changes page to whatevers in input
 	console.log("change page called");
-	if (userPageInputInt < 604 && userPageInputInt > -1) {
+	if (userPageInputInt < 604 && userPageInputInt > -1) { //ensures posible page
 		if (userPageInputInt % 2 === 0) {
 			leftPageNumber = userPageInputInt;
 			rightPageNumber = leftPageNumber - 1;
@@ -24,17 +24,9 @@ function changePage() { // changes page to whatevers in input
 	}
 }
 function choicePage() {
-	var userPageInput = document.getElementById("pageNumberInput").value;
-	var userPageInputInt = parseInt(userPageInput);
-	if (userPageInputInt % 2 === 0) { // this and below is repeated changePage()…
-		leftPageNumber = userPageInputInt;
-		rightPageNumber = leftPageNumber - 1;
-	} else {
-		rightPageNumber = userPageInputInt;
-		leftPageNumber = parseInt(rightPageNumber) + 1;
-	}
-	localStorage.setItem("rightPageNumberStored", rightPageNumber);
-	updatePageView();
+	userPageInput = document.getElementById("pageNumberInput").value;
+	userPageInputInt = parseInt(userPageInput)
+	changePage();
 }
 function turnPage(increment) {
 	userPageInputInt += parseInt(increment);
@@ -43,16 +35,14 @@ function turnPage(increment) {
 function selectSurah() { // working for even pages, not odd
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);
 	userPageInputInt = selectedSurah;
-	console.log(selectedSurah);
-	console.log(userPageInputInt);
 	changePage();
 }
 function changeZoom(increment) {
 	var currentZoom = parseInt(localStorage.getItem("currentZoomStored")) || 100;
 	currentZoom += increment;
 	console.log("zoom="+currentZoom);
-	if (currentZoom <= 100) {
-		document.body.style.width = 100 + "%";
+	if (currentZoom <= 100) { //zoomout and in work better respectively with a different
+		document.body.style.width = 100 + "%"; // ^parent element being styled each time
 		document.getElementById("wrapper").style["max-width"] = currentZoom + "%";
 	} else if (currentZoom > 100) {
 		document.body.style.width = currentZoom + "%";
@@ -66,9 +56,9 @@ function updatePageView() {
 	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
 }
 
+// initialization
 updatePageView(); //resume reading from last page
 changeZoom(0); //to get last zoom set from storage
-
 (function() { // fills in <select> with values from surahs.js
     var ele = document.getElementById("surahSelect");
     for (let i = 0; i < surahs.length; i++) {
