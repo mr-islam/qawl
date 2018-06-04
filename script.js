@@ -66,10 +66,10 @@ function updatePageView() {
 	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
 }
 
-updatePageView(); //resume reading from last place
-changeZoom(0); //to get last zoom set
+updatePageView(); //resume reading from last page
+changeZoom(0); //to get last zoom set from storage
 
-(function() { // fills in <select> from surahs.js
+(function() { // fills in <select> with values from surahs.js
     var ele = document.getElementById("surahSelect");
     for (let i = 0; i < surahs.length; i++) {
         ele.innerHTML = ele.innerHTML +
