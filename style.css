@@ -52,6 +52,7 @@ div.footerControls {
 	position: fixed;
 	bottom: 0;
 	background:rgba(0,0,0,0.5);
+	height: 4%;
 
 }
 div.footerPageOptions, div.footerSettings {
@@ -62,6 +63,12 @@ input {
 	text-align: center;
 	height: 100%;
 	background: none;
+	color: #fdf6e3;
+}
+select {
+	text-align: center;
+	height: 100%;
+	background-color: #7E7A71;
 	color: #fdf6e3;
 }
 button {
