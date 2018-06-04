@@ -51,7 +51,7 @@ function changeZoom(increment) {
 	var currentZoom = parseInt(localStorage.getItem("currentZoomStored")) || 100;
 	currentZoom += increment;
 	console.log("zoom="+currentZoom);
-	if (currentZoom < 100) {
+	if (currentZoom <= 100) {
 		document.body.style.width = 100 + "%";
 		document.getElementById("wrapper").style["max-width"] = currentZoom + "%";
 	} else if (currentZoom > 100) {
