@@ -13,20 +13,19 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder -mwl"
+    "dist": "electron-builder -m"
   },
   "build": {
     "appId": "com.navedislam.al-kitab",
     "productName": "al-Kitab — Desktop Qur'an Reader",
     "mac": {
       "category": "public.app-category.education",
-      "target": "dmg"
+      "target": "pkg"
     },
-    "dmg": {
-      "contents": {
-        "x": 0,
-        "y": 0
-      }
-    }
-  } 
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": ["AppImage", "snap"]
+  }} 
 }
