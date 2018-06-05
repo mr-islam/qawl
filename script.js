@@ -66,3 +66,13 @@ changeZoom(0); //to get last zoom set from storage
             '<option value="' + surahs[i]['pageGreen'] + '">' + surahs[i]['name'] + '</option>'; 
     }
 })();
+
+document.onkeydown = function(e) { //keyboard shortcuts
+  if (e.which == 37) {
+    turnPage(+2);
+  } else if (e.which == 39) {
+    turnPage(-2);
+  } else if (e.which >= 48 && e.which <= 57) {
+  	document.getElementById("pageNumberInput").focus();
+  }
+}

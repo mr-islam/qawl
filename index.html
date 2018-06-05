@@ -18,7 +18,7 @@
 		<div class="footerPageOptions">
 			<button onclick="turnPage(+2);"><i class="icon-left-open-outline"></i></button>
 			<form onsubmit="return false">
-				<input type="number" name="pageNumberInput" id="pageNumberInput">
+				<input type="number" name="pageNumberInput" onfocus="this.value=''" id="pageNumberInput">
 				<input type="submit" name="go" value="submit" 
 				onclick="return choicePage();"; style="display: none"/>
 			</form>
