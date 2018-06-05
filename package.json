@@ -1,0 +1,32 @@
+{
+  "name": "al-Kitab",
+  "version": "1.0.0",
+  "description": "Read the Holy Qur'ān whenever, wherever, however you like it with al-Kitab — the premier digital mushaf",
+  "main": "main.js",
+  "repository": "https://github.com/mr-islam/al-kitab",
+  "author": "mrislam",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "electron": "^2.0.2",
+    "electron-builder": "^20.15.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -mwl"
+  },
+  "build": {
+    "appId": "com.navedislam.al-kitab",
+    "productName": "al-Kitab — Desktop Qur'an Reader",
+    "mac": {
+      "category": "public.app-category.education",
+      "target": "dmg"
+    },
+    "dmg": {
+      "contents": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  } 
+}
