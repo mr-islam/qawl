@@ -13,7 +13,8 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder -m"
+    "dist": "electron-builder -wl",
+    "release": "electron-builder -mwl"
   },
   "build": {
     "appId": "com.navedislam.al-kitab",
