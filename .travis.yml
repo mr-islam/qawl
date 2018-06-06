@@ -43,8 +43,8 @@ script:
     fi
   
 after_script:
-  - zip -r build.zip build
-  - curl --upload-file ./build.zip https://transfer.sh/build.zip 
+  - zip -r dist.zip dist
+  - curl --upload-file ./dist.zip https://transfer.sh/dist.zip 
 
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
