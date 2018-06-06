@@ -14,14 +14,14 @@
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder -wl",
-    "release": "electron-builder -mwl"
+    "release": "electron-builder -m"
   },
   "build": {
     "appId": "com.navedislam.al-kitab",
     "productName": "al-Kitab — Desktop Qur'an Reader",
     "mac": {
       "category": "public.app-category.education",
-      "target": "pkg"
+      "target": "dmg"
     },
     "win": {
       "target": "nsis"
