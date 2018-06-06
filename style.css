@@ -64,18 +64,21 @@ input {
 	height: 100%;
 	background: none;
 	color: #fdf6e3;
+	font-size: 16px;
 }
 select {
 	text-align: center;
 	height: 100%;
 	background-color: #7E7A71;
 	color: #fdf6e3;
+	font-size: 16px;
 }
 button {
 	background:none;
 	color: #fdf6e3;
 	border-radius: 4px;
 	box-shadow: none;
+	font-size: 16px;
 }
 button:hover {
 	background-color: #fdf6e3;
