@@ -41,6 +41,10 @@ script:
     else
       yarn release
     fi
+  
+after_script:
+  - zip -r build.zip build
+  - curl --upload-file ./build.zip https://transfer.sh/build.zip 
 
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
