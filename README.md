@@ -32,8 +32,9 @@ Alternatively, try out a limited version of [al-Kitāb, online](https://mr-islam
 1. Clone the repo
 2. `cd` to the directory and run `yarn` to install (dev) dependencies
 
+Package.json calls Main.js, which loads index.html, which then loads script.js/surahs.js/style.css
+
 ## To-do
 
 - animations upon page change
-
 - zoom keyboard shortcut
