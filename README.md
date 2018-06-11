@@ -1,22 +1,39 @@
 # al-kitab
-Read the Qur'ān from wherever and whenever you want.
 
-[image]
+![Mockup](https://preview.ibb.co/iFnSk8/mockup.png)
 
 
-## Goal
-Have a simple interface that launches directly onto Surah selection. At the bottom will be a toggle for the user to select what mushaf they want (indopak or madina). Both masāhif will be from online PDF scans, which will be broken up into images (page-by-page or how? decide when facing it). Selecing a surah will load the relevant page actually, and then keyboard shortcut and beautiful floating gui will let people go the next/prev page. The application will function perfectly offline.
+--------
+
+As salāmu ´alaykum dear sisters and brothers,
+
+There are dozens of amazing Qur'ān applications on mobile devices, and some great ones online for all devices (like the awesome quran.com) — but there was nothing up-to-date that targeted desktop computers/laptops.
+
+Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
+
+* Ultra high quality images of the Medina Mushaf
+
+* Precise, user-controlled zoom settings
+
+* Go to any page of the Qur'ān by selecting a surah, "turning" the page, or directly typing in your page of choice
+
+* Do the above using keyboard shortcuts! Simply start typing your page and then press enter to go there, and then use the left/right arrow keys to flip pages quickly
+
+* Simple and focused
+
+* Longevity — this is an open-source project, so all of you are invited to give feedback, report bugs, and/or develop improvements
+
+## Install
+Head to the [releases page](https://github.com/mr-islam/al-kitab/releases).
+
+Alternatively, try out a limited version of [al-Kitāb, online](https://mr-islam.github.io/al-kitab/) — with a lower quality mushaf for faster loading. This is just so you can give it a try; the real experience is on the desktop app!
+
+## Dev
+1. Clone the repo
+2. `cd` to the directory and run `yarn` to install (dev) dependencies
 
 ## To-do
 
-- packaging
-	- get the electtron structure in here and see if it runs
-		- branch correctly!
-	- use the build config from test, but also add icons
-	- fill in package.json
-	- package
-	- post on Reddit, producthunt
+- animations upon page change
 
-- get the gh-pages branch up to date with feature commits
-
-- animations
+- zoom keyboard shortcut
