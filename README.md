@@ -19,22 +19,39 @@ Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
 
 * Do the above using keyboard shortcuts! Simply start typing your page and then press enter to go there, and then use the left/right arrow keys to flip pages quickly
 
-* Simple and focused
+* Restart reading from exactly where you left-off between app restarts
+
+* Simple and focused to allow you to be the same!
 
 * Longevity — this is an open-source project, so all of you are invited to give feedback, report bugs, and/or develop improvements
 
 ## Install
 Head to the [releases page](https://github.com/mr-islam/al-kitab/releases).
 
-Alternatively, try out a limited version of [al-Kitāb, online](https://mr-islam.github.io/al-kitab/) — with a lower quality mushaf for faster loading. This is just so you can give it a try; the real experience is on the desktop app!
+Alternatively, try out a limited version of [al-Kitāb, online](https://mr-islam.github.io/al-kitab/) — 
+with a lower quality mushaf. This is just so you can give it a try; 
+the real experience is on the desktop app!
 
 ## Dev
 1. Clone the repo
-2. `cd` to the directory and run `yarn` to install (dev) dependencies
+2. `cd` to the directory 
+3. Run `yarn` to install (dev) dependencies
+4. `yarn start` to run the app locally
 
-Package.json calls Main.js, which loads index.html, which then loads script.js/surahs.js/style.css
+**Structure**: `Package.json` calls `Main.js`, which loads `index.html`, 
+which then loads `script.js`/`surahs.js`/`style.css` || Or, simply start the sequence from 
+`index.html` onwards by launching it in a web browser.
+
+**Packaging**: Linux and Windows was done on my personal Linux machine using `yarn dist`; 
+packaging Mac attempted using Travis and `yarn release`.
 
 ## To-do
 
+- **ASAP**: test packages on Mac and Windows… (I only have Linux!)
+
 - animations upon page change
-- zoom keyboard shortcut
+- zoom keyboard shortcuts
+- Marketing
+
+- remove unnecesssary parts of electron to trim app size 
+  - use Juli engine? electrino?
