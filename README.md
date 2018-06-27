@@ -55,6 +55,8 @@ packaging Mac attempted using Travis and `yarn release`.
   - only issue: if they are in a long surah they will be taken to it's beginning…
 - animations upon page change
   - if too complex, just make a fade in/out box on the left/right respective of page depending on page change saying the new page and showing an arrow
+- bookmarks feature
+  - entails small button to make/unmake bookmark, a dropdown to visit saved bmarks, some array in localstorage
 - Marketing
   - reach out on twitter, publications, reddit
 
