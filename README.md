@@ -54,7 +54,9 @@ packaging Mac attempted using Travis and `yarn release`.
   - by comparing current page using if-statements to the page definitons from `surahs.js`
   - only issue: if they are in a long surah they will be taken to it's beginning…
 - animations upon page change
+  - if too complex, just make a fade in/out box on the left/right respective of page depending on page change saying the new page and showing an arrow
 - Marketing
+  - reach out on twitter, publications, reddit
 
 - remove unnecesssary parts of electron to trim app size 
   - use Juli engine? electrino?
