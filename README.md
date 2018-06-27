@@ -49,8 +49,11 @@ packaging Mac attempted using Travis and `yarn release`.
 
 - **ASAP**: test packages on Mac and Windows… (I only have Linux!)
 
-- animations upon page change
 - zoom keyboard shortcuts
+- button to launch current surah on quran.com (allowing easy access to translations/recitations)
+  - by comparing current page using if-statements to the page definitons from `surahs.js`
+  - only issue: if they are in a long surah they will be taken to it's beginning…
+- animations upon page change
 - Marketing
 
 - remove unnecesssary parts of electron to trim app size 
