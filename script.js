@@ -55,6 +55,19 @@ function updatePageView() {
 	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
 	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
 }
+function openOnQuranCom() {
+	for (var i = surahs.length - 1; i >= 0; i--) {
+		if (userPageInputInt >= surahs[i]['pageGreen']) {
+			console.log(userPageInputInt);
+			console.log(surahs[i]['pageGreen'])
+			console.log(surahs[i])
+			console.log(i);
+			console.log('https://www.quran.com/' + parseInt(i+1), '_blank');
+			window.open('https://www.quran.com/' + parseInt(i+1), '_blank');
+			return
+		}
+	}
+}
 
 // initialization
 updatePageView(); //resume reading from last page
@@ -63,8 +76,8 @@ changeZoom(0); //to get last zoom set from storage
     var ele = document.getElementById("surahSelect");
     for (let i = 0; i < surahs.length; i++) {
         ele.innerHTML = ele.innerHTML +
-            '<option value="' + surahs[i]['pageGreen'] + '">' + 
-            parseInt(i+1) + '. ' + surahs[i]['name'] + '</option>'; 
+            '<option value="' + surahs[i]['pageGreen'] + '">' +
+            parseInt(i+1) + '. ' + surahs[i]['name'] + '</option>';
     }
 })();
 
