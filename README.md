@@ -49,6 +49,9 @@ packaging Mac attempted using Travis and `yarn release`.
 
 ## To-do
 
+- **fix now**: int classes are conflicting and switching between page change methods don't work sometimes…
+  - determine causes by testing, and clean the code to fix bug
+
 - **ASAP**: test packages on Mac and Windows… (I only have Linux!)
 
 - zoom keyboard shortcuts
