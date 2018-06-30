@@ -213,7 +213,7 @@ var surahs = [
 	},
 	{
 		"name": "al-Qamar",
-		"pageGreen": 428
+		"pageGreen": 528
 	},
 	{
 		"name": "ar-Rahmān",
