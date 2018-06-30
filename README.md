@@ -56,12 +56,12 @@ packaging Mac attempted using Travis and `yarn release`.
 
 - **ASAP**: test packages on Mac and Windows… (I only have Linux!)
 
-- zoom keyboard shortcuts
-
 - animations upon page change
   - if too complex, just make a fade in/out box on the left/right respective of page depending on page change saying the new page and showing an arrow
 - bookmarks feature
   - entails small button to make/unmake bookmark, a dropdown to visit saved bmarks, some array in localstorage
+
+**Long-term**:
 - Marketing
   - reach out on twitter, publications, reddit
 
@@ -72,3 +72,6 @@ packaging Mac attempted using Travis and `yarn release`.
 - button to launch current surah on quran.com (allowing easy access to translations/recitations)
   - by comparing current page using if-statements to the page definitons from `surahs.js`
   - only issue: if they are in a long surah they will be taken to it's beginning… at least quran.com allows easy surah navigation
+  
+- *abandoned*: zoom keyboard shortcuts
+  - browser zoom shouldn't be overridden, really messy on ff and chrome
