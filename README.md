@@ -1,6 +1,6 @@
 # al-kitab
 
-![Mockup](https://preview.ibb.co/iFnSk8/mockup.png)
+![screenshot](https://preview.ibb.co/iFnSk8/mockup.png)
 
 
 --------
@@ -24,6 +24,8 @@ Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
 * Simple and focused to allow you to be the same!
 
 * Longevity — this is an open-source project, so all of you are invited to give feedback, report bugs, and/or develop improvements
+
+* *Latest*: With one click of a button, open the current surah on Quran.com to benefit from audio recitations and translations.
 
 ## Install
 Head to the [releases page](https://github.com/mr-islam/al-kitab/releases).
@@ -55,9 +57,7 @@ packaging Mac attempted using Travis and `yarn release`.
 - **ASAP**: test packages on Mac and Windows… (I only have Linux!)
 
 - zoom keyboard shortcuts
-- button to launch current surah on quran.com (allowing easy access to translations/recitations)
-  - by comparing current page using if-statements to the page definitons from `surahs.js`
-  - only issue: if they are in a long surah they will be taken to it's beginning…
+
 - animations upon page change
   - if too complex, just make a fade in/out box on the left/right respective of page depending on page change saying the new page and showing an arrow
 - bookmarks feature
@@ -67,3 +67,8 @@ packaging Mac attempted using Travis and `yarn release`.
 
 - remove unnecesssary parts of electron to trim app size 
   - use Juli engine? electrino?
+  
+### Done
+- button to launch current surah on quran.com (allowing easy access to translations/recitations)
+  - by comparing current page using if-statements to the page definitons from `surahs.js`
+  - only issue: if they are in a long surah they will be taken to it's beginning… at least quran.com allows easy surah navigation
