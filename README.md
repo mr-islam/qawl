@@ -38,6 +38,8 @@ the real experience is on the desktop app!
 3. Run `yarn` to install (dev) dependencies
 4. `yarn start` to run the app locally
 
+**[Mushaf Source](https://archive.org/details/ar_Mushaf_AlMadinah_new_TruePDF)** — broken up using a terminal script
+
 **Structure**: `Package.json` calls `Main.js`, which loads `index.html`, 
 which then loads `script.js`/`surahs.js`/`style.css` || Or, simply start the sequence from 
 `index.html` onwards by launching it in a web browser.
