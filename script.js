@@ -63,7 +63,8 @@ changeZoom(0); //to get last zoom set from storage
     var ele = document.getElementById("surahSelect");
     for (let i = 0; i < surahs.length; i++) {
         ele.innerHTML = ele.innerHTML +
-            '<option value="' + surahs[i]['pageGreen'] + '">' + surahs[i]['name'] + '</option>'; 
+            '<option value="' + surahs[i]['pageGreen'] + '">' + 
+            parseInt(i+1) + '. ' + surahs[i]['name'] + '</option>'; 
     }
 })();
 
