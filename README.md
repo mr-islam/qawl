@@ -48,3 +48,9 @@ which then loads `script.js`/`surahs.js`/`style.css` || Or, simply start the seq
 
 **Packaging**: Linux and Windows was done on my personal Linux machine using `yarn dist`; 
 packaging Mac attempted using Travis and `yarn release`.
+
+### Wontfix:
+
+- Mobile devices will not be supported; there are already amazing native apps built for them which do the job very well.
+- This is meant to replicate the mushaf, so single-page view won't be supported
+  
