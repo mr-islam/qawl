@@ -87,6 +87,10 @@ document.onkeydown = function(e) { //keyboard shortcuts
   } else if (e.which == 39) {
     turnPage(-2);
   } else if (e.which >= 48 && e.which <= 57) {
-  	document.getElementById("pageNumberInput").focus();
+    document.getElementById("pageNumberInput").focus();
+  } else if (e.which == 173) {
+    changeZoom(-5);
+  } else if (e.which == 61) {
+    changeZoom(+5);
   }
 }
