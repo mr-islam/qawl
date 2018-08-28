@@ -19,7 +19,7 @@ Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
 
 * Do the above using keyboard shortcuts! Simply start typing your page and then press enter to go there, and then use the left/right arrow keys to flip pages quickly
 
-* Restart reading from exactly where you left-off between app restarts
+* Restart reading from exactly where you left-off between app restarts. And it starts lightning fast.
 
 * Simple and focused to allow you to be the same!
 
@@ -48,30 +48,3 @@ which then loads `script.js`/`surahs.js`/`style.css` || Or, simply start the seq
 
 **Packaging**: Linux and Windows was done on my personal Linux machine using `yarn dist`; 
 packaging Mac attempted using Travis and `yarn release`.
-
-## To-do
-
-- **fix now**: int classes are conflicting and switching between page change methods don't work sometimes…
-  - determine causes by testing, and clean the code to fix bug
-
-- **ASAP**: test packages on Mac and Windows… (I only have Linux!)
-
-- animations upon page change
-  - if too complex, just make a fade in/out box on the left/right respective of page depending on page change saying the new page and showing an arrow
-- bookmarks feature
-  - entails small button to make/unmake bookmark, a dropdown to visit saved bmarks, some array in localstorage
-
-**Long-term**:
-- Marketing
-  - reach out on twitter, publications, reddit
-
-- remove unnecesssary parts of electron to trim app size 
-  - use Juli engine? electrino?
-  
-### Done
-- button to launch current surah on quran.com (allowing easy access to translations/recitations)
-  - by comparing current page using if-statements to the page definitons from `surahs.js`
-  - only issue: if they are in a long surah they will be taken to it's beginning… at least quran.com allows easy surah navigation
-  
-- *abandoned*: zoom keyboard shortcuts
-  - browser zoom shouldn't be overridden, really messy on ff and chrome
