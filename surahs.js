@@ -292,7 +292,7 @@ var surahs = [
 		"pageGreen": 574
 	},
 	{
-		"name": "Muddaththir",
+		"name": "al-Muddaththir",
 		"pageGreen": 575
 	},
 	{
