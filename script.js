@@ -80,6 +80,7 @@ changeZoom(0); //get last zoom set from storage
             parseInt(i+1) + '. ' + surahs[i]['name'] + '</option>';
     }
 })();
+document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
 
 document.onkeydown = function(e) { //keyboard shortcuts
   if (e.which == 37) {
