@@ -56,12 +56,8 @@ function updatePageView() {
 	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
 }
 function openOnQuranCom() {
-	for (var i = surahs.length - 1; i >= 0; i--) {
+	for (var i = surahs.length - 1; i >= 0; i--) {  // for uses countdown, so if using >= works easily
 		if (userPageInputInt >= surahs[i]['pageGreen']) {
-			console.log(userPageInputInt); // for uses countdown, so if using >= works easily
-			console.log(surahs[i]['pageGreen'])
-			console.log(surahs[i])
-			console.log(i);
 			console.log('https://www.quran.com/' + parseInt(i+1), '_blank');
 			window.open('https://www.quran.com/' + parseInt(i+1), '_blank');
 			return
