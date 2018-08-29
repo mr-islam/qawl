@@ -15,6 +15,13 @@ function applyPage() {
 
 	localStorage.setItem("rightPageNumberStored", rightPageNumber); // save location for restart
 	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
+	
+	for (let i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
+		if (userPageInputInt <= surahs[i]['pageGreen']) {
+			var surahSelect = document.getElementById("surahSelect");
+			surahSelect.value = surahs[i-1]['pageGreen']
+		}
+	}
 }
 
 function checkPage() { // generic function called by specific user actions, gateway to applyPage
@@ -57,7 +64,7 @@ function changeZoom(increment) {
 	localStorage.setItem("currentZoomStored", currentZoom);
 }
 function openOnQuranCom() {
-	for (var i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
+	for (let i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
 		if (userPageInputInt >= surahs[i]['pageGreen']) {
 			console.log('https://www.quran.com/' + parseInt(i+1), '_blank');
 			window.open('https://www.quran.com/' + parseInt(i+1), '_blank');
@@ -68,8 +75,6 @@ function openOnQuranCom() {
 
 checkPage(); //resume reading from last page
 changeZoom(0); // set zoom same as last time
-document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
-
 (function() {
     var ele = document.getElementById("surahSelect");
     for (let i = 0; i < surahs.length; i++) {
@@ -78,6 +83,8 @@ document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputI
             parseInt(i+1) + '. ' + surahs[i]['name'] + '</option>';
     }
 })();
+document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
+
 
 document.onkeydown = function(e) {
   if (e.which == 37) {
