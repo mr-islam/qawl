@@ -9,7 +9,6 @@ userPageInput = localStorage.getItem("rightPageNumberStored") || 2;
 var userPageInputInt = parseInt(userPageInput);
 
 function changePage() { // generic function called by specific user actions
-	console.log("change page called");
 	if (userPageInputInt < 604 && userPageInputInt > -1) { // ensures possible page
 		if (userPageInputInt % 2 === 0) {
 			leftPageNumber = userPageInputInt;
@@ -19,11 +18,15 @@ function changePage() { // generic function called by specific user actions
 			leftPageNumber = parseInt(rightPageNumber) + 1;
 		}
 		localStorage.setItem("rightPageNumberStored", rightPageNumber);
-		updatePageView();
+
+		console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
+		leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
+		rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
+
 		document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
 	}
 }
-function choicePage() {
+function numberOfPage() {
 	userPageInput = document.getElementById("pageNumberInput").value;
 	userPageInputInt = parseInt(userPageInput)
 	changePage();
@@ -32,7 +35,7 @@ function turnPage(increment) {
 	userPageInputInt += parseInt(increment);
 	changePage();
 }
-function selectSurah() { // working for even pages, not odd
+function surahDropdown() { // working for even pages, not odd
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);
 	userPageInputInt = selectedSurah;
 	changePage();
@@ -50,11 +53,6 @@ function changeZoom(increment) {
 	}
 	localStorage.setItem("currentZoomStored", currentZoom);
 }
-function updatePageView() {
-	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
-	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
-	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
-}
 function openOnQuranCom() {
 	for (var i = surahs.length - 1; i >= 0; i--) {  // for uses countdown, so if using >= works easily
 		if (userPageInputInt >= surahs[i]['pageGreen']) {
@@ -66,7 +64,7 @@ function openOnQuranCom() {
 }
 
 // initialization
-updatePageView(); //resume reading from last page
+changePage(); //resume reading from last page
 changeZoom(0); //get last zoom set from storage
 (function() { //fills in <select> with values from surahs.js
     var ele = document.getElementById("surahSelect");

@@ -11,7 +11,7 @@
 	</div>
 	<div class="footerControls">
 		<div class="footerSurahSelect">
-			<select id="surahSelect" onchange="selectSurah();">
+			<select id="surahSelect" onchange="surahDropdown();">
 				<option value="">Surah</option>
 			</select>
 		</div>
@@ -20,7 +20,7 @@
 			<form onsubmit="return false">
 				<input type="number" name="pageNumberInput" onfocus="this.value=''" id="pageNumberInput">
 				<input type="submit" name="go" value="submit"
-				onclick="return choicePage();"; style="display: none"/>
+				onclick="return numberOfPage();"; style="display: none"/>
 			</form>
 			<button onclick="turnPage(-2);"><i class="icon-right-circle"></i></button>
 		</div>
