@@ -20,11 +20,11 @@ var surahs = [
 		"pageGreen": 106
 	},
 	{
-		"name": "al-An'ām",
+		"name": "al-An`ām",
 		"pageGreen": 128
 	},
 	{
-		"name": "al-A´rāf",
+		"name": "al-A`rāf",
 		"pageGreen": 151
 	},
 	{
@@ -64,7 +64,7 @@ var surahs = [
 		"pageGreen": 267
 	},
 	{
-		"name": "al-Isra'",
+		"name": "al-Isrā'",
 		"pageGreen": 282
 	},
 	{
@@ -100,7 +100,7 @@ var surahs = [
 		"pageGreen": 359
 	},
 	{
-		"name": "ash-Shu´arā",
+		"name": "ash-Shu`arā",
 		"pageGreen": 367
 	},
 	{
@@ -108,11 +108,11 @@ var surahs = [
 		"pageGreen": 377
 	},
 	{
-		"name": "al-Qasas",
+		"name": "al-Qaṣaṣ",
 		"pageGreen": 385
 	},
 	{
-		"name": "al-'Ankabūt",
+		"name": "al-`Ankabūt",
 		"pageGreen": 396
 	},
 	{
@@ -128,7 +128,7 @@ var surahs = [
 		"pageGreen": 415
 	},
 	{
-		"name": "al-Ahzāb",
+		"name": "al-Aḥzāb",
 		"pageGreen": 418
 	},
 	{
@@ -136,7 +136,7 @@ var surahs = [
 		"pageGreen": 428
 	},
 	{
-		"name": "Fātir",
+		"name": "Fāṭir",
 		"pageGreen": 434
 	},
 	{
@@ -160,11 +160,11 @@ var surahs = [
 		"pageGreen": 467
 	},
 	{
-		"name": "Fussilat",
+		"name": "Fuṣṣilat",
 		"pageGreen": 477
 	},
 	{
-		"name": "ash-Shūra",
+		"name": "ash-Shūrā",
 		"pageGreen": 483
 	},
 	{
@@ -180,19 +180,19 @@ var surahs = [
 		"pageGreen": 499
 	},
 	{
-		"name": "al-Ahqāf",
+		"name": "al-Aḥqāf",
 		"pageGreen": 502
 	},
 	{
-		"name": "Muhammad",
+		"name": "Muḥammad",
 		"pageGreen": 507
 	},
 	{
-		"name": "al-Fath",
+		"name": "al-Fatḥ",
 		"pageGreen": 511
 	},
 	{
-		"name": "al-Hujurāt",
+		"name": "al-Ḥujurāt",
 		"pageGreen": 515
 	},
 	{
@@ -204,7 +204,7 @@ var surahs = [
 		"pageGreen": 520
 	},
 	{
-		"name": "at-Tūr",
+		"name": "at-Ṭūr",
 		"pageGreen": 523
 	},
 	{
@@ -216,35 +216,35 @@ var surahs = [
 		"pageGreen": 528
 	},
 	{
-		"name": "ar-Rahmān",
+		"name": "ar-Raḥmān",
 		"pageGreen": 531
 	},
 	{
-		"name": "al-Wāqi´ah",
+		"name": "al-Wāqi`ah",
 		"pageGreen": 534
 	},
 	{
-		"name": "al-Hadīd",
+		"name": "al-Ḥadīd",
 		"pageGreen": 537
 	},
 	{
-		"name": "al-Mujādalah",
+		"name": "al-Mujādilah",
 		"pageGreen": 542
 	},
 	{
-		"name": "al-Hashr",
+		"name": "al-Ḥashr",
 		"pageGreen": 545
 	},
 	{
-		"name": "al-Mumtahanah",
+		"name": "al-Mumtaḥanah",
 		"pageGreen": 549
 	},
 	{
-		"name": "as-Saff",
+		"name": "as-Ṣaff",
 		"pageGreen": 551
 	},
 	{
-		"name": "al-Jumu´ah",
+		"name": "al-Jumu`ah",
 		"pageGreen": 553
 	},
 	{
@@ -256,11 +256,11 @@ var surahs = [
 		"pageGreen": 556
 	},
 	{
-		"name": "at-Talāq",
+		"name": "at-Ṭalāq",
 		"pageGreen": 558
 	},
 	{
-		"name": "at-Tahrīm",
+		"name": "at-Taḥrīm",
 		"pageGreen": 560
 	},
 	{
@@ -272,15 +272,15 @@ var surahs = [
 		"pageGreen": 564
 	},
 	{
-		"name": "al-Hāqqah",
+		"name": "al-Ḥāqqah",
 		"pageGreen": 566
 	},
 	{
-		"name": "al-Ma´ārij",
+		"name": "al-Ma`ārij",
 		"pageGreen": 568
 	},
 	{
-		"name": "Nūh",
+		"name": "Nūḥ",
 		"pageGreen": 570
 	},
 	{
@@ -292,7 +292,7 @@ var surahs = [
 		"pageGreen": 574
 	},
 	{
-		"name": "Muddaththir",
+		"name": "al-Muddaththir",
 		"pageGreen": 575
 	},
 	{
@@ -312,11 +312,11 @@ var surahs = [
 		"pageGreen": 582
 	},
 	{
-		"name": "an-Nāzi´āt",
+		"name": "an-Nāzi`āt",
 		"pageGreen": 583
 	},
 	{
-		"name": "´Abasa",
+		"name": "`Abasa",
 		"pageGreen": 585
 	},
 	{
@@ -324,11 +324,11 @@ var surahs = [
 		"pageGreen": 586
 	},
 	{
-		"name": "al-Infitār",
+		"name": "al-Infiṭār",
 		"pageGreen": 587
 	},
 	{
-		"name": "al-Mutaffifīn",
+		"name": "al-Muṭaffifīn",
 		"pageGreen": 587
 	},
 	{
@@ -340,11 +340,11 @@ var surahs = [
 		"pageGreen": 590
 	},
 	{
-		"name": "at-Tāriq",
+		"name": "at-Ṭāriq",
 		"pageGreen": 591
 	},
 	{
-		"name": "al-A´lā",
+		"name": "al-A`lā",
 		"pageGreen": 591
 	},
 	{
@@ -368,11 +368,11 @@ var surahs = [
 		"pageGreen": 595
 	},
 	{
-		"name": "ad-Duhā",
+		"name": "ad-Ḍuḥā",
 		"pageGreen": 596
 	},
 	{
-		"name": "ash-Sharh",
+		"name": "ash-Sharḥ",
 		"pageGreen": 596
 	},
 	{
@@ -380,7 +380,7 @@ var surahs = [
 		"pageGreen": 597
 	},
 	{
-		"name": "al-Alaq",
+		"name": "al-`Alaq",
 		"pageGreen": 597
 	},
 	{
@@ -396,7 +396,7 @@ var surahs = [
 		"pageGreen": 599
 	},
 	{
-		"name": "al-´Ãdiyāt",
+		"name": "al-`Ādiyāt",
 		"pageGreen": 599
 	},
 	{
@@ -424,7 +424,7 @@ var surahs = [
 		"pageGreen": 602
 	},
 	{
-		"name": "al-Mā´ūn",
+		"name": "al-Mā`ūn",
 		"pageGreen": 602
 	},
 	{
@@ -436,7 +436,7 @@ var surahs = [
 		"pageGreen": 603
 	},
 	{
-		"name": "an-Nasr",
+		"name": "an-Naṣr",
 		"pageGreen": 603
 	},
 	{
@@ -444,7 +444,7 @@ var surahs = [
 		"pageGreen": 603
 	},
 	{
-		"name": "al-Ikhlās",
+		"name": "al-Ikhlāṣ",
 		"pageGreen": 604
 	},
 	{
