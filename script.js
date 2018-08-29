@@ -8,7 +8,16 @@ var userPageInput = document.getElementById("pageNumberInput").value;
 userPageInput = localStorage.getItem("rightPageNumberStored") || 2;
 var userPageInputInt = parseInt(userPageInput);
 
-function changePage() { // generic function called by specific user actions
+function applyPage() {
+	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
+	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
+	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
+
+	localStorage.setItem("rightPageNumberStored", rightPageNumber); // save location for restart
+	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
+}
+
+function checkPage() { // generic function called by specific user actions, gateway to applyPage
 	if (userPageInputInt < 604 && userPageInputInt > -1) { // ensures possible page
 		if (userPageInputInt % 2 === 0) {
 			leftPageNumber = userPageInputInt;
@@ -17,28 +26,22 @@ function changePage() { // generic function called by specific user actions
 			rightPageNumber = userPageInputInt;
 			leftPageNumber = parseInt(rightPageNumber) + 1;
 		}
-		localStorage.setItem("rightPageNumberStored", rightPageNumber);
-
-		console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
-		leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
-		rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
-
-		document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
+		applyPage();
 	}
 }
 function numberOfPage() {
 	userPageInput = document.getElementById("pageNumberInput").value;
 	userPageInputInt = parseInt(userPageInput)
-	changePage();
+	checkPage();
 }
 function turnPage(increment) {
 	userPageInputInt += parseInt(increment);
-	changePage();
+	checkPage();
 }
 function surahDropdown() { // working for even pages, not odd
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);
 	userPageInputInt = selectedSurah;
-	changePage();
+	checkPage();
 }
 function changeZoom(increment) {
 	var currentZoom = parseInt(localStorage.getItem("currentZoomStored")) || 100;
@@ -54,7 +57,7 @@ function changeZoom(increment) {
 	localStorage.setItem("currentZoomStored", currentZoom);
 }
 function openOnQuranCom() {
-	for (var i = surahs.length - 1; i >= 0; i--) {  // for uses countdown, so if using >= works easily
+	for (var i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
 		if (userPageInputInt >= surahs[i]['pageGreen']) {
 			console.log('https://www.quran.com/' + parseInt(i+1), '_blank');
 			window.open('https://www.quran.com/' + parseInt(i+1), '_blank');
@@ -63,10 +66,11 @@ function openOnQuranCom() {
 	}
 }
 
-// initialization
-changePage(); //resume reading from last page
-changeZoom(0); //get last zoom set from storage
-(function() { //fills in <select> with values from surahs.js
+checkPage(); //resume reading from last page
+changeZoom(0); // set zoom same as last time
+document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
+
+(function() {
     var ele = document.getElementById("surahSelect");
     for (let i = 0; i < surahs.length; i++) {
         ele.innerHTML = ele.innerHTML +
@@ -74,9 +78,8 @@ changeZoom(0); //get last zoom set from storage
             parseInt(i+1) + '. ' + surahs[i]['name'] + '</option>';
     }
 })();
-document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
 
-document.onkeydown = function(e) { //keyboard shortcuts
+document.onkeydown = function(e) {
   if (e.which == 37) {
     turnPage(+2);
   } else if (e.which == 39) {
