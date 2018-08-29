@@ -5,34 +5,30 @@
 
 --------
 
-As salāmu ´alaykum dear sisters and brothers,
-
 There are dozens of amazing Qur'ān applications on mobile devices, and some great ones online for all devices (like the awesome quran.com) — but there was nothing up-to-date that targeted desktop computers/laptops.
 
 Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
 
-* Ultra high quality images of the Medina Mushaf
+* Ultra **high-quality** images of the Medina Mushaf millions are familiar with
 
-* Precise, user-controlled zoom settings
+* Precise, user-controlled **zoom**
 
-* Go to any page of the Qur'ān by selecting a surah, "turning" the page, or directly typing in your page of choice
+* Easy **navigation** of the Qur'ān by selecting a surah, "turning" the page, or directly typing in your page of choice
 
-* Do the above using keyboard shortcuts! Simply start typing your page and then press enter to go there, and then use the left/right arrow keys to flip pages quickly
+* **Keyboard shortcuts**! Simply start typing your page and then press enter to go there, and then use the left/right arrow keys to flip pages quickly
 
-* Restart reading from exactly where you left-off between app restarts. And it starts lightning fast.
+* Launch al-Kitab **lightning fast**, and restart reading from exactly where you left-off
 
-* Simple and focused to allow you to be the same!
+* **Longevity** — this is an open-source project, so all of you are invited to give feedback, report bugs, and/or develop improvements
 
-* Longevity — this is an open-source project, so all of you are invited to give feedback, report bugs, and/or develop improvements
+* With one click of a button, open the current surah on Quran.com to benefit from **audio recitations and translations**
 
-* *Latest*: With one click of a button, open the current surah on Quran.com to benefit from audio recitations and translations.
+* Bookmarks, notes and more coming soon — God willing
 
-## Install
-Head to the [releases page](https://github.com/mr-islam/al-kitab/releases).
+## Usage
+Head to the [releases page](https://github.com/mr-islam/al-kitab/releases) and choose the appropriate download for your operating system. Install and benefit!
 
-Alternatively, try out a limited version of [al-Kitāb, online](https://mr-islam.github.io/al-kitab/) — 
-with a lower quality mushaf. This is just so you can give it a try; 
-the real experience is on the desktop app!
+Alternatively, try out a limited version of [al-Kitāb, online](https://mr-islam.github.io/al-kitab/) — this has a lower quality mushaf to make it load faster.
 
 ## Dev
 1. Clone the repo
@@ -40,17 +36,15 @@ the real experience is on the desktop app!
 3. Run `yarn` to install (dev) dependencies
 4. `yarn start` to run the app locally
 
-**[Mushaf Source](https://archive.org/details/ar_Mushaf_AlMadinah_new_TruePDF)** — broken up using a terminal script
+**[Mushaf Source](https://archive.org/details/ar_Mushaf_AlMadinah_new_TruePDF)** — broken up using a terminal script with 
 
-**Structure**: `Package.json` calls `Main.js`, which loads `index.html`, 
-which then loads `script.js`/`surahs.js`/`style.css` || Or, simply start the sequence from 
-`index.html` onwards by launching it in a web browser.
+**Structure**: `Package.json` calls `Main.js`, which loads `index.html`, which then loads `script.js`/`surahs.js`/`style.css`. Or, simply start the sequence from `index.html` onwards by launching it in a web browser.
 
 **Packaging**: Linux and Windows was done on my personal Linux machine using `yarn dist`; 
 packaging Mac attempted using Travis and `yarn release`.
 
-### Wontfix:
+## Decisions:
 
-- Mobile devices will not be supported; there are already amazing native apps built for them which do the job very well.
+- Mobile devices will not be supported; there are already amazing native apps built for them 
 - This is meant to replicate the mushaf, so single-page view won't be supported
   
