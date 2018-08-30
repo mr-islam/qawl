@@ -48,12 +48,12 @@ div.footerControls {
 	flex-wrap: wrap;
 	justify-content: space-around;
 
-	width: 100%;
+	width: 97.25%;
 	position: fixed;
 	bottom: 0;
-	background:rgba(0,0,0,0.5);
-	height: 4%;
-
+	background:rgba(0,0,0,0.7);
+	height: 5%;
+	padding-right: 2.75%;
 }
 div.footerPageOptions, div.footerSettings {
 	display: flex;
@@ -65,22 +65,30 @@ input {
 	background: none;
 	color: #fdf6e3;
 	font-size: 16px;
+	width: 200px;
+	border: none;
 }
 select {
 	text-align: center;
+	text-align-last:center;
+	border: none;
 	height: 100%;
-	background-color: #7E7A71;
+	background-color: transparent;
 	color: #fdf6e3;
 	font-size: 16px;
+}
+option {
+	color: #3b321a;
+	background-color: transparent;
 }
 button {
 	background:none;
 	color: #fdf6e3;
-	border-radius: 4px;
 	box-shadow: none;
-	font-size: 16px;
+	font-size: 17px;
+	border: none;
 }
 button:hover {
-	background-color: #fdf6e3;
-	color: rgba(0,0,0,0.5);
+	background-color: #fdf6e3c4;
+	color: rgba(0,0,0,0.6);
 }

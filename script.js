@@ -45,10 +45,12 @@ function numberOfPage() {
 	updateDropdown();
 }
 function turnPage(increment) {
-	userPageInputInt += parseInt(increment);
-	checkPage();
-	applyPage();
-	updateDropdown();
+	if (userPageInputInt + increment > 0 && userPageInputInt + increment < 605) {
+		userPageInputInt += parseInt(increment);
+		checkPage();
+		applyPage();
+		updateDropdown();
+	} // else {error tooltip}
 }
 function surahDropdown() { // working for even pages, not odd
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);
