@@ -8,9 +8,26 @@ var userPageInput = document.getElementById("pageNumberInput").value;
 userPageInput = localStorage.getItem("rightPageNumberStored") || 2;
 var userPageInputInt = parseInt(userPageInput);
 
-function changePage() { // generic function called by specific user actions
-	console.log("change page called");
-	if (userPageInputInt < 604 && userPageInputInt > -1) { // ensures possible page
+function applyPage() {
+	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
+	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
+	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
+
+	localStorage.setItem("rightPageNumberStored", rightPageNumber); // save location for restart
+	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
+}
+
+function updateDropdown() {
+	for (let i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
+		if (userPageInputInt < surahs[i]['pageGreen']) {
+			var surahSelect = document.getElementById("surahSelect");
+			surahSelect.value = surahs[i-1]['pageGreen']
+		}
+	}
+}
+
+function checkPage() { // generic function called by specific user actions, gateway to applyPage
+	if (userPageInputInt < 605 && userPageInputInt > -1) { // ensures possible page
 		if (userPageInputInt % 2 === 0) {
 			leftPageNumber = userPageInputInt;
 			rightPageNumber = leftPageNumber - 1;
@@ -18,24 +35,28 @@ function changePage() { // generic function called by specific user actions
 			rightPageNumber = userPageInputInt;
 			leftPageNumber = parseInt(rightPageNumber) + 1;
 		}
-		localStorage.setItem("rightPageNumberStored", rightPageNumber);
-		updatePageView();
-		document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
 	}
 }
-function choicePage() {
+function numberOfPage() {
 	userPageInput = document.getElementById("pageNumberInput").value;
 	userPageInputInt = parseInt(userPageInput)
-	changePage();
+	checkPage();
+	applyPage();
+	updateDropdown();
 }
 function turnPage(increment) {
-	userPageInputInt += parseInt(increment);
-	changePage();
+	if (userPageInputInt + increment > 0 && userPageInputInt + increment < 605) {
+		userPageInputInt += parseInt(increment);
+		checkPage();
+		applyPage();
+		updateDropdown();
+	} // else {error tooltip}
 }
-function selectSurah() { // working for even pages, not odd
+function surahDropdown() { // working for even pages, not odd
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);
 	userPageInputInt = selectedSurah;
-	changePage();
+	checkPage();
+	applyPage();
 }
 function changeZoom(increment) {
 	var currentZoom = parseInt(localStorage.getItem("currentZoomStored")) || 100;
@@ -50,18 +71,9 @@ function changeZoom(increment) {
 	}
 	localStorage.setItem("currentZoomStored", currentZoom);
 }
-function updatePageView() {
-	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
-	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
-	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
-}
 function openOnQuranCom() {
-	for (var i = surahs.length - 1; i >= 0; i--) {
+	for (let i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
 		if (userPageInputInt >= surahs[i]['pageGreen']) {
-			console.log(userPageInputInt); // for uses countdown, so if using >= works easily
-			console.log(surahs[i]['pageGreen'])
-			console.log(surahs[i])
-			console.log(i);
 			console.log('https://www.quran.com/' + parseInt(i+1), '_blank');
 			window.open('https://www.quran.com/' + parseInt(i+1), '_blank');
 			return
@@ -69,10 +81,9 @@ function openOnQuranCom() {
 	}
 }
 
-// initialization
-updatePageView(); //resume reading from last page
-changeZoom(0); //get last zoom set from storage
-(function() { //fills in <select> with values from surahs.js
+applyPage(); //resume reading from last page
+changeZoom(0); // set zoom same as last time
+(function() {
     var ele = document.getElementById("surahSelect");
     for (let i = 0; i < surahs.length; i++) {
         ele.innerHTML = ele.innerHTML +
@@ -82,7 +93,7 @@ changeZoom(0); //get last zoom set from storage
 })();
 document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
 
-document.onkeydown = function(e) { //keyboard shortcuts
+document.onkeydown = function(e) {
   if (e.which == 37) {
     turnPage(+2);
   } else if (e.which == 39) {

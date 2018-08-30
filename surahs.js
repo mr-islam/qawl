@@ -400,7 +400,7 @@ var surahs = [
 		"pageGreen": 599
 	},
 	{
-		"name": "al-Qāriyah",
+		"name": "al-Qāri`ah",
 		"pageGreen": 600
 	},
 	{
