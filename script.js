@@ -19,7 +19,7 @@ function applyPage() {
 
 function updateDropdown() {
 	for (let i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
-		if (userPageInputInt <= surahs[i]['pageGreen']) {
+		if (userPageInputInt < surahs[i]['pageGreen']) {
 			var surahSelect = document.getElementById("surahSelect");
 			surahSelect.value = surahs[i-1]['pageGreen']
 		}
