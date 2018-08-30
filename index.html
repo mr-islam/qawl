@@ -12,13 +12,13 @@
 	<div class="footerControls">
 		<div class="footerSurahSelect">
 			<select id="surahSelect" onchange="surahDropdown();">
-				<option value="">Surah</option>
+				<option value="">Sūrah…</option>
 			</select>
 		</div>
 		<div class="footerPageOptions">
 			<button onclick="turnPage(+2);"><i class="icon-left-circle"></i></button>
 			<form onsubmit="return false">
-				<input type="number" name="pageNumberInput" onfocus="this.value=''" id="pageNumberInput">
+				<input type="number" name="pageNumberInput" onfocus="this.value=''" id="pageNumberInput" max="604" min="1">
 				<input type="submit" name="go" value="submit"
 				onclick="return numberOfPage();"; style="display: none"/>
 			</form>
