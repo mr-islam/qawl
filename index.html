@@ -11,31 +11,18 @@
 	</div>
 	<div class="footerControls">
 		<div class="footerSurahSelect">
-<<<<<<< HEAD
 			<select id="surahSelect" onchange="selectSurah();">
-				<option value="">Select Surah</option>
-			</select>
-		</div>
-		<div class="footerPageOptions">
-			<button onclick="turnPage(+2);" class="icon-left-circle"></button>
-=======
-			<select id="surahSelect" onchange="surahDropdown();">
 				<option value="">Sūrah…</option>
 			</select>
 		</div>
 		<div class="footerPageOptions">
-			<button onclick="turnPage(+2);"><i class="icon-left-circle"></i></button>
->>>>>>> beta
+			<button onclick="turnPage(+2);" class="icon-left-circle"></button>
 			<form onsubmit="return false">
-				<input type="number" name="pageNumberInput" onfocus="this.value=''" id="pageNumberInput" max="604" min="1">
+				<input type="number" name="pageNumberInput" onfocus="this.value=''" onkeyup="checkDigits(this);" id="pageNumberInput" max="604" min="1">
 				<input type="submit" name="go" value="submit"
 				onclick="return numberOfPage();"; style="display: none"/>
 			</form>
-<<<<<<< HEAD
 			<button onclick="turnPage(-2);" class="icon-right-circle"></button>
-=======
-			<button onclick="turnPage(-2);"><i class="icon-right-circle"></i></button>
->>>>>>> beta
 		</div>
 		<div class="footerSettings">
 			<button id="openOnQuranCom" onclick="openOnQuranCom();" class="icon-globe"></button>
