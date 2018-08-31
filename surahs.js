@@ -1,458 +1,458 @@
 var surahs = [
 	{
-		"name": "1. al-Fātihah",
+		"name": "al-Fātihah",
 		"pageGreen": 1
 	},
 	{
-		"name": "2. al-Baqarah",
+		"name": "al-Baqarah",
 		"pageGreen": 2
 	},
 	{
-		"name": "3. Ãl-´Imrān",
+		"name": "Ãl-´Imrān",
 		"pageGreen": 50
 	},
 	{
-		"name": "4. an-Nisā'",
+		"name": "an-Nisā'",
 		"pageGreen": 77
 	},
 	{
-		"name": "5. al-Mā'idah",
+		"name": "al-Mā'idah",
 		"pageGreen": 106
 	},
 	{
-		"name": "6. al-An'ām",
+		"name": "al-An`ām",
 		"pageGreen": 128
 	},
 	{
-		"name": "7. al-A´rāf",
+		"name": "al-A`rāf",
 		"pageGreen": 151
 	},
 	{
-		"name": "8. al-Anfāl",
+		"name": "al-Anfāl",
 		"pageGreen": 177
 	},
 	{
-		"name": "9. at-Taubah",
+		"name": "at-Taubah",
 		"pageGreen": 187
 	},
 	{
-		"name": "10. Yūnus",
+		"name": "Yūnus",
 		"pageGreen": 208
 	},
 	{
-		"name": "11. Hūd",
+		"name": "Hūd",
 		"pageGreen": 221
 	},
 	{
-		"name": "12. Yūsuf",
+		"name": "Yūsuf",
 		"pageGreen": 235
 	},
 	{
-		"name": "13. ar-Ra´d",
+		"name": "ar-Ra´d",
 		"pageGreen": 249
 	},
 	{
-		"name": "14. Ibrāhim",
+		"name": "Ibrāhim",
 		"pageGreen": 255
 	},
 	{
-		"name": "15. al-Hijr",
+		"name": "al-Hijr",
 		"pageGreen": 262
 	},
 	{
-		"name": "16. an-Nahl",
+		"name": "an-Nahl",
 		"pageGreen": 267
 	},
 	{
-		"name": "17. al-Isra'",
+		"name": "al-Isrā'",
 		"pageGreen": 282
 	},
 	{
-		"name": "18. al-Kahf",
+		"name": "al-Kahf",
 		"pageGreen": 293
 	},
 	{
-		"name": "19. Maryam",
+		"name": "Maryam",
 		"pageGreen": 305
 	},
 	{
-		"name": "20. Tā-Hā",
+		"name": "Tā-Hā",
 		"pageGreen": 312
 	},
 	{
-		"name": "21. al-Anbiyā'",
+		"name": "al-Anbiyā'",
 		"pageGreen": 322
 	},
 	{
-		"name": "22. al-Hajj",
+		"name": "al-Hajj",
 		"pageGreen": 332
 	},
 	{
-		"name": "23. al-Mu'minūn",
+		"name": "al-Mu'minūn",
 		"pageGreen": 342
 	},
 	{
-		"name": "24. an-Nūr",
+		"name": "an-Nūr",
 		"pageGreen": 350
 	},
 	{
-		"name": "25. al-Furqān",
+		"name": "al-Furqān",
 		"pageGreen": 359
 	},
 	{
-		"name": "26. ash-Shu´arā",
+		"name": "ash-Shu`arā",
 		"pageGreen": 367
 	},
 	{
-		"name": "27. an-Naml",
+		"name": "an-Naml",
 		"pageGreen": 377
 	},
 	{
-		"name": "28. al-Qasas",
+		"name": "al-Qaṣaṣ",
 		"pageGreen": 385
 	},
 	{
-		"name": "29. al-'Ankabūt",
+		"name": "al-`Ankabūt",
 		"pageGreen": 396
 	},
 	{
-		"name": "30. ar-Rūm",
+		"name": "ar-Rūm",
 		"pageGreen": 404
 	},
 	{
-		"name": "31. Luqmān",
+		"name": "Luqmān",
 		"pageGreen": 411
 	},
 	{
-		"name": "32. as-Sajdah",
+		"name": "as-Sajdah",
 		"pageGreen": 415
 	},
 	{
-		"name": "33. al-Ahzāb",
+		"name": "al-Aḥzāb",
 		"pageGreen": 418
 	},
 	{
-		"name": "34. Saba'",
+		"name": "Saba'",
 		"pageGreen": 428
 	},
 	{
-		"name": "35. Fātir",
+		"name": "Fāṭir",
 		"pageGreen": 434
 	},
 	{
-		"name": "36. Yā-Sīn",
+		"name": "Yā-Sīn",
 		"pageGreen": 440
 	},
 	{
-		"name": "37. as-Sāffāt",
+		"name": "as-Sāffāt",
 		"pageGreen": 446
 	},
 	{
-		"name": "38. Sād",
+		"name": "Sād",
 		"pageGreen": 453
 	},
 	{
-		"name": "39. az-Zumar",
+		"name": "az-Zumar",
 		"pageGreen": 458
 	},
 	{
-		"name": "40. Ghāfir",
+		"name": "Ghāfir",
 		"pageGreen": 467
 	},
 	{
-		"name": "41. Fussilat",
+		"name": "Fuṣṣilat",
 		"pageGreen": 477
 	},
 	{
-		"name": "42. ash-Shūra",
+		"name": "ash-Shūrā",
 		"pageGreen": 483
 	},
 	{
-		"name": "43. az-Zukhruf",
+		"name": "az-Zukhruf",
 		"pageGreen": 489
 	},
 	{
-		"name": "44. ad-Dukhān",
+		"name": "ad-Dukhān",
 		"pageGreen": 496
 	},
 	{
-		"name": "45. al-Jāthiyah",
+		"name": "al-Jāthiyah",
 		"pageGreen": 499
 	},
 	{
-		"name": "46. al-Ahqāf",
+		"name": "al-Aḥqāf",
 		"pageGreen": 502
 	},
 	{
-		"name": "47. Muhammad",
+		"name": "Muḥammad",
 		"pageGreen": 507
 	},
 	{
-		"name": "48. al-Fath",
+		"name": "al-Fatḥ",
 		"pageGreen": 511
 	},
 	{
-		"name": "49. al-Hujurāt",
+		"name": "al-Ḥujurāt",
 		"pageGreen": 515
 	},
 	{
-		"name": "50. Qāf",
+		"name": "Qāf",
 		"pageGreen": 518
 	},
 	{
-		"name": "51. adh-Dhāriyāt",
+		"name": "adh-Dhāriyāt",
 		"pageGreen": 520
 	},
 	{
-		"name": "52. at-Tūr",
+		"name": "at-Ṭūr",
 		"pageGreen": 523
 	},
 	{
-		"name": "53. an-Najm",
+		"name": "an-Najm",
 		"pageGreen": 526
 	},
 	{
-		"name": "54. al-Qamar",
-		"pageGreen": 428
+		"name": "al-Qamar",
+		"pageGreen": 528
 	},
 	{
-		"name": "55. ar-Rahmān",
+		"name": "ar-Raḥmān",
 		"pageGreen": 531
 	},
 	{
-		"name": "56. al-Wāqi´ah",
+		"name": "al-Wāqi`ah",
 		"pageGreen": 534
 	},
 	{
-		"name": "57. al-Hadīd",
+		"name": "al-Ḥadīd",
 		"pageGreen": 537
 	},
 	{
-		"name": "58. al-Mujādalah",
+		"name": "al-Mujādilah",
 		"pageGreen": 542
 	},
 	{
-		"name": "59. al-Hashr",
+		"name": "al-Ḥashr",
 		"pageGreen": 545
 	},
 	{
-		"name": "60. al-Mumtahanah",
+		"name": "al-Mumtaḥanah",
 		"pageGreen": 549
 	},
 	{
-		"name": "61. as-Saff",
+		"name": "as-Ṣaff",
 		"pageGreen": 551
 	},
 	{
-		"name": "62. al-Jumu´ah",
+		"name": "al-Jumu`ah",
 		"pageGreen": 553
 	},
 	{
-		"name": "63. al-Munāfiqūn",
+		"name": "al-Munāfiqūn",
 		"pageGreen": 554
 	},
 	{
-		"name": "64. at-Taghābun",
+		"name": "at-Taghābun",
 		"pageGreen": 556
 	},
 	{
-		"name": "65. at-Talāq",
+		"name": "at-Ṭalāq",
 		"pageGreen": 558
 	},
 	{
-		"name": "66. at-Tahrīm",
+		"name": "at-Taḥrīm",
 		"pageGreen": 560
 	},
 	{
-		"name": "67. al-Mulk",
+		"name": "al-Mulk",
 		"pageGreen": 562
 	},
 	{
-		"name": "68. al-Qalam",
+		"name": "al-Qalam",
 		"pageGreen": 564
 	},
 	{
-		"name": "69. al-Hāqqah",
+		"name": "al-Ḥāqqah",
 		"pageGreen": 566
 	},
 	{
-		"name": "70. al-Ma´ārij",
+		"name": "al-Ma`ārij",
 		"pageGreen": 568
 	},
 	{
-		"name": "71. Nūh",
+		"name": "Nūḥ",
 		"pageGreen": 570
 	},
 	{
-		"name": "72. al-Jinn",
+		"name": "al-Jinn",
 		"pageGreen": 572
 	},
 	{
-		"name": "73. al-Muzzammil",
+		"name": "al-Muzzammil",
 		"pageGreen": 574
 	},
 	{
-		"name": "74. Muddaththir",
+		"name": "al-Muddaththir",
 		"pageGreen": 575
 	},
 	{
-		"name": "75. al-Qiyāmah",
+		"name": "al-Qiyāmah",
 		"pageGreen": 577
 	},
 	{
-		"name": "76. al-Insān",
+		"name": "al-Insān",
 		"pageGreen": 578
 	},
 	{
-		"name": "77. al-Mursalāt",
+		"name": "al-Mursalāt",
 		"pageGreen": 580
 	},
 	{
-		"name": "78. an-Naba'",
+		"name": "an-Naba'",
 		"pageGreen": 582
 	},
 	{
-		"name": "79. an-Nāzi´āt",
+		"name": "an-Nāzi`āt",
 		"pageGreen": 583
 	},
 	{
-		"name": "80. ´Abasa",
+		"name": "`Abasa",
 		"pageGreen": 585
 	},
 	{
-		"name": "81. at-Takwīr",
+		"name": "at-Takwīr",
 		"pageGreen": 586
 	},
 	{
-		"name": "82. al-Infitār",
+		"name": "al-Infiṭār",
 		"pageGreen": 587
 	},
 	{
-		"name": "83. al-Mutaffifīn",
+		"name": "al-Muṭaffifīn",
 		"pageGreen": 587
 	},
 	{
-		"name": "84. al-Inshiqāq",
+		"name": "al-Inshiqāq",
 		"pageGreen": 589
 	},
 	{
-		"name": "85. al-Burūj",
+		"name": "al-Burūj",
 		"pageGreen": 590
 	},
 	{
-		"name": "86. at-Tāriq",
+		"name": "at-Ṭāriq",
 		"pageGreen": 591
 	},
 	{
-		"name": "87. al-A´lā",
+		"name": "al-A`lā",
 		"pageGreen": 591
 	},
 	{
-		"name": "88. al-Ghāshiyah",
+		"name": "al-Ghāshiyah",
 		"pageGreen": 592
 	},
 	{
-		"name": "89. al-Fajr",
+		"name": "al-Fajr",
 		"pageGreen": 593
 	},
 	{
-		"name": "90. al-Balad",
+		"name": "al-Balad",
 		"pageGreen": 594
 	},
 	{
-		"name": "91. ash-Shams",
+		"name": "ash-Shams",
 		"pageGreen": 595
 	},
 	{
-		"name": "92. al-Layl",
+		"name": "al-Layl",
 		"pageGreen": 595
 	},
 	{
-		"name": "93. ad-Duhā",
+		"name": "ad-Ḍuḥā",
 		"pageGreen": 596
 	},
 	{
-		"name": "94. ash-Sharh",
+		"name": "ash-Sharḥ",
 		"pageGreen": 596
 	},
 	{
-		"name": "95. at-Tīn",
+		"name": "at-Tīn",
 		"pageGreen": 597
 	},
 	{
-		"name": "96. al-Alaq",
+		"name": "al-`Alaq",
 		"pageGreen": 597
 	},
 	{
-		"name": "97. al-Qadr",
+		"name": "al-Qadr",
 		"pageGreen": 598
 	},
 	{
-		"name": "98. al-Bayyinah",
+		"name": "al-Bayyinah",
 		"pageGreen": 598
 	},
 	{
-		"name": "99. az-Zalzalah",
+		"name": "az-Zalzalah",
 		"pageGreen": 599
 	},
 	{
-		"name": "100. al-´Ãdiyāt",
+		"name": "al-`Ādiyāt",
 		"pageGreen": 599
 	},
 	{
-		"name": "101. al-Qāriyah",
+		"name": "al-Qāri`ah",
 		"pageGreen": 600
 	},
 	{
-		"name": "102. at-Takāthur",
+		"name": "at-Takāthur",
 		"pageGreen": 600
 	},
 	{
-		"name": "103. al-´Asr",
+		"name": "al-´Asr",
 		"pageGreen": 601
 	},
 	{
-		"name": "104. al-Humazah",
+		"name": "al-Humazah",
 		"pageGreen": 601
 	},
 	{
-		"name": "105. al-Fīl",
+		"name": "al-Fīl",
 		"pageGreen": 601
 	},
 	{
-		"name": "106. Quraysh",
+		"name": "Quraysh",
 		"pageGreen": 602
 	},
 	{
-		"name": "107. al-Mā´ūn",
+		"name": "al-Mā`ūn",
 		"pageGreen": 602
 	},
 	{
-		"name": "108. al-Kawthar",
+		"name": "al-Kawthar",
 		"pageGreen": 602
 	},
 	{
-		"name": "109. al-Kāfirūn",
+		"name": "al-Kāfirūn",
 		"pageGreen": 603
 	},
 	{
-		"name": "110. an-Nasr",
+		"name": "an-Naṣr",
 		"pageGreen": 603
 	},
 	{
-		"name": "111. al-Masad",
+		"name": "al-Masad",
 		"pageGreen": 603
 	},
 	{
-		"name": "112. al-Ikhlās",
+		"name": "al-Ikhlāṣ",
 		"pageGreen": 604
 	},
 	{
-		"name": "113. al-Falaq",
+		"name": "al-Falaq",
 		"pageGreen": 604
 	},
 	{
-		"name": "114. an-Nās",
+		"name": "an-Nās",
 		"pageGreen": 604
 	}
 ]

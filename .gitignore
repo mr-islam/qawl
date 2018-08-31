@@ -1,0 +1,11 @@
+
+dist/
+
+yarn-error\.log
+*.log
+
+yarn\.lock
+
+releases/
+
+node_modules/

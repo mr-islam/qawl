@@ -11,25 +11,26 @@
 	</div>
 	<div class="footerControls">
 		<div class="footerSurahSelect">
-			<select id="surahSelect" onchange="selectSurah();">
-				<option value="">Surah</option>
+			<select id="surahSelect" onchange="surahDropdown();">
+				<option value="">Sūrah…</option>
 			</select>
 		</div>
 		<div class="footerPageOptions">
-			<button onclick="turnPage(+2);"><i class="icon-left-open-outline"></i></button>
+			<button onclick="turnPage(+2);" class="icon-left-circle"></button>
 			<form onsubmit="return false">
-				<input type="number" name="pageNumberInput" onfocus="this.value=''" id="pageNumberInput">
-				<input type="submit" name="go" value="submit" 
-				onclick="return choicePage();"; style="display: none"/>
+				<input type="number" name="pageNumberInput" onfocus="this.value=''" onkeyup="checkDigits(this);" id="pageNumberInput" max="604" min="1">
+				<input type="submit" name="go" value="submit"
+				onclick="return numberOfPage();"; style="display: none"/>
 			</form>
-			<button onclick="turnPage(-2);"><i class="icon-right-open-outline"></i></button>
+			<button onclick="turnPage(-2);" class="icon-right-circle"></button>
 		</div>
 		<div class="footerSettings">
-			<button id="zoomOut" onclick="changeZoom(-5);"><i class="icon-zoom-out-1"></i></button>
-			<button id="zoomIn" onclick="changeZoom(+5);"><i class="icon-zoom-in-1"></i></button>
+			<button id="openOnQuranCom" onclick="openOnQuranCom();" class="icon-globe"></button>
+			<button id="zoomOut" onclick="changeZoom(-5);" class="icon-zoom-out"></button>
+			<button id="zoomIn" onclick="changeZoom(+5);" class="icon-zoom-in"></button>
 		</div>
 	</div>
 <script type="text/javascript" src="surahs.js"></script>
 <script type="text/javascript" src="script.js"></script>
-<link rel="stylesheet" href="assets/fonts/css/fontello.css">
+<link rel="stylesheet" href="assets/icon-font/css/fontello.css">
 </body>
