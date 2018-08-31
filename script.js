@@ -65,7 +65,7 @@ function changeZoom(increment) {
 	if (currentZoom <= 100) { // zoomout and in work better respectively with a different
 		document.body.style.width = 100 + "%"; // ^parent element being styled each time
 		document.getElementById("wrapper").style["max-width"] = currentZoom + "%";
-	} else if (currentZoom > 100) {
+	} else if (currentZoom > 100 && currentZoom < 151) {
 		document.body.style.width = currentZoom + "%";
 		document.getElementById("wrapper").style["max-width"] = 100 + "%";
 	}
