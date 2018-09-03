@@ -92,3 +92,6 @@ button:hover {
 	background-color: #fdf6e3c4;
 	color: rgba(0,0,0,0.6);
 }
+img {
+	image-rendering: -webkit-optimize-contrast;
+}
