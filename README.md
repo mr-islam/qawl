@@ -30,9 +30,9 @@ Alternatively, try out a limited version of [al-Kitāb, online](https://mr-islam
 
 # Usage
 
-The interface has been tested thorougly for intuitivity — all actions are done by the bottom bar: surah is selected by clicking the text on the left, numbers at the center are page numbers (click, type the desired page and hit enter. Or, just start typing numbers and it will automatically gain focus), the arrow icons to its left and right flip the page respectively, the globe icon in the right-cluster opens the current surah on quran.com, and the zoom keys are after that. 
+The interface has been tested thoroughly for ease of use — all actions are done by the bottom bar: surah is selected by clicking the text on the left, numbers at the center are page numbers (click, type the desired page and hit enter. Or, just start typing numbers and it will automatically gain focus), the arrow icons to its left and right flip the page respectively, the globe icon in the right-cluster opens the current surah on quran.com, and the zoom keys are after that. 
 
-There are also keybaord shortcuts for your convenience:
+There are also keyboard shortcuts for your convenience:
 
 | Action  | Key |
 | ------------- | ------------- |
@@ -51,12 +51,9 @@ There are also keybaord shortcuts for your convenience:
 
 **Structure**: `Package.json` calls `Main.js`, which loads `index.html`, which then loads `script.js`/`surahs.js`/`style.css`. Or, simply start the sequence from `index.html` onwards by launching it in a web browser.
 
-**Packaging**: `electron-builder` is used. Windows was done on my PC using `yarn dist`; 
-packaging for Mac attempted using Travis and `yarn release`.
-
 ## Decisions:
 
 - Mobile devices will not be supported; there are already amazing native apps built for them 
 - This is meant to replicate the mushaf, so single-page view won't be supported
-- Notes & bookmarks will not be added to the app; keeping separate (digital/manual) notebooks is encouraged
+- Notes & bookmarks will not be added to the app; keeping separate (digital/manual) notebooks is encouraged instead
   
