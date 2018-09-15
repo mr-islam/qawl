@@ -2,7 +2,7 @@ body {
     background-color: #002b36;
 }
 div.footerControls {
-    background:rgba(0,0,0,0.7);
+    background:rgba(7,54,66,0.95);
 }
 input {
     color: #6c71c4;
@@ -22,4 +22,14 @@ button:hover {
 }
 img {
     filter: invert(1);
+}
+::-webkit-scrollbar {
+    background:rgba(7,54,66,0.95);
+}
+::-webkit-scrollbar-thumb {
+    background:rgba(108,113,196,1);
+}
+::-webkit-scrollbar-corner {
+    background:rgba(7,54,66,0.95);
+
 }
