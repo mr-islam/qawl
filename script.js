@@ -101,9 +101,9 @@ document.onkeydown = function(e) {
     turnPage(-2);
   } else if (e.which >= 48 && e.which <= 57) {
     document.getElementById("pageNumberInput").focus();
-  } else if (e.which == 173) {
+  } else if (e.which == 189) {
     changeZoom(-5);
-  } else if (e.which == 61) {
+  } else if (e.which == 187) {
     changeZoom(+5);
   }
 }
