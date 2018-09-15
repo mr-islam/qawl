@@ -15,11 +15,11 @@ function applyPage() {
 	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
 	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
 
-	localStorage.setItem("rightPageNumberStored", rightPageNumber); // save location for restart
+	localStorage.setItem("rightPageNumberStored", rightPageNumber);
 	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
 }
 function updateDropdown() {
-	for (let i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
+	for (let i = surahs.length - 1; i >= 0; i--) {
 		if (userPageInputInt < surahs[i]['pageGreen']) {
 			var surahSelect = document.getElementById("surahSelect");
 			surahSelect.value = surahs[i-1]['pageGreen']
@@ -52,7 +52,7 @@ function turnPage(increment) {
 		updateDropdown();
 	} // TODO: else {error tooltip}
 }
-function surahDropdown() { // working for even pages, not odd
+function surahDropdown() {
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);
 	userPageInputInt = selectedSurah;
 	checkPage();
@@ -72,7 +72,7 @@ function changeZoom(increment) {
 	localStorage.setItem("currentZoomStored", currentZoom);
 }
 function openOnQuranCom() {
-	for (let i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
+	for (let i = surahs.length - 1; i >= 0; i--) {
 		if (userPageInputInt >= surahs[i]['pageGreen']) {
 			console.log('https://www.quran.com/' + parseInt(i+1), '_blank');
 			window.open('https://www.quran.com/' + parseInt(i+1), '_blank');
@@ -95,8 +95,10 @@ function toggleTheme() {
 	}
 }
 
-applyPage(); //resume reading from last page
-changeZoom(0); // set zoom same as last time
+//initialization:
+applyPage(); 
+toggleTheme();
+changeZoom(0);
 (function() {
     var ele = document.getElementById("surahSelect");
     for (let i = 0; i < surahs.length; i++) {
@@ -107,7 +109,6 @@ changeZoom(0); // set zoom same as last time
 })();
 document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
 updateDropdown();
-toggleTheme();
 
 document.onkeydown = function(e) {
   if (e.which == 37) {
