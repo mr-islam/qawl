@@ -25,7 +25,6 @@ body {
 	min-height: 100%;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #fdf6e3;
 }
 #wrapper {
 	display: flex;
@@ -47,11 +46,9 @@ div.footerControls {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-
 	width: 97.25%;
 	position: fixed;
 	bottom: 0;
-	background:rgba(0,0,0,0.7);
 	height: 5%;
 	padding-right: 2.75%;
 }
@@ -63,7 +60,6 @@ input {
 	text-align: center;
 	height: 100%;
 	background: none;
-	color: #fdf6e3;
 	font-size: 16px;
 	width: 200px;
 	border: none;
@@ -74,23 +70,16 @@ select {
 	border: none;
 	height: 100%;
 	background-color: transparent;
-	color: #fdf6e3;
 	font-size: 16px;
 }
 option {
-	color: #3b321a;
 	background-color: transparent;
 }
 button {
 	background:none;
-	color: #fdf6e3;
 	box-shadow: none;
 	font-size: 17px;
 	border: none;
-}
-button:hover {
-	background-color: #fdf6e3;
-	color: rgba(0,0,0,0.6);
 }
 img {
 	image-rendering: -webkit-optimize-contrast;

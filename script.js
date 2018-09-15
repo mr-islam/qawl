@@ -1,12 +1,14 @@
 var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 3;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
-
-var leftPageElement = document.getElementById("leftPage");
 var rightPageElement = document.getElementById("rightPage");
+var leftPageElement = document.getElementById("leftPage");
 
 var userPageInput = document.getElementById("pageNumberInput").value;
 userPageInput = localStorage.getItem("rightPageNumberStored") || 2;
 var userPageInputInt = parseInt(userPageInput);
+
+var darkCss = document.getElementById("darkCss");
+var lightCss = document.getElementById("lightCss");
 
 function applyPage() {
 	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
@@ -16,7 +18,6 @@ function applyPage() {
 	localStorage.setItem("rightPageNumberStored", rightPageNumber); // save location for restart
 	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
 }
-
 function updateDropdown() {
 	for (let i = surahs.length - 1; i >= 0; i--) {  // for loop uses countdown, so if using >= works easily
 		if (userPageInputInt < surahs[i]['pageGreen']) {
@@ -25,7 +26,6 @@ function updateDropdown() {
 		}
 	}
 }
-
 function checkPage() { // generic function called by specific user actions, gateway to applyPage
 	if (userPageInputInt < 605 && userPageInputInt > -1) { // ensures possible page
 		if (userPageInputInt % 2 === 0) {
@@ -50,7 +50,7 @@ function turnPage(increment) {
 		checkPage();
 		applyPage();
 		updateDropdown();
-	} // else {error tooltip}
+	} // TODO: else {error tooltip}
 }
 function surahDropdown() { // working for even pages, not odd
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);
@@ -80,6 +80,20 @@ function openOnQuranCom() {
 		}
 	}
 }
+function toggleTheme() {
+	if (localStorage.getItem("testTheme") == null) {
+		localStorage.setItem("testTheme", "light") //for first use
+	}
+	if (localStorage.getItem("lastTheme") == "light") {
+		darkCss.media = '';
+		lightCss.media = 'none';
+		localStorage.setItem("lastTheme", "dark")
+		} else {
+		darkCss.media = 'none';
+		lightCss.media = '';
+		localStorage.setItem("lastTheme", "light")
+	}
+}
 
 applyPage(); //resume reading from last page
 changeZoom(0); // set zoom same as last time
@@ -93,6 +107,7 @@ changeZoom(0); // set zoom same as last time
 })();
 document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
 updateDropdown();
+toggleTheme();
 
 document.onkeydown = function(e) {
   if (e.which == 37) {

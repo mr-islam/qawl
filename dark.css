@@ -1,0 +1,25 @@
+body {
+    background-color: #002b36;
+}
+div.footerControls {
+    background:rgba(0,0,0,0.7);
+}
+input {
+    color: #6c71c4;
+}
+select {
+    color: #6c71c4;
+}
+option {
+    color: #6c71c4;
+}
+button {
+    color: #6c71c4;
+}
+button:hover {
+	background-color: #002b36;
+	color: #6c71c4;
+}
+img {
+    filter: invert(1);
+}
