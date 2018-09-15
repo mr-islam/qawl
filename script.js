@@ -92,6 +92,7 @@ changeZoom(0); // set zoom same as last time
     }
 })();
 document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
+updateDropdown();
 
 document.onkeydown = function(e) {
   if (e.which == 37) {
