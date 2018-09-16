@@ -43,16 +43,10 @@
       "src": "fontawesome"
     },
     {
-      "uid": "gr2i0fsmy50yfjhz6defsqkexnmctv8z",
-      "css": "bookmark",
-      "code": 59397,
-      "src": "typicons"
-    },
-    {
-      "uid": "2aeb4987b469d22fcb8b471b6d2cdfff",
-      "css": "pencil",
-      "code": 59398,
-      "src": "linecons"
+      "uid": "f0eac0958921fe45b85d01b79d76e86b",
+      "css": "switch",
+      "code": 59399,
+      "src": "entypo"
     }
   ]
 }

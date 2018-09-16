@@ -10,6 +10,9 @@ var userPageInputInt = parseInt(userPageInput);
 var darkCss = document.getElementById("darkCss");
 var lightCss = document.getElementById("lightCss");
 
+const Analytics = require("electron-ga").Analytics;
+const analytics = new Analytics('UA-120295167-1');
+
 function applyPage() {
 	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
 	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
@@ -17,14 +20,6 @@ function applyPage() {
 
 	localStorage.setItem("rightPageNumberStored", rightPageNumber);
 	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
-}
-function updateDropdown() {
-	for (let i = surahs.length - 1; i >= 0; i--) {
-		if (userPageInputInt < surahs[i]['pageGreen']) {
-			var surahSelect = document.getElementById("surahSelect");
-			surahSelect.value = surahs[i-1]['pageGreen']
-		}
-	}
 }
 function checkPage() { // generic function called by specific user actions, gateway to applyPage
 	if (userPageInputInt < 605 && userPageInputInt > -1) { // ensures possible page
@@ -37,7 +32,16 @@ function checkPage() { // generic function called by specific user actions, gate
 		}
 	}
 }
+function quickSwitch() {
+	var lastLastPage = userPageInputInt
+	userPageInputInt = parseInt(localStorage.getItem("lastPage"));
+	checkPage();
+	applyPage();
+	updateDropdown();
+	localStorage.setItem("lastPage", lastLastPage);
+}
 function numberOfPage() {
+	localStorage.setItem("lastPage", userPageInputInt);
 	userPageInput = document.getElementById("pageNumberInput").value;
 	userPageInputInt = parseInt(userPageInput)
 	checkPage();
@@ -45,6 +49,7 @@ function numberOfPage() {
 	updateDropdown();
 }
 function turnPage(increment) {
+	localStorage.setItem("lastPage", userPageInputInt);
 	if (userPageInputInt + increment > 0 && userPageInputInt + increment < 605) {
 		userPageInputInt += parseInt(increment);
 		checkPage();
@@ -53,10 +58,19 @@ function turnPage(increment) {
 	} // TODO: else {error tooltip}
 }
 function surahDropdown() {
+	localStorage.setItem("lastPage", userPageInputInt);
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);
 	userPageInputInt = selectedSurah;
 	checkPage();
 	applyPage();
+}
+function updateDropdown() {
+	for (let i = surahs.length - 1; i >= 0; i--) {
+		if (userPageInputInt < surahs[i]['pageGreen']) {
+			var surahSelect = document.getElementById("surahSelect");
+			surahSelect.value = surahs[i-1]['pageGreen']
+		}
+	}
 }
 function changeZoom(increment) {
 	var currentZoom = parseInt(localStorage.getItem("currentZoomStored")) || 100;
@@ -109,6 +123,13 @@ changeZoom(0);
 })();
 document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
 updateDropdown();
+(async function() {
+	await analytics.send('screenview', { cd: 'Reader' });
+	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
+})();
+
+
+
 
 document.onkeydown = function(e) {
   if (e.which == 37) {
