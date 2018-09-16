@@ -108,10 +108,21 @@ function toggleTheme() {
 		localStorage.setItem("lastTheme", "light")
 	}
 }
+function lastTheme() {
+	if (localStorage.getItem("lastTheme") == "dark") {
+		darkCss.media = '';
+		lightCss.media = 'none';
+		localStorage.setItem("lastTheme", "dark")
+	} else {
+		darkCss.media = 'none';
+		lightCss.media = '';
+		localStorage.setItem("lastTheme", "light")
+	}
+}
 
 //initialization:
-applyPage(); 
-toggleTheme();
+applyPage();
+lastTheme();
 changeZoom(0);
 (function() {
     var ele = document.getElementById("surahSelect");
