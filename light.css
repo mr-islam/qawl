@@ -20,7 +20,3 @@ button:hover {
 	background-color: #fdf6e3;
 	color: rgba(0,0,0,0.6);
 }
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
