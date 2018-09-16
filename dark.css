@@ -2,7 +2,7 @@ body {
     background-color: #002b36;
 }
 div.footerControls {
-    background:rgba(7,54,66,0.95);
+    background:rgba(0,0,0,0.8);
 }
 input {
     color: #6c71c4;
@@ -17,7 +17,7 @@ button {
     color: #6c71c4;
 }
 button:hover {
-	background-color: #002b36;
+    background:rgba(7,54,66,0.8);
 	color: #6c71c4;
 }
 img {
