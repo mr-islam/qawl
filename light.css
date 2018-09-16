@@ -21,11 +21,6 @@ button:hover {
 	color: rgba(0,0,0,0.6);
 }
 ::-webkit-scrollbar {
-	background-color: rgba(0,0,0,0.7);
-}
-::-webkit-scrollbar-thumb {
-	background-color: rgba(0,0,0,0.5);
-}
-::-webkit-scrollbar-corner {
-	background-color: rgba(0,0,0,0.7);
+    width: 0px;
+    height: 0px;
 }

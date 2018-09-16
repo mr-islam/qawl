@@ -24,12 +24,6 @@ img {
     filter: invert(1);
 }
 ::-webkit-scrollbar {
-    background:rgba(7,54,66,0.95);
-}
-::-webkit-scrollbar-thumb {
-    background:rgba(108,113,196,1);
-}
-::-webkit-scrollbar-corner {
-    background:rgba(7,54,66,0.95);
-
+    width: 0px;
+    height: 0px;
 }
