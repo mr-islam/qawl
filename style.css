@@ -83,6 +83,7 @@ button {
 }
 img {
 	image-rendering: -webkit-optimize-contrast;
+	padding-bottom: 2.5%;
 }
 ::-webkit-scrollbar {
     width: 0px;
