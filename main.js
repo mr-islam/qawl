@@ -7,6 +7,7 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
+    title: "Qawl — Desktop Quran Reader",
     show: false,
     width: 1024,
     height: 768,
