@@ -1,20 +1,21 @@
 {
-  "name": "al-Kitab",
-  "version": "2.1.0",
+  "name": "Qawl — Desktop Quran Reader",
+  "version": "2.5.0",
   "description": "Read the Holy Qur'ān whenever, wherever, however you like it with al-Kitab — the premier digital mushaf",
   "main": "main.js",
-  "repository": "https://github.com/mr-islam/al-kitab",
+  "repository": "https://github.com/mr-islam/qawl",
   "author": "mrislam",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "electron": "^2.0.2",
-    "electron-builder": "^20.15.1"
+    "electron-builder": "^20.15.1",
+    "electron-packager": "^12.1.1"
   },
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder -w",
-    "release": "electron-builder -m"
+    "release": "electron-packager ./ --all"
   },
   "build": {
     "appId": "com.navedislam.al-kitab",
@@ -27,6 +28,12 @@
       "target": "nsis"
     },
     "linux": {
-      "target": ["AppImage", "snap"]
-  }} 
+      "target": [
+        "AppImage"
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-ga": "^1.0.6"
+  }
 }
