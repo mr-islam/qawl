@@ -20,16 +20,16 @@
 			<select id="surahSelect" onchange="surahDropdown();">
 				<option value="">Sūrah…</option>
 			</select>
-			<button id="openOnQuranCom" onclick="openOnQuranCom();" class="icon-globe" title="Open on Quran.com"></button>
+			<button id="openOnQuranCom" onclick="openOnQuranCom();" class="icon-globe" title="Open translations and recitations"></button>
 		</div>
 		<div class="footerPageOptions">
-			<button onclick="turnPage(+2);" title="Turn page left" class="icon-left-circle"></button>
+			<button onclick="turnPage(+2);" title="Turn left" class="icon-left-circle"></button>
 			<form id="pageForm" onsubmit="return false">
-				<input type="number" onkeyup="checkDigits();" name="pageNumberInput" onfocus="this.value=''" id="pageNumberInput" max="604" min="1">
-				<input type="submit" name="go" value="submit"
-				onclick="return numberOfPage();"; style="display: none"/>
+				<input type="number" onkeyup="checkDigits();" name="pageNumberInput" onfocus="this.value=''" 
+					id="pageNumberInput" max="604" min="1">
+				<input type="submit" name="go" value="submit" onclick="return numberOfPage();"; style="display: none"/>
 			</form>
-			<button onclick="turnPage(-2);" title="Turn page right" class="icon-right-circle"></button>
+			<button onclick="turnPage(-2);" title="Turn right" class="icon-right-circle"></button>
 		</div>
 		<div class="footerSettings">
 			<button id="quickSwitch" onclick="quickSwitch();" title="Flip to last page" class="icon-switch"></button>
