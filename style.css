@@ -84,6 +84,8 @@ button {
 	box-shadow: none;
 	font-size: 17px;
 	border: none;
+	padding: 0;
+	min-height: 100%;
 }
 button:focus {
 	outline: none;
