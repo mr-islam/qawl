@@ -1,6 +1,7 @@
 const { ipcRenderer } = require('electron');
 const Analytics = require("electron-ga").Analytics;
 const analytics = new Analytics('UA-120295167-1');
+var Mousetrap = require('mousetrap');
 
 var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 3;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
@@ -48,6 +49,7 @@ function numberOfPage() {
 	checkPage();
 	applyPage();
 	updateDropdown();
+	document.getElementById("pageNumberInput").blur()
 }
 function turnPage(increment) {
 	localStorage.setItem("lastPage", userPageInputInt);
@@ -120,6 +122,15 @@ function lastTheme() {
 		localStorage.setItem("lastTheme", "light")
 	}
 }
+function checkDigits() {
+	var id = document.getElementById('pageNumberInput');
+	if (id.value.length == 3) {
+		id.blur();
+		return numberOfPage();
+	}
+}
+
+
 
 //initialization:
 applyPage();
@@ -149,22 +160,25 @@ updateDropdown();
 function toggleFullscreen() {
 	ipcRenderer.send('click');
 }
-
-document.onkeydown = function(e) {
-  if (e.which == 37) {
-    turnPage(+2);
-  } else if (e.which == 39) {
-    turnPage(-2);
+/*
   } else if (e.which >= 48 && e.which <= 57) {
     document.getElementById("pageNumberInput").focus();
-  } else if (e.which == 189) {
-    changeZoom(-5);
-  } else if (e.which == 187) {
-    changeZoom(+5);
-  } else if (e.which == 122) {
-	toggleFullscreen();
   }
-}
+}*/
+
+Mousetrap.bind("right", function() {turnPage(-2);});
+Mousetrap.bind("left", function() {turnPage(+2);});
+Mousetrap.bind("=", function() {changeZoom(+5);});
+Mousetrap.bind("-", function() {changeZoom(-5);});
+Mousetrap.bind("F11", function() {toggleFullscreen();});
+Mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
+	document.getElementById("pageNumberInput").focus();
+});
+
+
+
+
+
 
 var myListener = function () {
 	document.removeEventListener('mousemove', myListener, false);

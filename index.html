@@ -24,9 +24,8 @@
 		</div>
 		<div class="footerPageOptions">
 			<button onclick="turnPage(+2);" title="Turn page left" class="icon-left-circle"></button>
-			<form onsubmit="return false">
-				<input type="number" name="pageNumberInput" onfocus="this.value=''" 
-				onkeyup="checkDigits(this);" id="pageNumberInput" max="604" min="1">
+			<form id="pageForm" onsubmit="return false">
+				<input type="number" onkeyup="checkDigits();" name="pageNumberInput" onfocus="this.value=''" id="pageNumberInput" max="604" min="1">
 				<input type="submit" name="go" value="submit"
 				onclick="return numberOfPage();"; style="display: none"/>
 			</form>
