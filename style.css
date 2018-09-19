@@ -94,3 +94,6 @@ img {
 	font-family: sans-serif;
 	font-size: 14px;
 }
+button:focus {
+	outline: none;
+}
