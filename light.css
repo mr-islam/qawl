@@ -22,6 +22,5 @@ button:hover {
 }
 .tippy-tooltip.tippy-backdrop-theme {
     background:rgba(0,0,0,0.7);
-	border: 2px solid #fdf6e3;
     color: #fdf6e3;
 }
