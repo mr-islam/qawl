@@ -1,3 +1,7 @@
+const { ipcRenderer } = require('electron');
+const Analytics = require("electron-ga").Analytics;
+const analytics = new Analytics('UA-120295167-1');
+
 var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 3;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
 var rightPageElement = document.getElementById("rightPage");
@@ -9,9 +13,6 @@ var userPageInputInt = parseInt(userPageInput);
 
 var darkCss = document.getElementById("darkCss");
 var lightCss = document.getElementById("lightCss");
-
-const Analytics = require("electron-ga").Analytics;
-const analytics = new Analytics('UA-120295167-1');
 
 function applyPage() {
 	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
@@ -139,8 +140,11 @@ updateDropdown();
 	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
 })();
 
-
-
+document
+  .querySelector('#fullScreen')
+  .addEventListener('click', () => {
+    ipcRenderer.send('click');
+  });
 
 document.onkeydown = function(e) {
   if (e.which == 37) {

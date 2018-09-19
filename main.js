@@ -1,5 +1,6 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
+const { ipcMain } = require('electron')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -13,7 +14,8 @@ function createWindow () {
     height: 768,
     minWidth: 800,
     minHeight: 600,
-    resizable: true
+    resizable: true,
+    scrollBounce: true
   });
   mainWindow.once('ready-to-show', () => {
     mainWindow.show()
@@ -55,3 +57,11 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+function toggleFullscreen() {
+  if (mainWindow.isFullScreen()) {
+      mainWindow.setFullScreen(false);
+  } else {
+      mainWindow.setFullScreen(true);
+  }
+}
+ipcMain.on('click', () => toggleFullscreen());
