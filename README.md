@@ -47,7 +47,7 @@ There are also keyboard shortcuts for your convenience:
 3. Run `yarn` to install (dev) dependencies
 4. `yarn start` to run the app locally
 
-**[Mushaf Source](https://archive.org/details/ar_Mushaf_AlMadinah_new_TruePDF)** — broken up using a terminal script with 
+**[Mushaf Source](https://archive.org/details/ar_Mushaf_AlMadinah_new_TruePDF)** — broken up using a [terminal script](https://gist.github.com/mr-islam/67de74c60adb9d10057d9b83d19b5563) with `convert` from `imagemagick` at a DPI of 150.
 
 **Structure**: `Package.json` calls `Main.js`, which loads `index.html`, which then loads `script.js`/`surahs.js`/`style.css`. Or, simply start the sequence from `index.html` onwards by launching it in a web browser.
 
