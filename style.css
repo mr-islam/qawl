@@ -47,11 +47,10 @@ div.footerControls {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	width: 97.25%;
+	width: 100%;
 	position: fixed;
 	bottom: 0;
 	height: 5%;
-	padding-right: 2.75%;
 }
 div.footerPageOptions, div.footerSettings {
 	display: flex;
@@ -84,7 +83,6 @@ button {
 	box-shadow: none;
 	font-size: 17px;
 	border: none;
-	padding: 0;
 	min-height: 100%;
 }
 button:focus {
