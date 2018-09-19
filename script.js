@@ -140,11 +140,15 @@ updateDropdown();
 	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
 })();
 
-document
+/*document
   .querySelector('#fullScreen')
   .addEventListener('click', () => {
     ipcRenderer.send('click');
-  });
+  });*/
+
+function toggleFullscreen() {
+	ipcRenderer.send('click');
+}
 
 document.onkeydown = function(e) {
   if (e.which == 37) {
@@ -157,6 +161,8 @@ document.onkeydown = function(e) {
     changeZoom(-5);
   } else if (e.which == 187) {
     changeZoom(+5);
+  } else if (e.which == 122) {
+	toggleFullscreen();
   }
 }
 
