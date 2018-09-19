@@ -24,3 +24,15 @@ button:hover {
     background:rgba(0,0,0,0.7);
     color: #fdf6e3;
 }
+#overlay {
+    background-color: #fdf6e3;
+}
+.overlayContents {
+    background-color: #eee8d5;
+}
+h1 {
+    color: #586e75
+}
+p {
+    color: #93a1a1
+}

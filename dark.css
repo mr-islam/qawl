@@ -27,3 +27,15 @@ img {
     background:#000;
     color: #6c71c4;
 }
+#overlay {
+    background-color: #073642;
+}
+.overlayContents {
+    background-color: #002b36;
+}
+h1 {
+    color: #93a1a1
+}
+p {
+    color: #586e75
+}

@@ -159,3 +159,15 @@ document.onkeydown = function(e) {
     changeZoom(+5);
   }
 }
+
+var myListener = function () {
+	document.removeEventListener('mousemove', myListener, false);
+	document.getElementById("overlay").style.display = "none";
+    setTimeout(function() {
+		document.getElementById("overlay").style.display = "block";
+		document.addEventListener('mousemove', myListener, false);
+    }, 3000);
+};
+
+document.getElementById("overlay").style.display = "none";
+document.addEventListener('mousemove', myListener, false);

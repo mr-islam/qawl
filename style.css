@@ -73,6 +73,9 @@ select {
 	background-color: transparent;
 	font-size: 16px;
 }
+select:focus {
+	outline: none;
+}
 option {
 	background-color: transparent;
 }
@@ -81,6 +84,9 @@ button {
 	box-shadow: none;
 	font-size: 17px;
 	border: none;
+}
+button:focus {
+	outline: none;
 }
 img {
 	image-rendering: -webkit-optimize-contrast;
@@ -94,6 +100,40 @@ img {
 	font-family: sans-serif;
 	font-size: 14px;
 }
-button:focus {
-	outline: none;
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+	z-index: 2; /* Specify a stack order in case you're using a different order for */
+}
+.overlayContents {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%,-50%);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	border-radius: 2px;
+	padding: 5%;
+	text-align: center;
+}
+#logo {
+	max-width: 16%;
+	max-height: 9%;
+}
+h1 {
+	font-size: 42px;
+	font-family: sans-serif;
+	font-weight: bolder;
+}
+p {
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: lighter;
 }
