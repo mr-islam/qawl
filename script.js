@@ -180,7 +180,7 @@ var myListener = function () {
     setTimeout(function() {
 		document.getElementById("overlay").style.display = "block";
 		document.addEventListener('mousemove', myListener, false);
-    }, 3000);
+    }, 600000);
 };
 
 document.getElementById("overlay").style.display = "none";
