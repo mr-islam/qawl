@@ -23,6 +23,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
+  mainWindow.setMenu(null)
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -64,4 +65,8 @@ function toggleFullscreen() {
       mainWindow.setFullScreen(true);
   }
 }
-ipcMain.on('click', () => toggleFullscreen());
+function toggleDevTools() {
+  mainWindow.toggleDevTools();
+}
+ipcMain.on('fullScreen', () => toggleFullscreen());
+ipcMain.on('devTools', () => toggleDevTools());

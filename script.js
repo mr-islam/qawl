@@ -158,27 +158,21 @@ updateDropdown();
   });*/
 
 function toggleFullscreen() {
-	ipcRenderer.send('click');
+	ipcRenderer.send('fullScreen');
 }
-/*
-  } else if (e.which >= 48 && e.which <= 57) {
-    document.getElementById("pageNumberInput").focus();
-  }
-}*/
 
 Mousetrap.bind("right", function() {turnPage(-2);});
 Mousetrap.bind("left", function() {turnPage(+2);});
 Mousetrap.bind("=", function() {changeZoom(+5);});
 Mousetrap.bind("-", function() {changeZoom(-5);});
 Mousetrap.bind("F11", function() {toggleFullscreen();});
+Mousetrap.bind("ctrl+shift+i", function () {ipcRenderer.send('devTools');})
+Mousetrap.bind("ctrl+=", function() { document.body.style.zoom = 1.2})
+Mousetrap.bind("ctrl+0", function() { document.body.style.zoom = 1.1})
+Mousetrap.bind("ctrl+-", function() { document.body.style.zoom = 1})
 Mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 	document.getElementById("pageNumberInput").focus();
 });
-
-
-
-
-
 
 var myListener = function () {
 	document.removeEventListener('mousemove', myListener, false);
