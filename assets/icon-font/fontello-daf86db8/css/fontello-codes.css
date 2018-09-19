@@ -1,0 +1,9 @@
+
+.icon-right-circle:before { content: '\e800'; } /* '' */
+.icon-left-circle:before { content: '\e801'; } /* '' */
+.icon-globe:before { content: '\e802'; } /* '' */
+.icon-zoom-in:before { content: '\e803'; } /* '' */
+.icon-zoom-out:before { content: '\e804'; } /* '' */
+.icon-resize-full:before { content: '\e805'; } /* '' */
+.icon-switch:before { content: '\e807'; } /* '' */
+.icon-moon:before { content: '\f186'; } /* '' */

@@ -23,3 +23,8 @@ button:hover {
 img {
     filter: invert(1);
 }
+.tippy-tooltip.tippy-backdrop-theme {
+    background:#000;
+	border: 2px solid #6c71c4;
+    color: #6c71c4;
+}

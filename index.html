@@ -20,26 +20,36 @@
 			<select id="surahSelect" onchange="surahDropdown();">
 				<option value="">Sūrah…</option>
 			</select>
-			<button id="openOnQuranCom" onclick="openOnQuranCom();" class="icon-globe"></button>
+			<button id="openOnQuranCom" onclick="openOnQuranCom();" class="icon-globe" title="Open on Quran.com"></button>
 		</div>
 		<div class="footerPageOptions">
-			<button onclick="turnPage(+2);" class="icon-left-circle"></button>
+			<button onclick="turnPage(+2);" title="Turn page left" class="icon-left-circle"></button>
 			<form onsubmit="return false">
 				<input type="number" name="pageNumberInput" onfocus="this.value=''" 
 				onkeyup="checkDigits(this);" id="pageNumberInput" max="604" min="1">
 				<input type="submit" name="go" value="submit"
 				onclick="return numberOfPage();"; style="display: none"/>
 			</form>
-			<button onclick="turnPage(-2);" class="icon-right-circle"></button>
+			<button onclick="turnPage(-2);" title="Turn page right" class="icon-right-circle"></button>
 		</div>
 		<div class="footerSettings">
-			<button id="quickSwitch" onclick="quickSwitch();" class="icon-switch"></button>
-			<button id="toggleTheme" onclick="toggleTheme();" class="icon-moon"></button>
-			<button id="zoomOut" onclick="changeZoom(-5);" class="icon-zoom-out"></button>
-			<button id="zoomIn" onclick="changeZoom(+5);" class="icon-zoom-in"></button>
+			<button id="quickSwitch" onclick="quickSwitch();" title="Flip to last page" class="icon-switch"></button>
+			<button id="toggleTheme" onclick="toggleTheme();" title="Switch theme" class="icon-moon"></button>
+			<button id="zoomOut" onclick="changeZoom(-5);" title="Zoom out" class="icon-zoom-out"></button>
+			<button id="zoomIn" onclick="changeZoom(+5);" title="Zoom in" class="icon-zoom-in"></button>
 		</div>
 	</div>
 <script type="text/javascript" src="surahs.js"></script>
 <script type="text/javascript" src="script.js"></script>
+<script src="tippy.all.min.js"></script>
 <link rel="stylesheet" href="assets/icon-font/css/fontello.css">
+<script>
+tippy('[title]', {
+	delay: [1500, 200],
+	arrow: true,
+	size: 'small',
+	theme: "tippy-backdrop",
+	animateFill: true
+})
+</script>
 </body>
