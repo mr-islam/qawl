@@ -65,6 +65,7 @@ function surahDropdown() {
 	userPageInputInt = selectedSurah;
 	checkPage();
 	applyPage();
+	document.getElementById("surahSelect").blur()
 }
 function updateDropdown() {
 	for (let i = surahs.length - 1; i >= 0; i--) {

@@ -26,6 +26,7 @@ body {
 	min-height: 100%;
 	margin-right: auto;
 	margin-left: auto;
+	cursor: pointer;
 }
 #wrapper {
 	display: flex;
@@ -71,9 +72,6 @@ select {
 	height: 100%;
 	background-color: transparent;
 	font-size: 16px;
-}
-select:focus {
-	outline: none;
 }
 option {
 	background-color: transparent;
