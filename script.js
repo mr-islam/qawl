@@ -13,9 +13,6 @@ var userPageInput = document.getElementById("pageNumberInput").value;
 userPageInput = localStorage.getItem("rightPageNumberStored") || 2;
 var userPageInputInt = parseInt(userPageInput);
 
-var darkCss = document.getElementById("darkCss");
-var lightCss = document.getElementById("lightCss");
-
 function applyPage() {
 	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
 	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
@@ -61,6 +58,7 @@ function turnPage(increment) {
 		updateDropdown();
 	} // TODO: else {error tooltip}
 }
+
 function surahDropdown() {
 	localStorage.setItem("lastPage", userPageInputInt);
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);
@@ -76,6 +74,7 @@ function updateDropdown() {
 		}
 	}
 }
+
 function changeZoom(increment) {
 	var currentZoom = parseInt(localStorage.getItem("currentZoomStored")) || 100;
 	currentZoom += increment;
@@ -89,6 +88,7 @@ function changeZoom(increment) {
 	}
 	localStorage.setItem("currentZoomStored", currentZoom);
 }
+
 function openOnQuranCom() {
 	for (let i = surahs.length - 1; i >= 0; i--) {
 		if (userPageInputInt >= surahs[i]['pageGreen']) {
@@ -98,6 +98,9 @@ function openOnQuranCom() {
 		}
 	}
 }
+
+var darkCss = document.getElementById("darkCss");
+var lightCss = document.getElementById("lightCss");
 function toggleTheme() {
 	if (localStorage.getItem("testTheme") == null) {
 		localStorage.setItem("testTheme", "light") //for first use
@@ -123,6 +126,7 @@ function lastTheme() {
 		localStorage.setItem("lastTheme", "light")
 	}
 }
+
 function checkDigits() {
 	var id = document.getElementById('pageNumberInput');
 	if (id.value.length == 3) {
@@ -131,7 +135,20 @@ function checkDigits() {
 	}
 }
 
+function toggleFullscreen() {
+	ipcRenderer.send('fullScreen');
+}
 
+var idleOverlay = function () {
+	document.removeEventListener('mousemove', myListener, false);
+	document.getElementById("overlay").style.display = "none";
+    setTimeout(function() {
+		document.getElementById("overlay").style.display = "block";
+		document.addEventListener('mousemove', myListener, false);
+    }, 600000);
+};
+document.getElementById("overlay").style.display = "none";
+document.addEventListener('mousemove', idleOverlay, false);
 
 //initialization:
 applyPage();
@@ -152,8 +169,16 @@ updateDropdown();
 	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
 })();
 
-function toggleFullscreen() {
-	ipcRenderer.send('fullScreen');
+var footer = document.getElementById("footer")
+footer.onmouseover = function () {
+	document.body.classList.remove("dragscroll");
+	dragscroll.reset();
+	document.body.style.cursor = "default"; 
+}
+footer.onmouseout = function () {
+	document.body.classList.add("dragscroll");
+	dragscroll.reset();
+	document.body.style.cursor = "pointer"; 
 }
 
 Mousetrap.bind("right", function() {turnPage(-2)});
@@ -170,27 +195,3 @@ Mousetrap.bind("q", function() { openOnQuranCom()})
 Mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 	document.getElementById("pageNumberInput").focus();
 });
-
-var myListener = function () {
-	document.removeEventListener('mousemove', myListener, false);
-	document.getElementById("overlay").style.display = "none";
-    setTimeout(function() {
-		document.getElementById("overlay").style.display = "block";
-		document.addEventListener('mousemove', myListener, false);
-    }, 600000);
-};
-
-document.getElementById("overlay").style.display = "none";
-document.addEventListener('mousemove', myListener, false);
-
-var footer = document.getElementById("footer")
-footer.onmouseover = function () {
-	document.body.classList.remove("dragscroll");
-	dragscroll.reset();
-	document.body.style.cursor = "default"; 
-}
-footer.onmouseout = function () {
-	document.body.classList.add("dragscroll");
-	dragscroll.reset();
-	document.body.style.cursor = "pointer"; 
-}
