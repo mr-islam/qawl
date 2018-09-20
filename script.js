@@ -3,6 +3,7 @@ const Analytics = require("electron-ga").Analytics;
 const analytics = new Analytics('UA-120295167-1');
 const Mousetrap = require('mousetrap');
 const dragscroll = require('dragscroll');
+const tippy = require('tippy.js');
 
 var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 3;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
@@ -181,6 +182,14 @@ footer.onmouseout = function () {
 	dragscroll.reset();
 	document.body.style.cursor = "pointer"; 
 }
+
+tippy('[title]', {
+	delay: [1000, 200],
+	arrow: true,
+	size: 'small',
+	theme: "tippy-backdrop",
+	animateFill: true
+})
 
 Mousetrap.bind("right", function() {turnPage(-2)});
 Mousetrap.bind("left", function() {turnPage(+2)});
