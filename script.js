@@ -142,11 +142,11 @@ function toggleFullscreen() {
 }
 
 var idleOverlay = function () {
-	document.removeEventListener('mousemove', myListener, false);
+	document.removeEventListener('mousemove', idleOverlay, false);
 	document.getElementById("overlay").style.display = "none";
     setTimeout(function() {
 		document.getElementById("overlay").style.display = "block";
-		document.addEventListener('mousemove', myListener, false);
+		document.addEventListener('mousemove', idleOverlay, false);
     }, 600000);
 };
 document.getElementById("overlay").style.display = "none";
