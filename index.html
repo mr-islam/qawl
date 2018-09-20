@@ -1,7 +1,7 @@
 <doctype !HTML>
 <meta charset="utf-8">
 <head>
-	<title>al-Kitab</title>
+	<title>Qawl</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" media='' href="light.css" id="lightCss">
 	<link rel="stylesheet" type="text/css" media='none' href="dark.css" id="darkCss">
@@ -10,12 +10,12 @@
 		  heap.load("1194431884");
 	</script>
 </head>
-<body>
+<body class="dragscroll">
 	<div id="wrapper">
 		<img class="resize" id="leftPage">
 		<img class="resize" id="rightPage">
 	</div>
-	<div class="footerControls">
+	<div id="footer" class="footerControls">
 		<div class="footerSurahSelect">
 			<select id="surahSelect" onchange="surahDropdown();">
 				<option value="">Sūrah…</option>
@@ -43,20 +43,21 @@
 		<div class="overlayContents">
 			<img src="assets/icon.png" id="logo">
 			<h1>Qawl</h1>
-			<p>Move mouse to resume reading</p>
+			<p>Move mouse to resume</p>
 		</div>
 	</div>
+	
 <script type="text/javascript" src="surahs.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <script src="tippy.all.min.js"></script>
 <link rel="stylesheet" href="assets/icon-font/css/fontello.css">
 <script>
-tippy('[title]', {
-	delay: [2000, 200],
-	arrow: true,
-	size: 'small',
-	theme: "tippy-backdrop",
-	animateFill: true
-})
+	tippy('[title]', {
+		delay: [2000, 200],
+		arrow: true,
+		size: 'small',
+		theme: "tippy-backdrop",
+		animateFill: true
+	})
 </script>
 </body>

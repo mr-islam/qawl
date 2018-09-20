@@ -2,6 +2,7 @@ const { ipcRenderer } = require('electron');
 const Analytics = require("electron-ga").Analytics;
 const analytics = new Analytics('UA-120295167-1');
 var Mousetrap = require('mousetrap');
+var dragscroll = require('dragscroll');
 
 var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 3;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
@@ -151,12 +152,6 @@ updateDropdown();
 	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
 })();
 
-/*document
-  .querySelector('#fullScreen')
-  .addEventListener('click', () => {
-    ipcRenderer.send('click');
-  });*/
-
 function toggleFullscreen() {
 	ipcRenderer.send('fullScreen');
 }
@@ -185,3 +180,19 @@ var myListener = function () {
 
 document.getElementById("overlay").style.display = "none";
 document.addEventListener('mousemove', myListener, false);
+
+var footer = document.getElementById("footer")
+footer.onmouseover = function () {
+	document.body.classList.remove("dragscroll");
+	dragscroll.reset();
+	document.body.style.cursor = "default"; 
+}
+footer.onmouseout = function () {
+	document.body.classList.add("dragscroll");
+	dragscroll.reset();
+	document.body.style.cursor = "pointer"; 
+}
+
+//  see of higher z index of footer would solve it completely without this
+	// remove dragscroll class and reload dragscroll. and on going out of div do reverse
+	//https://stackoverflow.com/questions/36767196/check-if-mouse-is-inside-div

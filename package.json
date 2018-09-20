@@ -1,5 +1,5 @@
 {
-  "name": "Qawl",
+  "name": "qawl",
   "version": "2.5.0",
   "description": "Read the Holy Qur'ān whenever, wherever, however you like it with al-Kitab — the premier digital mushaf",
   "main": "main.js",
@@ -34,6 +34,7 @@
     }
   },
   "dependencies": {
+    "dragscroll": "^0.0.8",
     "electron-ga": "^1.0.6",
     "mousetrap": "^1.6.2"
   }
