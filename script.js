@@ -1,8 +1,8 @@
 const { ipcRenderer } = require('electron');
 const Analytics = require("electron-ga").Analytics;
 const analytics = new Analytics('UA-120295167-1');
-var Mousetrap = require('mousetrap');
-var dragscroll = require('dragscroll');
+const Mousetrap = require('mousetrap');
+const dragscroll = require('dragscroll');
 
 var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 3;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
@@ -156,15 +156,17 @@ function toggleFullscreen() {
 	ipcRenderer.send('fullScreen');
 }
 
-Mousetrap.bind("right", function() {turnPage(-2);});
-Mousetrap.bind("left", function() {turnPage(+2);});
-Mousetrap.bind("=", function() {changeZoom(+5);});
-Mousetrap.bind("-", function() {changeZoom(-5);});
-Mousetrap.bind("F11", function() {toggleFullscreen();});
-Mousetrap.bind("ctrl+shift+i", function () {ipcRenderer.send('devTools');})
+Mousetrap.bind("right", function() {turnPage(-2)});
+Mousetrap.bind("left", function() {turnPage(+2)});
+Mousetrap.bind("=", function() {changeZoom(+5)});
+Mousetrap.bind("-", function() {changeZoom(-5)});
+Mousetrap.bind("f11", function() {toggleFullscreen()});
+Mousetrap.bind("ctrl+shift+i", function () {ipcRenderer.send('devTools')})
 Mousetrap.bind("ctrl+=", function() { document.body.style.zoom = 1.2})
 Mousetrap.bind("ctrl+0", function() { document.body.style.zoom = 1.1})
 Mousetrap.bind("ctrl+-", function() { document.body.style.zoom = 1})
+Mousetrap.bind("t", function() { toggleTheme()})
+Mousetrap.bind("q", function() { openOnQuranCom()})
 Mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 	document.getElementById("pageNumberInput").focus();
 });
@@ -192,7 +194,3 @@ footer.onmouseout = function () {
 	dragscroll.reset();
 	document.body.style.cursor = "pointer"; 
 }
-
-//  see of higher z index of footer would solve it completely without this
-	// remove dragscroll class and reload dragscroll. and on going out of div do reverse
-	//https://stackoverflow.com/questions/36767196/check-if-mouse-is-inside-div
