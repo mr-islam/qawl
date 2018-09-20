@@ -15,8 +15,8 @@ var userPageInputInt = parseInt(userPageInput);
 
 function applyPage() {
 	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
-	leftPage.src = "assets/mushaf-green/"+leftPageNumber+".png";
-	rightPage.src = "assets/mushaf-green/"+rightPageNumber+".png";
+	leftPage.src = "assets/mushaf/"+leftPageNumber+".png";
+	rightPage.src = "assets/mushaf/"+rightPageNumber+".png";
 
 	localStorage.setItem("rightPageNumberStored", rightPageNumber);
 	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
