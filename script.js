@@ -185,6 +185,14 @@ footer.onmouseout = function () {
 	document.body.style.cursor = "pointer"; 
 }
 
+tippy('[title]', {
+	delay: [1000, 200],
+	arrow: true,
+	size: 'small',
+	theme: "tippy-backdrop",
+	animateFill: true
+})
+
 mousetrap.bind("right", function() {turnPage(-2)});
 mousetrap.bind("left", function() {turnPage(+2)});
 mousetrap.bind("=", function() {changeZoom(+5)});
