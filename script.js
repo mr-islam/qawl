@@ -1,11 +1,11 @@
 const { ipcRenderer } = require('electron');
 const Analytics = require("electron-ga").Analytics;
 const analytics = new Analytics('UA-120295167-1');
-const Mousetrap = require('mousetrap');
+const mousetrap = require('mousetrap');
 const dragscroll = require('dragscroll');
 const tippy = require('tippy.js');
 
-var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 3;
+var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 2;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
 var rightPageElement = document.getElementById("rightPage");
 var leftPageElement = document.getElementById("leftPage");
@@ -21,6 +21,7 @@ function applyPage() {
 
 	localStorage.setItem("rightPageNumberStored", rightPageNumber);
 	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
+	idleOverlay();
 }
 function checkPage() { // generic function called by specific user actions, gateway to applyPage
 	if (userPageInputInt < 605 && userPageInputInt > -1) { // ensures possible page
@@ -142,12 +143,13 @@ function toggleFullscreen() {
 }
 
 var idleOverlay = function () {
+	console.log("ideleOveraly");
 	document.removeEventListener('mousemove', idleOverlay, false);
 	document.getElementById("overlay").style.display = "none";
     setTimeout(function() {
 		document.getElementById("overlay").style.display = "block";
 		document.addEventListener('mousemove', idleOverlay, false);
-    }, 600000);
+    }, 1800000);
 };
 document.getElementById("overlay").style.display = "none";
 document.addEventListener('mousemove', idleOverlay, false);
@@ -183,25 +185,17 @@ footer.onmouseout = function () {
 	document.body.style.cursor = "pointer"; 
 }
 
-tippy('[title]', {
-	delay: [1000, 200],
-	arrow: true,
-	size: 'small',
-	theme: "tippy-backdrop",
-	animateFill: true
-})
-
-Mousetrap.bind("right", function() {turnPage(-2)});
-Mousetrap.bind("left", function() {turnPage(+2)});
-Mousetrap.bind("=", function() {changeZoom(+5)});
-Mousetrap.bind("-", function() {changeZoom(-5)});
-Mousetrap.bind("f11", function() {toggleFullscreen()});
-Mousetrap.bind("ctrl+shift+i", function () {ipcRenderer.send('devTools')})
-Mousetrap.bind("ctrl+=", function() { document.body.style.zoom = 1.2})
-Mousetrap.bind("ctrl+0", function() { document.body.style.zoom = 1.1})
-Mousetrap.bind("ctrl+-", function() { document.body.style.zoom = 1})
-Mousetrap.bind("t", function() { toggleTheme()})
-Mousetrap.bind("q", function() { openOnQuranCom()})
-Mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
+mousetrap.bind("right", function() {turnPage(-2)});
+mousetrap.bind("left", function() {turnPage(+2)});
+mousetrap.bind("=", function() {changeZoom(+5)});
+mousetrap.bind("-", function() {changeZoom(-5)});
+mousetrap.bind("f11", function() {toggleFullscreen()});
+mousetrap.bind("ctrl+shift+i", function () {ipcRenderer.send('devTools')})
+mousetrap.bind("ctrl+=", function() { document.body.style.zoom = 1.2})
+mousetrap.bind("ctrl+0", function() { document.body.style.zoom = 1.1})
+mousetrap.bind("ctrl+-", function() { document.body.style.zoom = 1})
+mousetrap.bind("t", function() { toggleTheme()})
+mousetrap.bind("q", function() { openOnQuranCom()})
+mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 	document.getElementById("pageNumberInput").focus();
 });
