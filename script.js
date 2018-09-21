@@ -193,6 +193,13 @@ tippy('[title]', {
 	animateFill: true
 })
 
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
 mousetrap.bind("right", function() {turnPage(-2)});
 mousetrap.bind("left", function() {turnPage(+2)});
 mousetrap.bind("=", function() {changeZoom(+5)});
