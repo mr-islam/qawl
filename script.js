@@ -212,6 +212,11 @@ mousetrap.bind("ctrl+-", function() { document.body.style.zoom = 1})
 mousetrap.bind("t", function() { toggleTheme()})
 mousetrap.bind("q", function() { openOnQuranCom()})
 mousetrap.bind("e", function() { quickSwitch()})
+mousetrap.bind("w", function() { window.scrollBy({top:-100, left:0, behavior:"smooth"})})
+mousetrap.bind("a", function() { window.scrollBy({top:0, left:-100, behavior:"smooth"})})
+mousetrap.bind("s", function() { window.scrollBy({top:100, left:0, behavior:"smooth"})})
+mousetrap.bind("d", function() { window.scrollBy({top:0, left:100, behavior:"smooth"})})
+
 mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 	document.getElementById("pageNumberInput").focus();
 });
