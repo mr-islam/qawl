@@ -69,6 +69,17 @@ function surahDropdown() {
 	applyPage();
 	document.getElementById("surahSelect").blur()
 }
+function surahChange(increment) {
+	increment = parseInt(increment);
+	localStorage.setItem("lastPage", userPageInputInt);
+	for (let i = surahs.length - 1; i >= 0; i--) {
+		if (userPageInputInt < surahs[i]['pageGreen']) {
+			var surahSelect = document.getElementById("surahSelect");
+			surahSelect.value = surahs[i-1+increment]['pageGreen']
+		}
+	}
+	surahDropdown();
+}
 function updateDropdown() {
 	for (let i = surahs.length - 1; i >= 0; i--) {
 		if (userPageInputInt < surahs[i]['pageGreen']) {
@@ -202,20 +213,22 @@ window.addEventListener("keydown", function(e) {
 
 mousetrap.bind("right", function() {turnPage(-2)});
 mousetrap.bind("left", function() {turnPage(+2)});
+mousetrap.bind("up", function() {surahChange(+1)})
+mousetrap.bind("up", function() {surahChange(-1)})
 mousetrap.bind("=", function() {changeZoom(+5)});
 mousetrap.bind("-", function() {changeZoom(-5)});
 mousetrap.bind("f11", function() {toggleFullscreen()});
 mousetrap.bind("ctrl+shift+i", function () {ipcRenderer.send('devTools')})
-mousetrap.bind("ctrl+=", function() { document.body.style.zoom = 1.2})
-mousetrap.bind("ctrl+0", function() { document.body.style.zoom = 1.1})
-mousetrap.bind("ctrl+-", function() { document.body.style.zoom = 1})
-mousetrap.bind("t", function() { toggleTheme()})
-mousetrap.bind("q", function() { openOnQuranCom()})
-mousetrap.bind("e", function() { quickSwitch()})
-mousetrap.bind("w", function() { window.scrollBy({top:-100, left:0, behavior:"smooth"})})
-mousetrap.bind("a", function() { window.scrollBy({top:0, left:-100, behavior:"smooth"})})
-mousetrap.bind("s", function() { window.scrollBy({top:100, left:0, behavior:"smooth"})})
-mousetrap.bind("d", function() { window.scrollBy({top:0, left:100, behavior:"smooth"})})
+mousetrap.bind("ctrl+=", function() {document.body.style.zoom = 1.2})
+mousetrap.bind("ctrl+0", function() {document.body.style.zoom = 1.1})
+mousetrap.bind("ctrl+-", function() {document.body.style.zoom = 1})
+mousetrap.bind("t", function() {toggleTheme()})
+mousetrap.bind("q", function() {openOnQuranCom()})
+mousetrap.bind("e", function() {quickSwitch()})
+mousetrap.bind("w", function() {window.scrollBy({top:-100, left:0, behavior:"smooth"})})
+mousetrap.bind("a", function() {window.scrollBy({top:0, left:-100, behavior:"smooth"})})
+mousetrap.bind("s", function() {window.scrollBy({top:100, left:0, behavior:"smooth"})})
+mousetrap.bind("d", function() {window.scrollBy({top:0, left:100, behavior:"smooth"})})
 
 mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 	document.getElementById("pageNumberInput").focus();
