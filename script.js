@@ -214,7 +214,7 @@ window.addEventListener("keydown", function(e) {
 mousetrap.bind("right", function() {turnPage(-2)});
 mousetrap.bind("left", function() {turnPage(+2)});
 mousetrap.bind("up", function() {surahChange(+1)})
-mousetrap.bind("up", function() {surahChange(-1)})
+mousetrap.bind("down", function() {surahChange(-1)})
 mousetrap.bind("=", function() {changeZoom(+5)});
 mousetrap.bind("-", function() {changeZoom(-5)});
 mousetrap.bind("f11", function() {toggleFullscreen()});
