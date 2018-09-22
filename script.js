@@ -21,7 +21,6 @@ function applyPage() {
 
 	localStorage.setItem("rightPageNumberStored", rightPageNumber);
 	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
-	idleOverlay();
 }
 function checkPage() { // generic function called by specific user actions, gateway to applyPage
 	if (userPageInputInt < 605 && userPageInputInt > -1) { // ensures possible page
@@ -50,6 +49,13 @@ function numberOfPage() {
 	applyPage();
 	updateDropdown();
 	document.getElementById("pageNumberInput").blur()
+}
+function checkDigits() {
+	var id = document.getElementById('pageNumberInput');
+	if (id.value.length == 3) {
+		id.blur();
+		return numberOfPage();
+	}
 }
 function turnPage(increment) {
 	localStorage.setItem("lastPage", userPageInputInt);
@@ -106,7 +112,6 @@ function changeZoom(increment) {
 function openOnQuranCom() {
 	for (let i = surahs.length - 1; i >= 0; i--) {
 		if (userPageInputInt >= surahs[i]['pageGreen']) {
-			console.log('https://www.quran.com/' + parseInt(i+1), '_blank');
 			window.open('https://www.quran.com/' + parseInt(i+1), '_blank');
 			return
 		}
@@ -116,8 +121,8 @@ function openOnQuranCom() {
 var darkCss = document.getElementById("darkCss");
 var lightCss = document.getElementById("lightCss");
 function toggleTheme() {
-	if (localStorage.getItem("testTheme") == null) {
-		localStorage.setItem("testTheme", "light") //for first use
+	if (localStorage.getItem("testTheme") == null) { //for first use
+		localStorage.setItem("testTheme", "light")
 	}
 	if (localStorage.getItem("lastTheme") == "light") {
 		darkCss.media = '';
@@ -141,29 +146,23 @@ function lastTheme() {
 	}
 }
 
-function checkDigits() {
-	var id = document.getElementById('pageNumberInput');
-	if (id.value.length == 3) {
-		id.blur();
-		return numberOfPage();
-	}
-}
-
 function toggleFullscreen() {
 	ipcRenderer.send('fullScreen');
 }
-
-var idleOverlay = function () {
-	console.log("ideleOveraly");
-	document.removeEventListener('mousemove', idleOverlay, false);
-	document.getElementById("overlay").style.display = "none";
-    setTimeout(function() {
-		document.getElementById("overlay").style.display = "block";
-		document.addEventListener('mousemove', idleOverlay, false);
-    }, 1800000);
-};
-document.getElementById("overlay").style.display = "none";
-document.addEventListener('mousemove', idleOverlay, false);
+onInactive(600000, function () {
+	document.getElementById("overlay").style.display = "block";
+});
+function onInactive(ms, cb) {
+    var wait = setTimeout(cb, ms);
+	document.onmousemove = document.mousedown = document.mouseup = document.onkeydown = 
+	document.onkeyup = document.focus = document.ontouchstart = document.onclick = 
+	document.onkeypress = function () {
+		clearTimeout(wait);
+		document.getElementById("overlay").style.display = "none";
+		wait = setTimeout(cb, ms);
+    };
+}
+document.getElementById("overlay").style.display = "block";
 
 //initialization:
 applyPage();
@@ -204,8 +203,8 @@ tippy('[title]', {
 	animateFill: true
 })
 
+//prevent scrolling by keys for use by other shortcuts
 window.addEventListener("keydown", function(e) {
-    // space and arrow keys
     if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
         e.preventDefault();
     }
@@ -229,7 +228,6 @@ mousetrap.bind("w", function() {window.scrollBy({top:-100, left:0, behavior:"smo
 mousetrap.bind("a", function() {window.scrollBy({top:0, left:-100, behavior:"smooth"})})
 mousetrap.bind("s", function() {window.scrollBy({top:100, left:0, behavior:"smooth"})})
 mousetrap.bind("d", function() {window.scrollBy({top:0, left:100, behavior:"smooth"})})
-
 mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 	document.getElementById("pageNumberInput").focus();
 });
