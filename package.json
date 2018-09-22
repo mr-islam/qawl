@@ -1,7 +1,7 @@
 {
   "name": "qawl",
-  "version": "2.5.0",
-  "description": "Read the Holy Qur'ān whenever, wherever, however you like it with al-Kitab — the premier digital mushaf",
+  "version": "2.7.0",
+  "description": "Read the Holy Qur'ān whenever, wherever, however you like.",
   "main": "main.js",
   "repository": "https://github.com/mr-islam/qawl",
   "author": "mrislam",
@@ -18,11 +18,11 @@
     "release": "electron-packager ./ --all"
   },
   "build": {
-    "appId": "com.navedislam.al-kitab",
-    "productName": "al-Kitab — Desktop Qur'an Reader",
+    "appId": "com.navedislam.qawl",
+    "productName": "Qawl — Desktop Quran Reader",
     "mac": {
       "category": "public.app-category.education",
-      "target": "dmg"
+      "target": "pkg"
     },
     "win": {
       "target": "nsis"
