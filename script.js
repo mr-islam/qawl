@@ -149,8 +149,9 @@ function lastTheme() {
 function toggleFullscreen() {
 	ipcRenderer.send('fullScreen');
 }
-onInactive(600000, function () {
-	document.getElementById("overlay").style.display = "block";
+
+onInactive(3500, function () {
+	document.getElementById("footer").style.opacity = 0;
 });
 function onInactive(ms, cb) {
     var wait = setTimeout(cb, ms);
@@ -158,11 +159,10 @@ function onInactive(ms, cb) {
 	document.onkeyup = document.focus = document.ontouchstart = document.onclick = 
 	document.onkeypress = function () {
 		clearTimeout(wait);
-		document.getElementById("overlay").style.display = "none";
+		document.getElementById("footer").style.opacity = 1;
 		wait = setTimeout(cb, ms);
     };
 }
-document.getElementById("overlay").style.display = "block";
 
 //initialization:
 applyPage();
