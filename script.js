@@ -162,6 +162,7 @@ function onInactive(ms, cb) {
 	document.onkeypress = function () {
 		clearTimeout(wait);
 		document.getElementById("footer").style.opacity = 1;
+		document.body.style.cursor = "pointer";
 		wait = setTimeout(cb, ms);
     };
 }
@@ -170,6 +171,7 @@ onInactive(7000, function () {
 		return;
 	} else {
 		document.getElementById("footer").style.opacity = 0;
+		document.body.style.cursor = "none";
 	}
 });
 var isOnDiv; //so if mouse is resting on footer, it'll keep showing
