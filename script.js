@@ -154,9 +154,7 @@ function toggleFullscreen() {
 	ipcRenderer.send('fullScreen');
 }
 
-onInactive(7000, function () {
-	document.getElementById("footer").style.opacity = 0;
-});
+
 function onInactive(ms, cb) {
     var wait = setTimeout(cb, ms);
 	document.onmousemove = document.mousedown = document.mouseup = document.onkeydown = 
@@ -167,6 +165,16 @@ function onInactive(ms, cb) {
 		wait = setTimeout(cb, ms);
     };
 }
+onInactive(7000, function () {
+	if (isOnDiv === true) {
+		return;
+	} else {
+		document.getElementById("footer").style.opacity = 0;
+	}
+});
+var isOnDiv; //so if mouse is resting on footer, it'll keep showing
+document.getElementById("footer").addEventListener("mouseenter", function() {isOnDiv=true;});
+document.getElementById("footer").addEventListener("mouseout", function() {isOnDiv=false;});
 
 //prevent scrolling by keys for use by other shortcuts
 window.addEventListener("keydown", function(e) {
