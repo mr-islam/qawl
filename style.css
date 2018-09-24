@@ -78,8 +78,13 @@ select {
 	background-color: transparent;
 	font-size: 16px;
 }
+select:focus {
+	outline: none;
+	border: none;
+}
 option {
 	background-color: transparent;
+	border: none;
 }
 button {
 	background:none;
