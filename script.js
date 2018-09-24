@@ -33,6 +33,7 @@ function checkPage() { // generic function called by specific user actions, gate
 		}
 	}
 }
+
 function quickSwitch() {
 	var lastLastPage = userPageInputInt
 	userPageInputInt = parseInt(localStorage.getItem("lastPage"));
@@ -41,6 +42,7 @@ function quickSwitch() {
 	updateDropdown();
 	localStorage.setItem("lastPage", lastLastPage);
 }
+
 function numberOfPage() {
 	localStorage.setItem("lastPage", userPageInputInt);
 	userPageInput = document.getElementById("pageNumberInput").value;
@@ -57,6 +59,7 @@ function checkDigits() {
 		return numberOfPage();
 	}
 }
+
 function turnPage(increment) {
 	localStorage.setItem("lastPage", userPageInputInt);
 	if (userPageInputInt + increment > 0 && userPageInputInt + increment < 605) {
@@ -66,6 +69,7 @@ function turnPage(increment) {
 		updateDropdown();
 	} // TODO: else {error tooltip}
 }
+
 
 function surahDropdown() {
 	localStorage.setItem("lastPage", userPageInputInt);
@@ -150,7 +154,7 @@ function toggleFullscreen() {
 	ipcRenderer.send('fullScreen');
 }
 
-onInactive(3500, function () {
+onInactive(7000, function () {
 	document.getElementById("footer").style.opacity = 0;
 });
 function onInactive(ms, cb) {
@@ -164,24 +168,12 @@ function onInactive(ms, cb) {
     };
 }
 
-//initialization:
-applyPage();
-lastTheme();
-changeZoom(0);
-(function() {
-    var ele = document.getElementById("surahSelect");
-    for (let i = 0; i < surahs.length; i++) {
-        ele.innerHTML = ele.innerHTML +
-            '<option value="' + surahs[i]['pageGreen'] + '">' +
-            parseInt(i+1) + '. ' + surahs[i]['name'] + '</option>';
+//prevent scrolling by keys for use by other shortcuts
+window.addEventListener("keydown", function(e) {
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
     }
-})();
-document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
-updateDropdown();
-(async function() {
-	await analytics.send('screenview', { cd: 'Reader' });
-	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
-})();
+}, false);
 
 var footer = document.getElementById("footer")
 footer.onmouseover = function () {
@@ -203,12 +195,25 @@ tippy('[title]', {
 	animateFill: true
 })
 
-//prevent scrolling by keys for use by other shortcuts
-window.addEventListener("keydown", function(e) {
-    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-        e.preventDefault();
+
+///////////  initialization:
+applyPage();
+lastTheme();
+changeZoom(0);
+(function() {
+    var ele = document.getElementById("surahSelect");
+    for (let i = 0; i < surahs.length; i++) {
+        ele.innerHTML = ele.innerHTML +
+            '<option value="' + surahs[i]['pageGreen'] + '">' +
+            parseInt(i+1) + '. ' + surahs[i]['name'] + '</option>';
     }
-}, false);
+})();
+document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
+updateDropdown();
+(async function() {
+	await analytics.send('screenview', { cd: 'Reader' });
+	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
+})();
 
 mousetrap.bind("right", function() {turnPage(-2)});
 mousetrap.bind("left", function() {turnPage(+2)});
