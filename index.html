@@ -16,16 +16,14 @@
 	</div>
 	<div id="footer" class="footerControls">
 		<div class="footerSurahSelect">
-			<select id="surahSelect" onchange="surahDropdown();">
-				<option value="">Sūrah…</option>
-			</select>
+			<select id="surahSelect" onchange="surahDropdown();" title="Select sūrah…"></select>
 			<button id="openOnQuranCom" onclick="openOnQuranCom();" class="icon-globe" title="Open translations and recitations [Q]"></button>
 		</div>
 		<div class="footerPageOptions">
 			<button onclick="turnPage(+2);" title="Turn left [←]" class="icon-left-circle"></button>
 			<form id="pageForm" onsubmit="return false">
 				<input type="number" onkeyup="checkDigits();" name="pageNumberInput" onfocus="this.value=''" 
-					id="pageNumberInput" max="604" min="1">
+					id="pageNumberInput" max="604" min="1" title="Directly go to page…">
 				<input type="submit" name="go" value="submit" onclick="return numberOfPage();"; style="display: none"/>
 			</form>
 			<button onclick="turnPage(-2);" title="Turn right [→]" class="icon-right-circle"></button>
