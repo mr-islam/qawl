@@ -28,6 +28,7 @@ body {
 	margin-left: auto;
 	cursor: pointer;
 	-webkit-user-select:none;
+	font: caption;
 }
 #wrapper {
 	display: flex;
@@ -45,13 +46,14 @@ img.resize {
 	border: none;
 }
 div.footerControls {
+	cursor: default;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	width: 90%;
 	margin-left: 5%;
-	margin-bottom: 1%;
+	margin-bottom: 1.5%;
 	position: fixed;
 	bottom: 0;
 	height: 6%;
@@ -70,14 +72,22 @@ input {
 	font-size: 16px;
 	width: 200px;
 	border: none;
+	border-radius: 2px;
+	transition: background-color 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+input:focus {
+	outline: none;
 }
 select {
 	text-align: center;
 	text-align-last:center;
 	border: none;
+	border-radius: 2px;
 	height: 100%;
 	background-color: transparent;
 	font-size: 16px;
+	transition: background-color 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+
 }
 select:focus {
 	outline: none;

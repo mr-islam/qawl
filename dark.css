@@ -8,8 +8,16 @@ div.footerControls {
 input {
     color: #6c71c4;
 }
+input:hover, input:focus {
+    background:rgba(7,54,66,0.8);
+	color: #6c71c4;
+}
 select {
     color: #6c71c4;
+}
+select:hover, select:focus {
+    background:rgba(7,54,66,0.8);
+	color: #6c71c4;
 }
 option {
     color: #6c71c4;
