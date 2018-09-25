@@ -27,6 +27,7 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	cursor: pointer;
+	-webkit-user-select:none;
 }
 #wrapper {
 	display: flex;
