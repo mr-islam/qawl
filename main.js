@@ -6,52 +6,12 @@ const windowStateKeeper = require('electron-window-state')
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-/*
-function createWindow () {
-  // Create the browser window.
-  mainWindow = new BrowserWindow({
-    title: "Qawl — Desktop Quran Reader",
-    show: false,
-    width: 1024,
-    height: 768,
-    minWidth: 800,
-    minHeight: 600,
-    resizable: true,
-    scrollBounce: true,
-    backgroundColor: '#073642',
-    icon: __dirname + '/assets/icon.png'
-});
-  mainWindow.once('ready-to-show', () => {
-    mainWindow.show()
-  })
-
-  // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
-  mainWindow.setMenu(null)
-
-  // Emitted when the window is closed.
-  mainWindow.on('closed', function () {
-    // Dereference the window object, usually you would store windows
-    // in an array if your app supports multi windows, this is the time
-    // when you should delete the corresponding element.
-    mainWindow = null
-  })
-}
-
-
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
-*/
-
 app.on('ready', function () {
   // Load the previous state with fallback to defaults
   let mainWindowState = windowStateKeeper({
     defaultWidth: 1000,
     defaultHeight: 800
   });
-  // Create the window using the state information
   mainWindow = new BrowserWindow({
     title: "Qawl — Desktop Quran Reader",
     show: false,
@@ -71,7 +31,6 @@ app.on('ready', function () {
     mainWindow.show()
   })
 
-  // and load the index.html of the app.
   mainWindow.loadFile('index.html')
   mainWindow.setMenu(null)
 
