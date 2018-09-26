@@ -10,11 +10,12 @@ div.footerControls {
 }
 button, option, input, select {
     color: var(--text);
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.15);
 }
 input:hover, input:focus, select:hover, select:focus, button:hover, option {
     border: 1px solid #fdf6e3;
     background:rgba(50, 50, 50, 0.8);
+}
 option {
     color: #3b321a;
 }
