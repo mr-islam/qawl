@@ -1,42 +1,29 @@
 :root {
-    --solar-light: #fdf6e3;
+    --text: #fdf6e3;
 }
 body {
-    background-color: var(--solar-light);
+    background-color: var(--text);
 }
 div.footerControls {
-    background:rgba(0,0,0,0.7);
+    background:rgba(0, 0, 0, 0.7);
+    z-index: 2;
 }
-input {
-    color: var(--solar-light);
+button, option, input, select {
+    color: var(--text);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
-input:hover, input:focus {
-    background-color: var(--solar-light);
-    color: rgba(0,0,0,0.6);
-}
-select {
-    color: var(--solar-light);
-}
-select:hover, select:focus {
-    background-color: var(--solar-light);
-	color: rgba(0,0,0,0.6);
-}
+input:hover, input:focus, select:hover, select:focus, button:hover, option {
+    border: 1px solid #fdf6e3;
+    background:rgba(50, 50, 50, 0.8);
 option {
     color: #3b321a;
 }
-button {
-    color: var(--solar-light);
-}
-button:hover {
-    background-color: var(--solar-light);
-	color: rgba(0,0,0,0.6);
-}
 .tippy-tooltip.tippy-backdrop-theme {
     background:rgba(0,0,0,0.7);
-    color: var(--solar-light);
+    color: var(--text);
 }
 #overlay {
-    background-color: var(--solar-light);
+    background-color: var(--text);
 }
 .overlayContents {
     background-color: #eee8d5;
