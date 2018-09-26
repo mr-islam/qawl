@@ -1,3 +1,6 @@
+:root {
+    --violet: #6c71c4;
+}  
 body {
     background-color: #002b36;
 }
@@ -6,35 +9,34 @@ div.footerControls {
     z-index: 2;
 }
 input {
-    color: #6c71c4;
+    color: var(--violet);
 }
 input:hover, input:focus {
     background:rgba(7,54,66,0.8);
-	color: #6c71c4;
 }
 select {
-    color: #6c71c4;
+    color: var(--violet);
 }
 select:hover, select:focus {
     background:rgba(7,54,66,0.8);
-	color: #6c71c4;
+    color: var(--violet);
 }
 option {
-    color: #6c71c4;
+    color: var(--violet);
 }
 button {
-    color: #6c71c4;
+    color: var(--violet);
 }
 button:hover {
     background:rgba(7,54,66,0.8);
-	color: #6c71c4;
+    color: var(--violet);
 }
 img {
     filter: invert(1);
 }
 .tippy-tooltip.tippy-backdrop-theme {
     background:#000;
-    color: #6c71c4;
+    color: var(--violet);
 }
 #overlay {
     background-color: #073642;
