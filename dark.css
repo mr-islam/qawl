@@ -1,42 +1,28 @@
 :root {
-    --violet: #6c71c4;
+    --text: #fdf6e3;
 }  
 body {
     background-color: #002b36;
 }
 div.footerControls {
-    background:rgba(0,0,0,0.8);
+    background:rgba(88,110,117,0.9);
     z-index: 2;
 }
-input {
-    color: var(--violet);
+input:hover, input:focus, select:hover, select:focus, button:hover, option {
+    border: 1px solid #fdf6e3;
+    background-color: #839496;
 }
-input:hover, input:focus {
-    background:rgba(7,54,66,0.8);
-}
-select {
-    color: var(--violet);
-}
-select:hover, select:focus {
-    background:rgba(7,54,66,0.8);
-    color: var(--violet);
-}
-option {
-    color: var(--violet);
-}
-button {
-    color: var(--violet);
-}
-button:hover {
-    background:rgba(7,54,66,0.8);
-    color: var(--violet);
+button, option, input, select {
+    color: var(--text);
+    border: 1px solid rgba(88,110,117,0.9);;
 }
 img {
     filter: invert(1);
 }
 .tippy-tooltip.tippy-backdrop-theme {
-    background:#000;
-    color: var(--violet);
+    background:#586e75;
+    color: var(--text);
+    font-family: caption;
 }
 #overlay {
     background-color: #073642;
