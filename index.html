@@ -20,18 +20,18 @@
 			<button id="openOnQuranCom" onclick="openOnQuranCom();" class="icon-globe" title="Open translations and recitations [Q]"></button>
 		</div>
 		<div class="footerPageOptions">
-			<button onclick="turnPage(+2);" title="Turn left [←]" class="icon-left-circle"></button>
+			<button id="turnLeft" onclick="turnPage(+2);" title="Turn left [←]" class="icon-left-circle"></button>
 			<form id="pageForm" onsubmit="return false">
 				<input type="number" onkeyup="checkDigits();" name="pageNumberInput" onfocus="this.value=''" 
 					id="pageNumberInput" max="604" min="1" title="Directly go to page…">
 				<input type="submit" name="go" value="submit" onclick="return numberOfPage();"; style="display: none"/>
 			</form>
-			<button onclick="turnPage(-2);" title="Turn right [→]" class="icon-right-circle"></button>
+			<button id="turnRight" onclick="turnPage(-2);" title="Turn right [→]" class="icon-right-circle"></button>
 		</div>
 		<div class="footerSettings">
 			<button id="quickSwitch" onclick="quickSwitch();" title="Flip to last page [E]" class="icon-switch"></button>
 			<button id="toggleTheme" onclick="toggleTheme();" title="Switch theme [T]" class="icon-moon"></button>
-			<button id="fullScreen" onclick="toggleFullscreen();" title="Toggle fullscreen [F11]" class="icon-resize-full"></button>
+			<button id="fullscreen" onclick="toggleFullscreen();" title="Toggle fullscreen [F11]" class="icon-resize-full"></button>
 			<button id="zoomOut" onclick="changeZoom(-5);" title="Zoom out [-]" class="icon-zoom-out"></button>
 			<button id="zoomIn" onclick="changeZoom(+5);" title="Zoom in [+]" class="icon-zoom-in"></button>
 		</div>

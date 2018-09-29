@@ -12,7 +12,8 @@ button, option, input, select {
     color: var(--text);
     border: 1px solid rgba(0, 0, 0, 0.15);
 }
-input:hover, input:focus, select:hover, select:focus, button:hover, option {
+input:hover, input:focus, select:hover, select:focus, 
+button:hover, option, .click {
     border: 1px solid #fdf6e3;
     background:rgba(50, 50, 50, 0.8);
 }

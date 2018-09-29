@@ -225,24 +225,75 @@ updateDropdown();
 	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
 })();
 
-mousetrap.bind("right", function() {turnPage(-2)});
-mousetrap.bind("left", function() {turnPage(+2)});
-mousetrap.bind("up", function() {surahChange(+1)})
-mousetrap.bind("down", function() {surahChange(-1)})
-mousetrap.bind("=", function() {changeZoom(+5)});
-mousetrap.bind("-", function() {changeZoom(-5)});
-mousetrap.bind("f11", function() {toggleFullscreen()});
-mousetrap.bind("ctrl+shift+i", function () {ipcRenderer.send('devTools')})
-mousetrap.bind("ctrl+=", function() {document.body.style.zoom = 1.2})
-mousetrap.bind("ctrl+0", function() {document.body.style.zoom = 1.1})
-mousetrap.bind("ctrl+-", function() {document.body.style.zoom = 1})
-mousetrap.bind("t", function() {toggleTheme()})
-mousetrap.bind("q", function() {openOnQuranCom()})
-mousetrap.bind("e", function() {quickSwitch()})
+mousetrap.bind("right", function() {
+	let element = document.getElementById("turnRight");
+	element.classList.add("click");
+	element.click();
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+mousetrap.bind("left", function() {
+	let element = document.getElementById("turnLeft");
+	element.classList.add("click");
+	element.click(); //timeout below simulates button press:
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+mousetrap.bind("up", function() {
+	let element = document.getElementById("surahSelect");
+	element.classList.add("click");
+	surahChange(+1);
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+mousetrap.bind("down", function() {
+	let element = document.getElementById("surahSelect");
+	element.classList.add("click");
+	surahChange(-1);
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+mousetrap.bind("=", function() {
+	let element = document.getElementById("zoomIn");
+	element.classList.add("click");
+	element.click();
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+mousetrap.bind("-", function() {
+	let element = document.getElementById("zoomOut");
+	element.classList.add("click");
+	element.click();
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+mousetrap.bind("f11", function() {
+	let element = document.getElementById("fullscreen");
+	element.classList.add("click");
+	element.click();
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+mousetrap.bind("t", function() {
+	let element = document.getElementById("toggleTheme");
+	element.classList.add("click");
+	element.click();
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+mousetrap.bind("q", function() {
+	let element = document.getElementById("openOnQuranCom");
+	element.classList.add("click");
+	element.click();
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+mousetrap.bind("e", function() {
+	let element = document.getElementById("quickSwitch");
+	element.classList.add("click");
+	element.click();
+	setTimeout(function(){ element.classList.remove("click") }, 200);
+});
+
 mousetrap.bind("w", function() {window.scrollBy({top:-100, left:0, behavior:"smooth"})})
 mousetrap.bind("a", function() {window.scrollBy({top:0, left:-100, behavior:"smooth"})})
 mousetrap.bind("s", function() {window.scrollBy({top:100, left:0, behavior:"smooth"})})
 mousetrap.bind("d", function() {window.scrollBy({top:0, left:100, behavior:"smooth"})})
+mousetrap.bind("ctrl+shift+i", function () {ipcRenderer.send('devTools')})
+mousetrap.bind("ctrl+=", function() {document.body.style.zoom = 1.2})
+mousetrap.bind("ctrl+0", function() {document.body.style.zoom = 1.1})
+mousetrap.bind("ctrl+-", function() {document.body.style.zoom = 1})
 mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 	document.getElementById("pageNumberInput").focus();
 });

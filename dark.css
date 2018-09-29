@@ -8,7 +8,8 @@ div.footerControls {
     background:rgba(88,110,117,0.9);
     z-index: 2;
 }
-input:hover, input:focus, select:hover, select:focus, button:hover, option {
+input:hover, input:focus, select:hover, select:focus, 
+button:hover, option, .click {
     border: 1px solid #fdf6e3;
     background-color: #839496;
 }
