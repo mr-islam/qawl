@@ -166,7 +166,7 @@ function onInactive(ms, cb) {
 		wait = setTimeout(cb, ms);
     };
 }
-onInactive(7000, function () {
+onInactive(5000, function () {
 	if (isOnDiv === true) {
 		return;
 	} else {
