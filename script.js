@@ -70,7 +70,6 @@ function turnPage(increment) {
 	} // TODO: else {error tooltip}
 }
 
-
 function surahDropdown() {
 	localStorage.setItem("lastPage", userPageInputInt);
 	var selectedSurah = parseInt(document.getElementById("surahSelect").value);

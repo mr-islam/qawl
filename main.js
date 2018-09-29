@@ -34,6 +34,11 @@ app.on('ready', function () {
   mainWindow.loadFile('index.html')
   mainWindow.setMenu(null)
 
+  mainWindow.webContents.on('new-window', function(e, url) {
+    e.preventDefault();
+    require('electron').shell.openExternal(url);
+  });
+
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
@@ -74,3 +79,4 @@ function toggleDevTools() {
 }
 ipcMain.on('fullScreen', () => toggleFullscreen());
 ipcMain.on('devTools', () => toggleDevTools());
+
