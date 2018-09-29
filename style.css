@@ -38,6 +38,7 @@ body {
 	cursor: pointer;
 	-webkit-user-select:none;
 	font: caption;
+	transition: width 100ms ease;
 }
 #wrapper {
 	display: flex;
@@ -47,6 +48,7 @@ body {
 	max-width: 50%;
 	margin-right: auto;
 	margin-left: auto;
+	transition: max-width 100ms ease;
 }
 img.resize {
 	max-width: 50%;
