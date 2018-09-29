@@ -16,9 +16,6 @@ input:hover, input:focus, select:hover, select:focus, button:hover, option {
     border: 1px solid #fdf6e3;
     background:rgba(50, 50, 50, 0.8);
 }
-option {
-    color: #3b321a;
-}
 .tippy-tooltip.tippy-backdrop-theme {
     background:rgba(0,0,0,0.7);
     color: var(--text);
