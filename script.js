@@ -192,6 +192,8 @@ footer.onmouseover = function () {
 	document.body.style.cursor = "default"; 
 }
 footer.onmouseout = function () {
+	document.getElementById("pageNumberInput").blur();
+	document.getElementById("surahSelect").blur();
 	document.body.classList.add("dragscroll");
 	dragscroll.reset();
 	document.body.style.cursor = "pointer"; 
