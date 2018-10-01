@@ -8,7 +8,7 @@ var surahs = [
 		"pageGreen": 2
 	},
 	{
-		"name": "Ãl-ʿImrān",
+		"name": "Āl-ʿImrān",
 		"pageGreen": 50
 	},
 	{
