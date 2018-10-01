@@ -8,7 +8,7 @@ var surahs = [
 		"pageGreen": 2
 	},
 	{
-		"name": "Ãl-´Imrān",
+		"name": "Ãl-ʿImrān",
 		"pageGreen": 50
 	},
 	{
@@ -20,11 +20,11 @@ var surahs = [
 		"pageGreen": 106
 	},
 	{
-		"name": "al-An`ām",
+		"name": "al-Anʿām",
 		"pageGreen": 128
 	},
 	{
-		"name": "al-A`rāf",
+		"name": "al-Aʿrāf",
 		"pageGreen": 151
 	},
 	{
@@ -48,7 +48,7 @@ var surahs = [
 		"pageGreen": 235
 	},
 	{
-		"name": "ar-Ra´d",
+		"name": "ar-Raʿd",
 		"pageGreen": 249
 	},
 	{
@@ -100,7 +100,7 @@ var surahs = [
 		"pageGreen": 359
 	},
 	{
-		"name": "ash-Shu`arā",
+		"name": "ash-Shuʿarā",
 		"pageGreen": 367
 	},
 	{
@@ -112,7 +112,7 @@ var surahs = [
 		"pageGreen": 385
 	},
 	{
-		"name": "al-`Ankabūt",
+		"name": "al-ʿAnkabūt",
 		"pageGreen": 396
 	},
 	{
@@ -220,7 +220,7 @@ var surahs = [
 		"pageGreen": 531
 	},
 	{
-		"name": "al-Wāqi`ah",
+		"name": "al-Wāqiʿah",
 		"pageGreen": 534
 	},
 	{
@@ -244,7 +244,7 @@ var surahs = [
 		"pageGreen": 551
 	},
 	{
-		"name": "al-Jumu`ah",
+		"name": "al-Jumuʿah",
 		"pageGreen": 553
 	},
 	{
@@ -276,7 +276,7 @@ var surahs = [
 		"pageGreen": 566
 	},
 	{
-		"name": "al-Ma`ārij",
+		"name": "al-Maʿārij",
 		"pageGreen": 568
 	},
 	{
@@ -312,11 +312,11 @@ var surahs = [
 		"pageGreen": 582
 	},
 	{
-		"name": "an-Nāzi`āt",
+		"name": "an-Nāziʿāt",
 		"pageGreen": 583
 	},
 	{
-		"name": "`Abasa",
+		"name": "ʿAbasa",
 		"pageGreen": 585
 	},
 	{
@@ -344,7 +344,7 @@ var surahs = [
 		"pageGreen": 591
 	},
 	{
-		"name": "al-A`lā",
+		"name": "al-Aʿlā",
 		"pageGreen": 591
 	},
 	{
@@ -380,7 +380,7 @@ var surahs = [
 		"pageGreen": 597
 	},
 	{
-		"name": "al-`Alaq",
+		"name": "al-ʿAlaq",
 		"pageGreen": 597
 	},
 	{
@@ -396,11 +396,11 @@ var surahs = [
 		"pageGreen": 599
 	},
 	{
-		"name": "al-`Ādiyāt",
+		"name": "al-ʿĀdiyāt",
 		"pageGreen": 599
 	},
 	{
-		"name": "al-Qāri`ah",
+		"name": "al-Qāriʿah",
 		"pageGreen": 600
 	},
 	{
@@ -408,7 +408,7 @@ var surahs = [
 		"pageGreen": 600
 	},
 	{
-		"name": "al-´Asr",
+		"name": "al-ʿAsr",
 		"pageGreen": 601
 	},
 	{
@@ -424,7 +424,7 @@ var surahs = [
 		"pageGreen": 602
 	},
 	{
-		"name": "al-Mā`ūn",
+		"name": "al-Māʿūn",
 		"pageGreen": 602
 	},
 	{
