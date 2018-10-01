@@ -80,7 +80,8 @@ input {
 	text-align: center;
 	height: 100%;
 	background: none;
-	font-size: 16px;
+	font-size: 19px;
+	font-family: 'Source Sans Pro';
 	width: 200px;
 	border: none;
 	transition: var(--transition-bg);
@@ -95,7 +96,8 @@ select {
 	border: none;
 	height: 100%;
 	background-color: transparent;
-	font-size: 16px;
+	font-size: 19px;
+	font-family: 'Source Sans Pro';
 	transition: var(--transition-bg);
 	transition: var(--transition-border);
 }
