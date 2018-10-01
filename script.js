@@ -16,9 +16,15 @@ var userPageInputInt = parseInt(userPageInput);
 
 function applyPage() {
 	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
-	leftPage.src = "assets/mushaf/"+leftPageNumber+".png";
-	rightPage.src = "assets/mushaf/"+rightPageNumber+".png";
-
+	leftPage.style.opacity = 0.75;
+	rightPage.style.opacity = 0.75;
+	setTimeout(function(){ 
+		leftPage.src = "assets/mushaf/"+leftPageNumber+".png";
+		rightPage.src = "assets/mushaf/"+rightPageNumber+".png";
+		leftPage.style.opacity = 1;
+		rightPage.style.opacity = 1;
+	}, 100);
+	
 	localStorage.setItem("rightPageNumberStored", rightPageNumber);
 	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
 }

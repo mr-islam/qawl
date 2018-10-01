@@ -55,6 +55,7 @@ img.resize {
 	height: auto;
 	background-color: transparent;
 	border: none;
+	transition: opacity 100ms ease;
 }
 div.footerControls {
 	cursor: default;
