@@ -16,14 +16,14 @@ var userPageInputInt = parseInt(userPageInput);
 
 function applyPage() {
 	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
-	leftPage.style.opacity = 0.75;
-	rightPage.style.opacity = 0.75;
+	leftPage.style.opacity = 0.6;
+	rightPage.style.opacity = 0.6;
 	setTimeout(function(){ 
 		leftPage.src = "assets/mushaf/"+leftPageNumber+".png";
 		rightPage.src = "assets/mushaf/"+rightPageNumber+".png";
 		leftPage.style.opacity = 1;
 		rightPage.style.opacity = 1;
-	}, 100);
+	}, 25);
 	
 	localStorage.setItem("rightPageNumberStored", rightPageNumber);
 	document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt);
@@ -232,6 +232,7 @@ updateDropdown();
 	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
 })();
 
+
 mousetrap.bind("right", function() {
 	let element = document.getElementById("turnRight");
 	element.classList.add("click");
@@ -292,7 +293,6 @@ mousetrap.bind("e", function() {
 	element.click();
 	setTimeout(function(){ element.classList.remove("click") }, 200);
 });
-
 mousetrap.bind("w", function() {window.scrollBy({top:-100, left:0, behavior:"smooth"})})
 mousetrap.bind("a", function() {window.scrollBy({top:0, left:-100, behavior:"smooth"})})
 mousetrap.bind("s", function() {window.scrollBy({top:100, left:0, behavior:"smooth"})})
