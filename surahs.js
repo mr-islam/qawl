@@ -12,11 +12,11 @@ var surahs = [
 		"pageGreen": 50
 	},
 	{
-		"name": "an-Nisā'",
+		"name": "an-Nisāʾ",
 		"pageGreen": 77
 	},
 	{
-		"name": "al-Mā'idah",
+		"name": "al-Māʾidah",
 		"pageGreen": 106
 	},
 	{
@@ -64,7 +64,7 @@ var surahs = [
 		"pageGreen": 267
 	},
 	{
-		"name": "al-Isrā'",
+		"name": "al-Isrāʾ",
 		"pageGreen": 282
 	},
 	{
@@ -80,7 +80,7 @@ var surahs = [
 		"pageGreen": 312
 	},
 	{
-		"name": "al-Anbiyā'",
+		"name": "al-Anbiyāʾ",
 		"pageGreen": 322
 	},
 	{
@@ -88,7 +88,7 @@ var surahs = [
 		"pageGreen": 332
 	},
 	{
-		"name": "al-Mu'minūn",
+		"name": "al-Muʾminūn",
 		"pageGreen": 342
 	},
 	{
@@ -132,7 +132,7 @@ var surahs = [
 		"pageGreen": 418
 	},
 	{
-		"name": "Saba'",
+		"name": "Sabaʾ",
 		"pageGreen": 428
 	},
 	{
@@ -308,7 +308,7 @@ var surahs = [
 		"pageGreen": 580
 	},
 	{
-		"name": "an-Naba'",
+		"name": "an-Nabaʾ",
 		"pageGreen": 582
 	},
 	{
