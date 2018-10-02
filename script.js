@@ -205,11 +205,7 @@ footer.onmouseout = function () {
 }
 
 tippy('[title]', {
-	delay: [400, 200],
-	arrow: true,
-	size: 'small',
-	theme: "tippy-backdrop",
-	animateFill: true
+	theme: "tippy-backdrop"
 })
 
 
