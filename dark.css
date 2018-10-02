@@ -20,10 +20,11 @@ button, option, input, select {
 img {
     filter: invert(1);
 }
-.tippy-tooltip.tippy-backdrop-theme {
-    background:#586e75;
+.tippy-backdrop {
+    background:#3b4b50;
+}
+.tippy-content {
     color: var(--text);
-    font-family: caption;
 }
 #overlay {
     background-color: #073642;

@@ -121,6 +121,11 @@ button {
 button:focus {
 	outline: none;
 }
+.tippy-content {
+	font-family: 'Source Sans Pro';
+	font-weight: lighter;
+	font-size: 16px;
+}
 img {
 	image-rendering: -webkit-optimize-contrast;
 	padding-bottom: 2.5%;
@@ -128,10 +133,6 @@ img {
 ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
-}
-.tippy-tooltip.tippy-backdrop-theme {
-	font-family: 'Source Sans Pro';
-	font-size: 15px;
 }
 #overlay {
 	position: fixed;

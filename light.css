@@ -17,8 +17,10 @@ button:hover, option, .click {
     border: 1px solid #fdf6e3;
     background:rgba(50, 50, 50, 0.8);
 }
-.tippy-tooltip.tippy-backdrop-theme {
-    background:rgba(0,0,0,0.7);
+.tippy-backdrop {
+    background-color: #231F20;
+}
+.tippy-content {
     color: var(--text);
 }
 #overlay {

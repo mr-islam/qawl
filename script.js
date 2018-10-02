@@ -177,6 +177,7 @@ onInactive(5000, function () {
 	} else {
 		document.getElementById("footer").style.opacity = 0;
 		document.body.style.cursor = "none";
+		tippy.hideAllPoppers();
 	}
 });
 var isOnDiv; //so if mouse is resting on footer, it'll keep showing
@@ -204,9 +205,7 @@ footer.onmouseout = function () {
 	document.body.style.cursor = "pointer"; 
 }
 
-tippy('[title]', {
-	theme: "tippy-backdrop"
-})
+tippy('[title]')
 
 
 ///////////  initialization:
