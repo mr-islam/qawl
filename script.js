@@ -205,7 +205,9 @@ footer.onmouseout = function () {
 	document.body.style.cursor = "pointer"; 
 }
 
-tippy('[title]')
+tippy('[title]', {
+	delay: [200, 400]
+})
 
 
 ///////////  initialization:
