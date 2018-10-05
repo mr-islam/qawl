@@ -16,13 +16,9 @@ var userPageInputInt = parseInt(userPageInput);
 
 function applyPage() {
 	console.log("page set: r="+ rightPageNumber + " l="+ leftPageNumber);
-	leftPage.style.opacity = 0.6;
-	rightPage.style.opacity = 0.6;
 	setTimeout(function(){ 
 		leftPage.src = "assets/mushaf/"+leftPageNumber+".png";
 		rightPage.src = "assets/mushaf/"+rightPageNumber+".png";
-		leftPage.style.opacity = 1;
-		rightPage.style.opacity = 1;
 	}, 25);
 	
 	localStorage.setItem("rightPageNumberStored", rightPageNumber);
