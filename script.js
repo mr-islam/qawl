@@ -184,13 +184,6 @@ var isOnDiv; //so if mouse is resting on footer, it'll keep showing
 document.getElementById("footer").addEventListener("mouseenter", function() {isOnDiv=true;});
 document.getElementById("footer").addEventListener("mouseout", function() {isOnDiv=false;});
 
-//prevent scrolling by keys for use by other shortcuts
-window.addEventListener("keydown", function(e) {
-    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-        e.preventDefault();
-    }
-}, false);
-
 var footer = document.getElementById("footer")
 footer.onmouseover = function () {
 	document.body.classList.remove("dragscroll");
@@ -230,25 +223,25 @@ updateDropdown();
 })();
 
 
-mousetrap.bind("right", function() {
+mousetrap.bind("d", function() {
 	let element = document.getElementById("turnRight");
 	element.classList.add("click");
 	element.click();
 	setTimeout(function(){ element.classList.remove("click") }, 200);
 });
-mousetrap.bind("left", function() {
+mousetrap.bind("a", function() {
 	let element = document.getElementById("turnLeft");
 	element.classList.add("click");
 	element.click(); //timeout below simulates button press:
 	setTimeout(function(){ element.classList.remove("click") }, 200);
 });
-mousetrap.bind("up", function() {
+mousetrap.bind("w", function() {
 	let element = document.getElementById("surahSelect");
 	element.classList.add("click");
 	surahChange(+1);
 	setTimeout(function(){ element.classList.remove("click") }, 200);
 });
-mousetrap.bind("down", function() {
+mousetrap.bind("s", function() {
 	let element = document.getElementById("surahSelect");
 	element.classList.add("click");
 	surahChange(-1);
@@ -290,10 +283,6 @@ mousetrap.bind("e", function() {
 	element.click();
 	setTimeout(function(){ element.classList.remove("click") }, 200);
 });
-mousetrap.bind("w", function() {window.scrollBy({top:-100, left:0, behavior:"smooth"})})
-mousetrap.bind("a", function() {window.scrollBy({top:0, left:-100, behavior:"smooth"})})
-mousetrap.bind("s", function() {window.scrollBy({top:100, left:0, behavior:"smooth"})})
-mousetrap.bind("d", function() {window.scrollBy({top:0, left:100, behavior:"smooth"})})
 mousetrap.bind("ctrl+shift+i", function () {ipcRenderer.send('devTools')})
 mousetrap.bind("ctrl+=", function() {document.body.style.zoom = 1.2})
 mousetrap.bind("ctrl+0", function() {document.body.style.zoom = 1.1})
