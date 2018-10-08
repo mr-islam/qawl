@@ -33,6 +33,7 @@ Alternatively, try out a limited version of [al-Kitāb, online](https://mr-islam
 The interface has been tested thoroughly for ease of use — all actions are done by the bottom bar: surah is selected by clicking the text on the left, numbers at the center are page numbers (click, type the desired page and hit enter. Or, just start typing numbers and it will automatically gain focus), the arrow icons to its left and right flip the page respectively, the globe icon in the right-cluster opens the current surah on quran.com, and the zoom keys are after that. 
 
 ### Keyboard Shortcuts
+*Tooltips also explain the keybaord shortcuts for the respective function*
 
 | Action            | Shortcut |
 |-------------------|----------|
