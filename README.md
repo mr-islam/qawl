@@ -34,12 +34,18 @@ The interface has been tested thoroughly for ease of use — all actions are don
 
 There are also keyboard shortcuts for your convenience:
 
-| Action  | Key |
-| ------------- | ------------- |
-| Turn page right  | `→`  |
-| Turn page left  | `←`  |
-| Zoom in | `+` |
-| Zoom out | `-` |
+| Action            | Shortcut |
+|-------------------|----------|
+| Turn page left    | `A`      |
+| Turn page right   | `D`      |
+| Next Surah        | `W`      |
+| Previous Surah    | `S`      |
+| Zoom in           | `=`      |
+| Zoom out          | `-`      |
+| Toggle fullscreen | `F11`    |
+| Toggle theme      | `T`      |
+| Jump to last page | `E`      |
+| Open on quran.com | `Q`      |
 
 ## Development
 1. Clone the repo
