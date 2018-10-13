@@ -286,3 +286,14 @@ mousetrap.bind("ctrl+-", function() {document.body.style.zoom = 1})
 mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 	document.getElementById("pageNumberInput").focus();
 });
+
+window.addEventListener('wheel', function(e) {
+	if (e.ctrlKey == true) { //all corresponds to touchpad pinch in/out
+		if (e.deltaY < 0) {
+			changeZoom(+5);
+		}
+		if (e.deltaY > 0) {
+			changeZoom(-5);
+		}
+	}
+});
