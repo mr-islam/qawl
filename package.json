@@ -36,7 +36,6 @@
   },
   "dependencies": {
     "dragscroll": "^0.0.8",
-    "electron-ga": "^1.0.6",
     "electron-window-state": "^5.0.1",
     "mousetrap": "^1.6.2",
     "tippy.js": "^2.6.0"

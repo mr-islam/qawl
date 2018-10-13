@@ -1,6 +1,4 @@
 const { ipcRenderer } = require('electron');
-const Analytics = require("electron-ga").Analytics;
-const analytics = new Analytics('UA-120295167-1');
 const mousetrap = require('mousetrap');
 const dragscroll = require('dragscroll');
 const tippy = require('tippy.js');
@@ -213,10 +211,6 @@ changeZoom(0);
 })();
 document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
 updateDropdown();
-(async function() {
-	await analytics.send('screenview', { cd: 'Reader' });
-	await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
-})();
 
 
 mousetrap.bind("d", function() {
