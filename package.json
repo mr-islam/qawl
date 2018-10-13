@@ -28,12 +28,10 @@
       "target": "pkg"
     },
     "win": {
-      "target": "nsis"
+      "target": ["appx", "nsis"]
     },
     "linux": {
-      "target": [
-        "AppImage"
-      ]
+      "target": "AppImage"
     }
   },
   "dependencies": {
