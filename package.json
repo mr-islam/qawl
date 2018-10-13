@@ -28,7 +28,9 @@
       "target": "pkg"
     },
     "win": {
-      "target": ["appx", "nsis"]
+      "target": ["appx", "nsis"],
+      "publisherDisplayName": "Naved Islam",
+      "backgroundColor": "#eee8d5"
     },
     "linux": {
       "target": "AppImage"
