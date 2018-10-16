@@ -1,6 +1,11 @@
 # al-kitab
 
 <p align="center">
+  <a href="http://www.youtube.com/watch?v=YYVfddZCyMs" title="Video Trailer"><img width="256" height="256" src="https://i.imgur.com/KSL8Ae9.png></a>
+</p>
+
+
+<p align="center">
   [![logo](https://i.imgur.com/KSL8Ae9.png)](http://www.youtube.com/watch?v=YYVfddZCyMs "Click for Video Demonstration")
 </p>
 
