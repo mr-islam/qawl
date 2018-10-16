@@ -1,6 +1,6 @@
 # al-kitab
 
-[![logo](https://i.imgur.com/ZABEsxq.png)](http://www.youtube.com/watch?v=YYVfddZCyMs "Click for Video Demonstration")
+[![logo](https://i.imgur.com/ZABEsxq.png)](https://qawl.navedislam.com)
 
 --------
 
@@ -24,7 +24,13 @@ Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
 
 * With one click of a button, open the current surah on Quran.com to benefit from **audio recitations, analyses and translations**
 
-* Soothe your eyes with 
+* Soothe your eyes with a stunning **dark theme**.
+
+See Qawl in action:
+
+[![](http://img.youtube.com/vi/EWtOurhTzqo/0.jpg)](http://www.youtube.com/watch?v=EWtOurhTzqo "")
+
+
 
 ### Installation
 Head to the [releases page](https://qawl.navedislam.com/#section3) and choose the appropriate download for your operating system. 
