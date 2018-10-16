@@ -1,6 +1,8 @@
 # al-kitab
 
-[![logo](https://i.imgur.com/KSL8Ae9.png)](http://www.youtube.com/watch?v=YYVfddZCyMs "Click for Video Demonstration")
+<p align="center">
+  [![logo](https://i.imgur.com/KSL8Ae9.png)](http://www.youtube.com/watch?v=YYVfddZCyMs "Click for Video Demonstration")
+</p>
 
 --------
 
