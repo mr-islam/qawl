@@ -26,10 +26,7 @@ Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
 
 * Soothe your eyes with a stunning **dark theme**.
 
-See Qawl in action:
-
-[![](http://img.youtube.com/vi/EWtOurhTzqo/0.jpg)](http://www.youtube.com/watch?v=EWtOurhTzqo "")
-
+See [**Qawl in action**](http://www.youtube.com/watch?v=EWtOurhTzqo "").
 
 
 ### Installation
