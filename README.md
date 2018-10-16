@@ -1,4 +1,4 @@
-# al-kitab
+# Qawl
 
 [![logo](https://i.imgur.com/ZABEsxq.png)](https://qawl.navedislam.com)
 
@@ -34,7 +34,7 @@ Head to the [releases page](https://qawl.navedislam.com/#section3) and choose th
 
 
 ### Keyboard Shortcuts
-*Tooltips also explain the keyboard shortcuts for the respective function*
+*Tooltips within the app also explain the keyboard shortcuts for the respective function*
 
 | Action            | Shortcut |
 |-------------------|----------|
