@@ -14,6 +14,8 @@ Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
 
 * Precise, user-controlled **zoom**
 
+* Full offline support
+
 * Easy **navigation** of the Qur'ān by selecting a surah, "turning" the page, or directly typing in your page of choice
 
 * **Keyboard shortcuts**! Simply start typing your page and then press enter to go there, and then use the left/right arrow keys to flip pages quickly, and many more!
