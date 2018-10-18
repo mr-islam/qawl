@@ -14,13 +14,15 @@ Qawl is an uncompromising desktop Qur'ān reading app, featuring:
 
 * Precise, user-controlled **zoom**
 
-* Full offline support
+* Full **offline** support
+
+* Restart reading from **exactly** where you left-off, with the same zoom and theme
 
 * Easy **navigation** of the Qur'ān by selecting a surah, "turning" the page, or directly typing in your page of choice
 
 * **Keyboard shortcuts**! Simply start typing your page and then press enter to go there, and then use the left/right arrow keys to flip pages quickly, and many more!
 
-* Launch Qawl **lightning fast**, and restart reading from exactly where you left-off, with the same zoom and theme
+* Launch Qawl **lightning fast**
 
 * **Longevity** — this is an open-source project, so all of you are invited to give feedback, report bugs, and/or develop improvements. It is not dependent on any one person.
 
