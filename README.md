@@ -8,7 +8,7 @@
 
 There are dozens of amazing Qur'ān applications on mobile devices, and some great ones online for all devices (like the awesome quran.com) — but there was nothing up-to-date that targeted desktop computers/laptops with only useful features (without excess) and beautiful design. 
 
-Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
+Qawl is an uncompromising desktop Qur'ān reading app, featuring:
 
 * Ultra **high-quality** images of the Medina Mushaf that millions are familiar with
 
@@ -20,7 +20,7 @@ Al-Kitāb is an uncompromising desktop Qur'ān reading app, featuring:
 
 * **Keyboard shortcuts**! Simply start typing your page and then press enter to go there, and then use the left/right arrow keys to flip pages quickly, and many more!
 
-* Launch al-Kitab **lightning fast**, and restart reading from exactly where you left-off, with the same zoom and theme
+* Launch Qawl **lightning fast**, and restart reading from exactly where you left-off, with the same zoom and theme
 
 * **Longevity** — this is an open-source project, so all of you are invited to give feedback, report bugs, and/or develop improvements. It is not dependent on any one person.
 
