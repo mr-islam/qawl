@@ -10,25 +10,18 @@ There are dozens of amazing Qur'ān applications on mobile devices, and some gre
 
 Qawl is an uncompromising desktop Qur'ān reading app, featuring:
 
-* Ultra **high-quality** images of the Medina Mushaf that millions are familiar with
-
-* Precise, user-controlled **zoom**
-
-* Full **offline** support
-
-* Restart reading from **exactly** where you left-off, with the same zoom and theme
-
-* Easy **navigation** of the Qur'ān by selecting a surah, "turning" the page, or directly typing in your page of choice
-
-* **Keyboard shortcuts**! Simply start typing your page and then press enter to go there, and then use the left/right arrow keys to flip pages quickly, and many more!
-
-* Launch Qawl **lightning fast**
-
-* **Longevity** — this is an open-source project, so all of you are invited to give feedback, report bugs, and/or develop improvements. It is not dependent on any one person.
-
-* With one click of a button, open the current surah on Quran.com to benefit from **audio recitations, analyses and translations**
-
-* Soothe your eyes with a stunning **dark theme**.
+- Lightning-fast startup and performance ⚡
+- Ultra high-quality scanned mushaf 📷
+- Beautiful-yet-effective design 🔮
+- Powerful navigation using table of contents, page flip, or direct entry 🎯
+- Precise, user-controlled zoom 🔎
+- One-click access to recitations, tafsir and translations 🖱
+- Offline support ☁
+- Comprehensive keyboard shortcuts 🎹
+- Stunning dark theme 🌙
+- Resume directly at your last read page, zoom and theme 💾
+- Natural controls with simple click-and-drag scrolling, touchpad pinch gestures, and automatic entry of page when pressing number keys ✋🏼
+- Helpful tooltips to explain all features and teach keyboard shortcuts 💭
 
 See [**Qawl in action**](http://www.youtube.com/watch?v=EWtOurhTzqo "").
 
