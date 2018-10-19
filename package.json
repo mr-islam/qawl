@@ -28,12 +28,18 @@
       "target": "pkg"
     },
     "win": {
-      "target": ["appx", "nsis"],
-      "publisherDisplayName": "Naved Islam",
-      "backgroundColor": "#eee8d5"
+      "target": ["appx", "nsis"]
     },
     "linux": {
       "target": "AppImage"
+    },
+    "appx": {
+      "publisherDisplayName": "Naved Islam",
+      "backgroundColor": "#eee8d5",
+      "displayName": "Qawl: Quran Reader",
+      "publisher": "CN=4145F1BA-8122-4819-9CAC-8AF0DBE50C3F",
+      "identityName": "27186NavedIslam.63763EF44F492",
+      "applicationId": "Qawl"
     }
   },
   "dependencies": {
