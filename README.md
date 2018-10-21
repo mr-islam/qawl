@@ -2,8 +2,6 @@
 
 [![logo](https://i.imgur.com/ZABEsxq.png)](https://qawl.navedislam.com)
 
---------
-
 ## Why Qawl?
 
 There are dozens of amazing Qur'ān applications on mobile devices, and some great ones online for all devices (like the awesome quran.com) — but there was nothing up-to-date that targeted desktop computers/laptops with only useful features (without excess) and beautiful design. 
