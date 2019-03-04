@@ -52,15 +52,15 @@ var surahs = [
 		"pageGreen": 249
 	},
 	{
-		"name": "Ibrāhim",
+		"name": "Ibrāhīm",
 		"pageGreen": 255
 	},
 	{
-		"name": "al-Hijr",
+		"name": "al-Ḥijr",
 		"pageGreen": 262
 	},
 	{
-		"name": "an-Nahl",
+		"name": "an-Naḥl",
 		"pageGreen": 267
 	},
 	{
@@ -84,7 +84,7 @@ var surahs = [
 		"pageGreen": 322
 	},
 	{
-		"name": "al-Hajj",
+		"name": "al-Ḥajj",
 		"pageGreen": 332
 	},
 	{
@@ -144,11 +144,11 @@ var surahs = [
 		"pageGreen": 440
 	},
 	{
-		"name": "as-Sāffāt",
+		"name": "as-Ṣāffāt",
 		"pageGreen": 446
 	},
 	{
-		"name": "Sād",
+		"name": "Ṣād",
 		"pageGreen": 453
 	},
 	{
