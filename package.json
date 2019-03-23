@@ -11,7 +11,7 @@
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "electron": "^2.0.2",
-    "electron-builder": "^20.15.1",
+    "electron-builder": "^20.39.0",
     "electron-packager": "^12.1.1"
   },
   "scripts": {
@@ -28,7 +28,10 @@
       "target": "pkg"
     },
     "win": {
-      "target": ["appx", "nsis"]
+      "target": [
+        "appx",
+        "nsis"
+      ]
     },
     "linux": {
       "target": "AppImage"
