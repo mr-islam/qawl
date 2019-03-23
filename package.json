@@ -1,6 +1,6 @@
 {
   "name": "qawl",
-  "version": "3.1.5",
+  "version": "3.0.0",
   "description": "Read the Holy Qur'ān whenever, wherever, however you like.",
   "main": "main.js",
   "repository": {
@@ -17,7 +17,6 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "win": "electron-builder --windows",
     "dist": "electron-builder",
     "release": "electron-packager ./ --all"
   },
@@ -30,6 +29,7 @@
     },
     "win": {
       "target": [
+        "appx",
         "nsis"
       ]
     },
