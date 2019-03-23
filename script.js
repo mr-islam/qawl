@@ -193,7 +193,8 @@ footer.onmouseout = function () {
 }
 
 tippy('[title]', {
-	delay: [200, 400]
+	delay: [200, 400],
+	placement: "top"
 })
 
 
