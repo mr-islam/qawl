@@ -76,7 +76,7 @@ var surahs = [
 		"pageGreen": 305
 	},
 	{
-		"name": "Tā-Hā",
+		"name": "Ṭā-Hā",
 		"pageGreen": 312
 	},
 	{
