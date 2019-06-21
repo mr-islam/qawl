@@ -115,7 +115,7 @@ function changeZoom(increment) {
 function openOnQuranCom() {
 	for (let i = surahs.length - 1; i >= 0; i--) {
 		if (userPageInputInt >= surahs[i]['pageGreen']) {
-			window.open('https://www.quran.com/' + parseInt(i+1), '_blank');
+			window.open(`https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=1&tSoraNo=${parseInt(i+1)}&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1`, '_blank');
 			return
 		}
 	}
