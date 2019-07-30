@@ -212,7 +212,6 @@ changeZoom(0);
 })();
 document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
 updateDropdown();
-console.log("Version 3.1.5");
 
 
 mousetrap.bind("d", function() {
