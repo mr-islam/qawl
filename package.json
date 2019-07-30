@@ -1,6 +1,6 @@
 {
   "name": "qawl",
-  "version": "3.1.6",
+  "version": "3.1.14",
   "description": "Read the Holy Qur'ān whenever, wherever, however you like.",
   "main": "main.js",
   "repository": {
@@ -10,16 +10,17 @@
   "author": "mrislam",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "electron": "^2.0.2",
-    "electron-builder": "^20.39.0",
-    "electron-packager": "^12.1.1",
-    "electron-updater": "^4.1.2"
+    "electron": "^4.2.8",
+    "electron-builder": "^21.1.5",
+    "electron-packager": "^12.1.1"
   },
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "release": "electron-packager ./ --all"
+    "release": "electron-packager ./ --all",
+    "build": "build --win",
+    "ship": "electron-builder --config ./electron-builder.yml -p always"
   },
   "build": {
     "appId": "com.navedislam.qawl",
@@ -48,8 +49,10 @@
   },
   "dependencies": {
     "dragscroll": "^0.0.8",
-    "electron-window-state": "^5.0.1",
-    "mousetrap": "^1.6.2",
+    "electron-log": "^3.0.6",
+    "electron-updater": "^4.1.2",
+    "electron-window-state": "^5.0.3",
+    "mousetrap": "^1.6.3",
     "tippy.js": "^2.6.0"
   },
   "bugs": {

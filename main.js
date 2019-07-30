@@ -1,9 +1,16 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, ipcMain } = require('electron')
 const windowStateKeeper = require('electron-window-state')
+const { autoUpdater } = require("electron-updater")
+const log = require('electron-log');
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+
+// Optional Logging
+autoUpdater.logger = log;
+autoUpdater.logger.transports.file.level = 'info';
+log.info('App starting...');
 
 app.on('ready', function () {
   // Load the previous state with fallback to defaults
@@ -32,6 +39,8 @@ app.on('ready', function () {
 
   mainWindow.loadFile('index.html')
   mainWindow.setMenu(null)
+  console.log("test")
+  autoUpdater.checkForUpdatesAndNotify()
 
   //I think so Quran.com links open in default user browser
   mainWindow.webContents.on('new-window', function(e, url) {
