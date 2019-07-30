@@ -1,6 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
-const { ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const windowStateKeeper = require('electron-window-state')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -13,7 +12,7 @@ app.on('ready', function () {
     defaultHeight: 800
   });
   mainWindow = new BrowserWindow({
-    title: "Qawl — Desktop Quran Reader",
+    title: "Qawl — Quran Reader",
     show: false,
     width: mainWindowState.width,
     height: mainWindowState.height,
@@ -21,7 +20,7 @@ app.on('ready', function () {
     y: mainWindowState.y,
     resizable: true,
     scrollBounce: true,
-    backgroundColor: '#073642',
+    backgroundColor: '#858585',
     icon: __dirname + '/assets/icon.png'
   });
 
@@ -34,6 +33,7 @@ app.on('ready', function () {
   mainWindow.loadFile('index.html')
   mainWindow.setMenu(null)
 
+  //I think so Quran.com links open in default user browser
   mainWindow.webContents.on('new-window', function(e, url) {
     e.preventDefault();
     require('electron').shell.openExternal(url);
