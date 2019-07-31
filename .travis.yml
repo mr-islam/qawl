@@ -22,11 +22,6 @@ cache:
     - $HOME/.cache/electron-builder
 
 script:
-  - |
-    if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-      npm run-script ship
-    else
-      npm run-script ship -- --mac --windows
-    fi
+  - npm run-script ship
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
