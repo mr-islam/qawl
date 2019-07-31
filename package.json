@@ -20,7 +20,7 @@
     "dist": "electron-builder",
     "release": "electron-packager ./ --all",
     "build": "build --win",
-    "ship": "electron-builder --config ./electron-builder.yml -p always"
+    "ship": "electron-builder -p always"
   },
   "build": {
     "appId": "com.navedislam.qawl",
