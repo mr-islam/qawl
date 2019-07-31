@@ -1,6 +1,6 @@
 {
   "name": "qawl",
-  "version": "3.1.14",
+  "version": "3.1.15",
   "description": "Read the Holy Qur'ān whenever, wherever, however you like.",
   "main": "main.js",
   "repository": {
