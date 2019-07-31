@@ -21,9 +21,6 @@ env:
 
 jobs:
   include:
-    - stage: Test
-      script:
-        - npm test
     - stage: Deploy Windows & Mac
       os: osx
       osx_image: xcode10.1
