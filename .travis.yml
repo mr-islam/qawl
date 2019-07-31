@@ -27,9 +27,9 @@ script:
         -v ~/.cache/electron:/root/.cache/electron \
         -v ~/.cache/electron-builder:/root/.cache/electron-builder \
         electronuserland/builder:wine \
-        /bin/bash -c "npm run-script release --linux --win"
+        /bin/bash -c "npm run-script ship --linux --win"
     else
-      npm run-script release
+      npm run-script ship
     fi
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
