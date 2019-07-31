@@ -25,6 +25,9 @@
   "build": {
     "appId": "com.navedislam.qawl",
     "productName": "Qawl – Quran Reader",
+    "publish": {
+      "provider": "github"
+    },
     "mac": {
       "category": "public.app-category.education",
       "target": "pkg"
