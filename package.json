@@ -19,15 +19,14 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "release": "build",
-    "build": "build --win",
+    "build": "electron-builder",
     "ship": "electron-builder -p always"
   },
   "build": {
     "appId": "com.navedislam.qawl",
     "productName": "Qawl – Quran Reader",
     "publish": {
-      "provider": "github",
-      "token": "$GH_TOKEN"
+      "provider": "github"
     },
     "mac": {
       "category": "public.app-category.education",
