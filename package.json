@@ -29,17 +29,13 @@
       "provider": "github"
     },
     "mac": {
-      "category": "public.app-category.education",
-      "target": "pkg"
+      "category": "public.app-category.education"
     },
     "win": {
       "target": [
         "appx",
         "nsis"
       ]
-    },
-    "linux": {
-      "target": "AppImage"
     },
     "appx": {
       "publisherDisplayName": "Naved Islam",

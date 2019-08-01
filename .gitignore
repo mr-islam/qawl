@@ -10,3 +10,4 @@ releases/
 
 node_modules/
 shrinkwrap.yaml
+electron-builder.yml
