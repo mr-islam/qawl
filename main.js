@@ -39,7 +39,7 @@ app.on('ready', function () {
 
   mainWindow.loadFile('index.html')
   mainWindow.setMenu(null)
-  console.log("test")
+  log.info(`Version: ${app.getVersion()}`)
   autoUpdater.checkForUpdatesAndNotify()
 
   //I think so Quran.com links open in default user browser
