@@ -3,6 +3,33 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const windowStateKeeper = require('electron-window-state')
 const { autoUpdater } = require("electron-updater")
 const log = require('electron-log');
+
+
+
+const ua = require('universal-analytics');
+const uuid = require('uuid/v4');
+const { JSONStorage } = require('node-localstorage');
+const nodeStorage = new JSONStorage(app.getPath('userData'));
+
+
+const usr = ua('UA-120295167-6');
+function trackEvent(category, action, label, value) {
+  usr
+    .event({
+      ec: category,
+      ea: action,
+      el: label,
+      ev: value,
+    })
+    .send();
+}
+
+
+
+
+
+
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -47,6 +74,9 @@ app.on('ready', function () {
     e.preventDefault();
     require('electron').shell.openExternal(url);
   });
+
+  //log app open
+  trackEvent('User Interaction', 'App opened');
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
