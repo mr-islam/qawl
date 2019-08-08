@@ -1,6 +1,6 @@
 {
   "name": "qawl",
-  "version": "3.1.6",
+  "version": "3.1.16",
   "description": "Read the Holy Qur'ān whenever, wherever, however you like.",
   "main": "main.js",
   "repository": {
@@ -10,23 +10,26 @@
   "author": "mrislam",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "electron": "^2.0.2",
-    "electron-builder": "^20.39.0",
-    "electron-packager": "^12.1.1",
-    "electron-updater": "^4.1.2"
+    "electron": "^4.2.8",
+    "electron-builder": "^21.1.5",
+    "electron-packager": "^12.1.1"
   },
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "release": "electron-packager ./ --all"
+    "release": "build",
+    "build": "electron-builder",
+    "ship": "electron-builder -p always"
   },
   "build": {
     "appId": "com.navedislam.qawl",
     "productName": "Qawl – Quran Reader",
+    "publish": {
+      "provider": "github"
+    },
     "mac": {
-      "category": "public.app-category.education",
-      "target": "pkg"
+      "category": "public.app-category.education"
     },
     "appx": {
       "publisherDisplayName": "Naved Islam",
