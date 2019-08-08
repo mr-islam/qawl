@@ -28,15 +28,6 @@
       "category": "public.app-category.education",
       "target": "pkg"
     },
-    "win": {
-      "target": [
-        "appx",
-        "nsis"
-      ]
-    },
-    "linux": {
-      "target": "AppImage"
-    },
     "appx": {
       "publisherDisplayName": "Naved Islam",
       "backgroundColor": "#eee8d5",
@@ -48,8 +39,11 @@
   },
   "dependencies": {
     "dragscroll": "^0.0.8",
-    "electron-window-state": "^5.0.1",
-    "mousetrap": "^1.6.2",
+    "electron-ga": "^1.0.6",
+    "electron-log": "^3.0.6",
+    "electron-updater": "^4.1.2",
+    "electron-window-state": "^5.0.3",
+    "mousetrap": "^1.6.3",
     "tippy.js": "^2.6.0"
   },
   "bugs": {
