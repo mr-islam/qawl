@@ -2,7 +2,6 @@ const { ipcRenderer } = require('electron');
 const mousetrap = require('mousetrap');
 const dragscroll = require('dragscroll');
 const tippy = require('tippy.js');
-const Analytics = require('electron-ga');
 
 var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 2;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
@@ -213,11 +212,6 @@ changeZoom(0);
 })();
 document.getElementById("pageNumberInput").value = JSON.stringify(userPageInputInt)
 updateDropdown();
-
-// electron-ga
-const analytics = new Analytics('UA-120295167-6');
-await analytics.send('screenview', { cd: 'User List' });
-await analytics.send('event', { ec: 'Scroll', ea: 'scrollto', el: 'row', ev: 123 });
 
 
 mousetrap.bind("d", function() {
