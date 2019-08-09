@@ -10,7 +10,7 @@
   "author": "mrislam",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "electron": "^4.2.8",
+    "electron": "^5.0.9",
     "electron-builder": "^21.1.5",
     "electron-packager": "^12.1.1"
   },

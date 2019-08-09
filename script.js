@@ -2,6 +2,7 @@ const { ipcRenderer } = require('electron');
 const mousetrap = require('mousetrap');
 const dragscroll = require('dragscroll');
 const tippy = require('tippy.js');
+const { trackEvent } = require('./analytics');
 
 var rightPageNumber = localStorage.getItem("rightPageNumberStored") || 2;
 var leftPageNumber = parseInt(rightPageNumber) + 1;
@@ -68,6 +69,7 @@ function turnPage(increment) {
 		applyPage();
 		updateDropdown();
 	} // TODO: else {error tooltip}
+	trackEvent("User Interaction", "Page turned once")
 }
 
 function surahDropdown() {
@@ -77,6 +79,7 @@ function surahDropdown() {
 	checkPage();
 	applyPage();
 	document.getElementById("surahSelect").blur()
+	trackEvent("User Interaction", "Surah dropdown used")
 }
 function surahChange(increment) {
 	increment = parseInt(increment);
@@ -105,9 +108,11 @@ function changeZoom(increment) {
 	if (currentZoom <= 100) { // zoomout and in work better respectively with a different
 		document.body.style.width = 100 + "%"; // ^parent element being styled each time
 		document.getElementById("wrapper").style["max-width"] = currentZoom + "%";
+		trackEvent("User Interaction", "Zoom in");
 	} else if (currentZoom > 100 && currentZoom < 151) {
 		document.body.style.width = currentZoom + "%";
 		document.getElementById("wrapper").style["max-width"] = 100 + "%";
+		trackEvent("User Interaction", "Zoom in");
 	}
 	localStorage.setItem("currentZoomStored", currentZoom);
 }
@@ -119,6 +124,7 @@ function openOnQuranCom() {
 			return
 		}
 	}
+	trackEvent("User Interaction", "Open external reference")
 }
 
 var darkCss = document.getElementById("darkCss");
@@ -136,6 +142,7 @@ function toggleTheme() {
 		lightCss.media = '';
 		localStorage.setItem("lastTheme", "light")
 	}
+	trackEvent("User Interaction", "Theme toggled")
 }
 function lastTheme() {
 	if (localStorage.getItem("lastTheme") == "dark") {

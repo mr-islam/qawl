@@ -1,4 +1,3 @@
-const {app} = require('electron')
 const ua = require('universal-analytics');
 const uuid = require('uuid/v4');
 const log = require('electron-log');
@@ -23,4 +22,4 @@ function trackEvent(category, action, label, value) {
     })
     .send();
 }
-module.exports = { trackEvent };
+module.exports = { trackEvent, usr };

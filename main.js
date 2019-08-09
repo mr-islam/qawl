@@ -3,7 +3,7 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const windowStateKeeper = require('electron-window-state')
 const { autoUpdater } = require("electron-updater")
 const log = require('electron-log');
-const { trackEvent } = require('./analytics');
+const { usr } = require('./analytics');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -30,7 +30,8 @@ app.on('ready', function () {
     resizable: true,
     scrollBounce: true,
     backgroundColor: '#858585',
-    icon: __dirname + '/assets/icon.png'
+    icon: __dirname + '/assets/icon.png',
+    webPreferences: {nodeIntegration: true}
   });
 
   mainWindowState.manage(mainWindow);
@@ -51,7 +52,10 @@ app.on('ready', function () {
   });
 
   //log app open
-  trackEvent('User Interaction', 'App opened');
+  usr.screenview("Home Screen", "Qawl").send()
+
+  mainWindow.webContents.openDevTools()
+  // mainWindow.toggleDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
