@@ -51,11 +51,16 @@ app.on('ready', function () {
     require('electron').shell.openExternal(url);
   });
 
-  //log app open
-  usr.screenview("Home Screen", "Qawl").send()
+  //log app open and details
+  let windowSize = `${mainWindowState.width}x${mainWindowState.height}`
+  usr.screenview({
+    "cd": "Home Screen",
+    "an": "Qawl",
+    "av": `${app.getVersion()}`,
+    "sr": windowSize,
+  }).send()
 
-  mainWindow.webContents.openDevTools()
-  // mainWindow.toggleDevTools();
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -68,11 +73,29 @@ app.on('ready', function () {
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
+  
+  usr.event(
+    {
+      "ec": "User Interaction", 
+      "ea": "All windows closed", 
+      "sc": "end"
+    }, 
+    function (err) {
+      if (err) {
+        log.warn("Error in final tracking: "+err)
+      } else {
+        log.info("Logged final succesfully.")
+      }
+    }
+    )
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
-  if (process.platform !== 'darwin') {
-    app.quit()
+  function quitOnDarwin() {
+    if (process.platform !== 'darwin') {
+      app.quit()
+    }
   }
+  setTimeout(quitOnDarwin, 7000)
 })
 
 app.on('activate', function () {
@@ -97,4 +120,3 @@ function toggleDevTools() {
 }
 ipcMain.on('fullScreen', () => toggleFullscreen());
 ipcMain.on('devTools', () => toggleDevTools());
-

@@ -9,9 +9,10 @@ const store = new Store();
 const userId = store.get('userid') || uuid();
 // (re)save the userid, so it persists for the next app session.
 store.set('userid', userId);
-log.info("uuid:" + store.get('userid'))
+log.info("uuid: " + store.get('userid'))
 
 const usr = ua('UA-120295167-6', userId);
+usr.set("uid", userId)
 function trackEvent(category, action, label, value) {
   usr
     .event({
