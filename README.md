@@ -1,6 +1,6 @@
-<div style="align: center">
+<div style="align-items: center">
   <h1>Qawl</h1>
-  [![logo](https://i.imgur.com/ZABEsxq.png)](https://qawl.navedislam.com)
+  <img src="https://i.imgur.com/ZABEsxq.png" alt="logo" href="https://qawl.navedislam.com">
 </div>
 
 ## Why Qawl?
