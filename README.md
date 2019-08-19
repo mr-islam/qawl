@@ -1,6 +1,7 @@
-# Qawl
-
-[![logo](https://i.imgur.com/ZABEsxq.png)](https://qawl.navedislam.com)
+<div style="align: center">
+  <h1>Qawl</h1>
+  [![logo](https://i.imgur.com/ZABEsxq.png)](https://qawl.navedislam.com)
+</div>
 
 ## Why Qawl?
 
