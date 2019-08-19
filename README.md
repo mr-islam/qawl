@@ -1,4 +1,4 @@
-<div style="align-items: center">
+<div style="text-align: center">
   <h1>Qawl</h1>
   <img src="https://i.imgur.com/ZABEsxq.png" alt="logo" href="https://qawl.navedislam.com">
 </div>
