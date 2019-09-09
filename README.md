@@ -53,7 +53,7 @@ Head to the [releases page](https://qawl.navedislam.com/#section3) and choose th
 4. `npm start` to run the app locally
 5. Build using `npm run dist`
 
-**[Mushaf Source](https://archive.org/details/ar_Mushaf_AlMadinah_new_TruePDF)** — broken up using a [terminal script](https://gist.github.com/mr-islam/67de74c60adb9d10057d9b83d19b5563) with `convert` from `imagemagick` at a DPI of 150. 
+**New Mushaf Source**: From the King Fahd Glorious Quran Printing Complex online site. 
 
 **Structure**: `package.json` calls `main.js`, which loads `index.html`, which then loads `script.js`/`surahs.js`/`style.css`.
 
