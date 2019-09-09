@@ -1,5 +1,4 @@
 <div align="center">
-  <h1>Qawl</h1>
   <a target="_blank" href="https://qawl.navedislam.com"><img src="https://i.imgur.com/ZABEsxq.png" alt="logo"></a>
 </div>
 
