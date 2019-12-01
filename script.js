@@ -101,18 +101,25 @@ function updateDropdown() {
 	}
 }
 
-function changeZoom(increment) {
+function changeZoom(increment) { //TODO: set a min for zoom, with parallel measures as mzx
 	var currentZoom = parseInt(localStorage.getItem("currentZoomStored")) || 100;
-	currentZoom += increment;
-	console.log("zoom="+currentZoom);
-	if (currentZoom <= 100) { // zoomout and in work better respectively with a different
-		document.body.style.width = 100 + "%"; // ^parent element being styled each time
+	if (currentZoom <= 100) { // zoomout and in work better respectively with a different parent element
+		currentZoom += increment;
+		console.log("zoom="+currentZoom);
+		document.body.style.width = 100 + "%"; 
 		document.getElementById("wrapper").style["max-width"] = currentZoom + "%";
 		trackEvent("User Interaction", "Zoom in");
-	} else if (currentZoom > 100 && currentZoom < 151) {
+	} else if (currentZoom > 100 && currentZoom < 150 || currentZoom == 150 && increment == -5) {
+		currentZoom += increment;
+		console.log("zoom="+currentZoom);
 		document.body.style.width = currentZoom + "%";
 		document.getElementById("wrapper").style["max-width"] = 100 + "%";
 		trackEvent("User Interaction", "Zoom in");
+	} else if (currentZoom > 150) { //a recovery option for those on higher than 150 zoom from old update
+		currentZoom = 140
+		console.log("zoom="+currentZoom);
+		document.body.style.width = currentZoom + "%";
+		document.getElementById("wrapper").style["max-width"] = 100 + "%";
 	}
 	localStorage.setItem("currentZoomStored", currentZoom);
 }
