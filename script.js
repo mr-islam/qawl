@@ -103,23 +103,29 @@ function updateDropdown() {
 
 function changeZoom(increment) { //TODO: set a min for zoom, with parallel measures as mzx
 	var currentZoom = parseInt(localStorage.getItem("currentZoomStored")) || 100;
-	if (currentZoom <= 100) { // zoomout and in work better respectively with a different parent element
-		currentZoom += increment;
+	if (currentZoom > 40 && currentZoom <= 100 || currentZoom == 40 && increment > 0) {
+		currentZoom += increment; // zoomout and in work better respectively with a different parent element
 		console.log("zoom="+currentZoom);
 		document.body.style.width = 100 + "%"; 
 		document.getElementById("wrapper").style["max-width"] = currentZoom + "%";
 		trackEvent("User Interaction", "Zoom in");
-	} else if (currentZoom > 100 && currentZoom < 150 || currentZoom == 150 && increment == -5) {
+	} else if (currentZoom > 100 && currentZoom < 175 || currentZoom == 175 && increment < 0) {
 		currentZoom += increment;
 		console.log("zoom="+currentZoom);
 		document.body.style.width = currentZoom + "%";
 		document.getElementById("wrapper").style["max-width"] = 100 + "%";
 		trackEvent("User Interaction", "Zoom in");
-	} else if (currentZoom > 150) { //a recovery option for those on higher than 150 zoom from old update
-		currentZoom = 140
+	} //recovery options for those on out of bound values from old update
+	else if (currentZoom > 175 && increment < 0) { 
+		currentZoom = 175
 		console.log("zoom="+currentZoom);
 		document.body.style.width = currentZoom + "%";
 		document.getElementById("wrapper").style["max-width"] = 100 + "%";
+	} else if (currentZoom < 40 && increment > 0) {
+		currentZoom = 40
+		console.log("zoom="+currentZoom);
+		document.body.style.width = 100 + "%"; 
+		document.getElementById("wrapper").style["max-width"] = currentZoom + "%";
 	}
 	localStorage.setItem("currentZoomStored", currentZoom);
 }
@@ -299,10 +305,10 @@ mousetrap.bind(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], function() {
 window.addEventListener('wheel', function(e) {
 	if (e.ctrlKey == true) { //all corresponds to touchpad pinch in/out
 		if (e.deltaY < 0) {
-			changeZoom(+5);
+			changeZoom(+1);
 		}
 		if (e.deltaY > 0) {
-			changeZoom(-5);
+			changeZoom(-1);
 		}
 	}
 });
