@@ -1,3 +1,5 @@
+**This repo is under maintenance, no future development. Follow the re-write at the new repo: https://github.com/mr-islam/qawl-svelte**
+
 <div align="center">
   <a target="_blank" href="https://qawl.navedislam.com"><img src="https://i.imgur.com/ZABEsxq.png" alt="logo"></a>
 </div>
